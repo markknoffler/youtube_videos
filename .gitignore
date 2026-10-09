@@ -45,3 +45,16 @@ venv/
 
 # Tool & MCP Temporary Caches
 .playwright-mcp/
+
+# Model Checkpoints and Weights (>1GB)
+**/checkpoints/
+checkpoints/
+*.safetensors
+*.pth
+*.pt
+*.bin
+*.onnx
+**/fish_speech/
+fish_speech/
+**/fish_speech_engine/
+fish_speech_engine/
