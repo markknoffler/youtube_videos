@@ -1,0 +1,877 @@
+[
+  {
+    "arxiv_id": "1706.03762",
+    "filename": "vaswani_2017_attention_is_all_you_need.pdf",
+    "title": "Attention Is All You Need",
+    "domain": "cs.CL",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/vaswani_2017_attention_is_all_you_need.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "1906.04358",
+    "filename": "gaier_2019_weight_agnostic_neural_networks.pdf",
+    "title": "Weight Agnostic Neural Networks",
+    "domain": "cs.LG",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/gaier_2019_weight_agnostic_neural_networks.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "1806.07366",
+    "filename": "chen_2018_neural_ordinary_differential_equations.pdf",
+    "title": "Neural Ordinary Differential Equations",
+    "domain": "cs.LG",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/chen_2018_neural_ordinary_differential_equations.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2009.06489",
+    "filename": "hooker_2020_the_hardware_lottery.pdf",
+    "title": "The Hardware Lottery",
+    "domain": "cs.CY",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/hooker_2020_the_hardware_lottery.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2209.11895",
+    "filename": "von_oswald_2022_transformers_learn_in_context_by_gradient_descent.pdf",
+    "title": "Transformers learn in-context by gradient descent",
+    "domain": "cs.LG",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/von_oswald_2022_transformers_learn_in_context_by_gradient_descent.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2010.08207",
+    "filename": "hasani_2020_liquid_time_constant_networks.pdf",
+    "title": "Liquid Time-Constant Networks",
+    "domain": "cs.LG",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/hasani_2020_liquid_time_constant_networks.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2206.04615",
+    "filename": "millidge_2022_predictive_coding_a_review.pdf",
+    "title": "Predictive Coding: A Review",
+    "domain": "cs.NE",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/millidge_2022_predictive_coding_a_review.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2103.02999",
+    "filename": "miconi_2021_hebbian_meta_learning.pdf",
+    "title": "Hebbian Meta-Learning in Deep Networks",
+    "domain": "cs.LG",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/miconi_2021_hebbian_meta_learning.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2307.02690",
+    "filename": "clune_2023_ai_generating_algorithms.pdf",
+    "title": "AI-Generating Algorithms: A New Paradigm for AGI",
+    "domain": "cs.AI",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/clune_2023_ai_generating_algorithms.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2309.08586",
+    "filename": "kirsch_2023_towards_general_meta_plasticity.pdf",
+    "title": "Towards General Meta-Plasticity",
+    "domain": "cs.LG",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/kirsch_2023_towards_general_meta_plasticity.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2402.04634",
+    "filename": "orchard_2024_self_organizing_circuits.pdf",
+    "title": "Self-Organizing Circuits for Scalable Computing",
+    "domain": "cs.NE",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/orchard_2024_self_organizing_circuits.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2404.19756",
+    "filename": "liu_2024_kan_kolmogorov_arnold_networks.pdf",
+    "title": "KAN: Kolmogorov-Arnold Networks",
+    "domain": "cs.LG",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/liu_2024_kan_kolmogorov_arnold_networks.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "1706.03762v7",
+    "title": "Attention Is All You Need",
+    "summary": "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.",
+    "published": "2017-06-12",
+    "pdf_url": "https://arxiv.org/pdf/1706.03762v7.pdf",
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "filename": "1706.03762v7_Attention_Is_All_You_Need.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/1706.03762v7_Attention_Is_All_You_Need.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2104.04692v3",
+    "title": "Not All Attention Is All You Need",
+    "summary": "Beyond the success story of pre-trained language models (PrLMs) in recent natural language processing, they are susceptible to over-fitting due to unusual large model size. To this end, dropout serves as a therapy. However, existing methods like random-based, knowledge-based and search-based dropout are more general but less effective onto self-attention based models, which are broadly chosen as the fundamental architecture of PrLMs. In this paper, we propose a novel dropout method named AttendOut to let self-attention empowered PrLMs capable of more robust task-specific tuning. We demonstrate that state-of-the-art models with elaborate training design may achieve much stronger results. We verify the universality of our approach on extensive natural language processing tasks.",
+    "published": "2021-04-10",
+    "pdf_url": "https://arxiv.org/pdf/2104.04692v3.pdf",
+    "categories": [
+      "cs.CL"
+    ],
+    "filename": "2104.04692v3_Not_All_Attention_Is_All_You_Need.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2104.04692v3_Not_All_Attention_Is_All_You_Need.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2501.06425v7",
+    "title": "Tensor Product Attention Is All You Need",
+    "summary": "Scaling language models to handle longer input sequences typically necessitates large key-value (KV) caches, resulting in substantial memory overhead during inference. In this paper, we propose Tensor Product Attention (TPA), a novel attention mechanism that uses tensor decompositions to represent queries, keys, and values compactly, substantially shrinking the KV cache size at inference time. By factorizing these representations into contextual low-rank components and seamlessly integrating with Rotary Position Embedding (RoPE), TPA achieves improved model quality alongside memory efficiency. Based on TPA, we introduce the Tensor ProducT ATTenTion Transformer (T6), a new model architecture for sequence modeling. Through extensive empirical evaluation on language modeling tasks, we demonstrate that T6 surpasses or matches the performance of standard Transformer baselines including Multi-Head Attention (MHA), Multi-Query Attention (MQA), Grouped-Query Attention (GQA), and Multi-Head Latent Attention (MLA) across various metrics, including perplexity and a range of established evaluation benchmarks. Notably, TPA's memory efficiency and computational efficiency at decoding stage enables processing longer sequences under fixed resource constraints, addressing a critical scalability challenge in modern language models. Project Page: https://github.com/tensorgi/TPA.",
+    "published": "2025-01-11",
+    "pdf_url": "https://arxiv.org/pdf/2501.06425v7.pdf",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "filename": "2501.06425v7_Tensor_Product_Attention_Is_All_You_Need.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2501.06425v7_Tensor_Product_Attention_Is_All_You_Need.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2501.05730v1",
+    "title": "Element-wise Attention Is All You Need",
+    "summary": "The self-attention (SA) mechanism has demonstrated superior performance across various domains, yet it suffers from substantial complexity during both training and inference. The next-generation architecture, aiming at retaining the competitive performance of SA while achieving low-cost inference and efficient long-sequence training, primarily focuses on three approaches: linear attention, linear RNNs, and state space models. Although these approaches achieve reduced complexity than SA, they all have built-in performance degradation factors, such as diminished \u00e2\u0080\u009cspikiness\u00e2\u0080\u009d and compression of historical information. In contrast to these approaches, we propose a novel element-wise attention mechanism, which uses the element-wise squared Euclidean distance, instead of the dot product operation, to compute similarity and approximates the quadratic complexity term $\\exp(q_{ic}k_{jc})$ with a Taylor polynomial. This design achieves remarkable efficiency: during training, the element-wise attention has a complexity of $\\mathcal{O}(tLD)$, making long-sequence training both computationally and memory efficient, where $L$ is the sequence length, $D$ is the feature dimension, and $t$ is the highest order of the polynomial; during inference, it can be reformulated as recurrent neural networks, achieving a inference complexity of $\\mathcal{O}(tD)$. Furthermore, the element-wise attention circumvents the performance degradation factors present in these approaches and achieves performance comparable to SA in both causal and non-causal forms.",
+    "published": "2025-01-10",
+    "pdf_url": "https://arxiv.org/pdf/2501.05730v1.pdf",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "filename": "2501.05730v1_Element-wise_Attention_Is_All_You_Need.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2501.05730v1_Element-wise_Attention_Is_All_You_Need.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2010.13154v2",
+    "title": "Attention is All You Need in Speech Separation",
+    "summary": "Recurrent Neural Networks (RNNs) have long been the dominant architecture in sequence-to-sequence learning. RNNs, however, are inherently sequential models that do not allow parallelization of their computations. Transformers are emerging as a natural alternative to standard RNNs, replacing recurrent computations with a multi-head attention mechanism. In this paper, we propose the SepFormer, a novel RNN-free Transformer-based neural network for speech separation. The SepFormer learns short and long-term dependencies with a multi-scale approach that employs transformers. The proposed model achieves state-of-the-art (SOTA) performance on the standard WSJ0-2/3mix datasets. It reaches an SI-SNRi of 22.3 dB on WSJ0-2mix and an SI-SNRi of 19.5 dB on WSJ0-3mix. The SepFormer inherits the parallelization advantages of Transformers and achieves a competitive performance even when downsampling the encoded representation by a factor of 8. It is thus significantly faster and it is less memory-demanding than the latest speech separation systems with comparable performance.",
+    "published": "2020-10-25",
+    "pdf_url": "https://arxiv.org/pdf/2010.13154v2.pdf",
+    "categories": [
+      "eess.AS",
+      "cs.LG",
+      "cs.SD",
+      "eess.SP"
+    ],
+    "filename": "2010.13154v2_Attention_is_All_You_Need_in_Speech_Sepa.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2010.13154v2_Attention_is_All_You_Need_in_Speech_Sepa.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2509.08122v2",
+    "title": "In-Context Learning Enhanced Credibility Transformer",
+    "summary": "The starting point of our network architecture is the Credibility Transformer which extends the classical Transformer architecture by a credibility mechanism to improve model learning and predictive performance. This Credibility Transformer learns credibilitized CLS tokens that serve as learned representations of the original input features. In this paper we present a new paradigm that augments this architecture by an in-context learning mechanism, i.e., we increase the information set by a context batch consisting of similar instances. This allows the model to enhance the CLS token representations of the instances by additional in-context information and fine-tuning. We empirically verify that this in-context learning enhances predictive accuracy by adapting to similar risk patterns. Moreover, this in-context learning also allows the model to generalize to new instances which, e.g., have feature levels in the categorical covariates that have not been present when the model was trained -- for a relevant example, think of a new vehicle model which has just been developed by a car manufacturer.",
+    "published": "2025-09-09",
+    "pdf_url": "https://arxiv.org/pdf/2509.08122v2.pdf",
+    "categories": [
+      "cs.LG",
+      "stat.AP"
+    ],
+    "filename": "2509.08122v2_In-Context_Learning_Enhanced_Credibility.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2509.08122v2_In-Context_Learning_Enhanced_Credibility.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2406.13493v1",
+    "title": "In-Context In-Context Learning with Transformer Neural Processes",
+    "summary": "Neural processes (NPs) are a powerful family of meta-learning models that seek to approximate the posterior predictive map of the ground-truth stochastic process from which each dataset in a meta-dataset is sampled. There are many cases in which practitioners, besides having access to the dataset of interest, may also have access to other datasets that share similarities with it. In this case, integrating these datasets into the NP can improve predictions. We equip NPs with this functionality and describe this paradigm as in-context in-context learning. Standard NP architectures, such as the convolutional conditional NP (ConvCNP) or the family of transformer neural processes (TNPs), are not capable of in-context in-context learning, as they are only able to condition on a single dataset. We address this shortcoming by developing the in-context in-context learning pseudo-token TNP (ICICL-TNP). The ICICL-TNP builds on the family of PT-TNPs, which utilise pseudo-token-based transformer architectures to sidestep the quadratic computational complexity associated with regular transformer architectures. Importantly, the ICICL-TNP is capable of conditioning on both sets of datapoints and sets of datasets, enabling it to perform in-context in-context learning. We demonstrate the importance of in-context in-context learning and the effectiveness of the ICICL-TNP in a number of experiments.",
+    "published": "2024-06-19",
+    "pdf_url": "https://arxiv.org/pdf/2406.13493v1.pdf",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "filename": "2406.13493v1_In-Context_In-Context_Learning_with_Tran.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2406.13493v1_In-Context_In-Context_Learning_with_Tran.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2604.25858v2",
+    "title": "Investigation into In-Context Learning Capabilities of Transformers",
+    "summary": "Transformers have demonstrated a strong ability for in-context learning (ICL), enabling models to solve previously unseen tasks using only example input output pairs provided at inference time. While prior theoretical work has established conditions under which transformers can perform linear classification in-context, the empirical scaling behavior governing when this mechanism succeeds remains insufficiently characterized.   In this paper, we conduct a systematic empirical study of in-context learning for Gaussian-mixture binary classification tasks. Building on the theoretical framework of Frei and Vardi (2024), we analyze how in-context test accuracy depends on three fundamental factors: the input dimension, the number of in-context examples, and the number of pre-training tasks. Using a controlled synthetic setup and a linear in-context classifier formulation, we isolate the geometric conditions under which models successfully infer task structure from context alone.   We additionally investigate the emergence of benign overfitting, where models memorize noisy in-context labels while still achieving strong generalization performance on clean test data. Through extensive sweeps across dimensionality, sequence length, task diversity, and signal-to-noise regimes, we identify the parameter regions in which this phenomenon arises and characterize how it depends on data geometry and training exposure.   Our results provide a comprehensive empirical map of scaling behavior in in-context classification, highlighting the critical role of dimensionality, signal strength, and contextual information in determining when in-context learning succeeds and when it fails.",
+    "published": "2026-04-28",
+    "pdf_url": "https://arxiv.org/pdf/2604.25858v2.pdf",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "filename": "2604.25858v2_Investigation_into_In-Context_Learning_C.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2604.25858v2_Investigation_into_In-Context_Learning_C.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2410.03291v1",
+    "title": "Enhanced Transformer architecture for in-context learning of dynamical systems",
+    "summary": "Recently introduced by some of the authors, the in-context identification paradigm aims at estimating, offline and based on synthetic data, a meta-model that describes the behavior of a whole class of systems. Once trained, this meta-model is fed with an observed input/output sequence (context) generated by a real system to predict its behavior in a zero-shot learning fashion. In this paper, we enhance the original meta-modeling framework through three key innovations: by formulating the learning task within a probabilistic framework; by managing non-contiguous context and query windows; and by adopting recurrent patching to effectively handle long context sequences. The efficacy of these modifications is demonstrated through a numerical example focusing on the Wiener-Hammerstein system class, highlighting the model's enhanced performance and scalability.",
+    "published": "2024-10-04",
+    "pdf_url": "https://arxiv.org/pdf/2410.03291v1.pdf",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "eess.SY"
+    ],
+    "filename": "2410.03291v1_Enhanced_Transformer_architecture_for_in.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2410.03291v1_Enhanced_Transformer_architecture_for_in.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2309.06054v3",
+    "title": "Breaking through the learning plateaus of in-context learning in Transformer",
+    "summary": "In-context learning, i.e., learning from context examples, is an impressive ability of Transformer. Training Transformers to possess this in-context learning skill is computationally intensive due to the occurrence of learning plateaus, which are periods within the training process where there is minimal or no enhancement in the model's in-context learning capability. To study the mechanism behind the learning plateaus, we conceptually seperate a component within the model's internal representation that is exclusively affected by the model's weights. We call this the \"weights component\", and the remainder is identified as the \"context component\". By conducting meticulous and controlled experiments on synthetic tasks, we note that the persistence of learning plateaus correlates with compromised functionality of the weights component. Recognizing the impaired performance of the weights component as a fundamental behavior drives learning plateaus, we have developed three strategies to expedite the learning of Transformers. The effectiveness of these strategies is further confirmed in natural language processing tasks. In conclusion, our research demonstrates the feasibility of cultivating a powerful in-context learning ability within AI systems in an eco-friendly manner.",
+    "published": "2023-09-12",
+    "pdf_url": "https://arxiv.org/pdf/2309.06054v3.pdf",
+    "categories": [
+      "cs.LG",
+      "cs.CL",
+      "cs.CV"
+    ],
+    "filename": "2309.06054v3_Breaking_through_the_learning_plateaus_o.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2309.06054v3_Breaking_through_the_learning_plateaus_o.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2506.18852v2",
+    "title": "Mechanistic Interpretability Needs Philosophy",
+    "summary": "Mechanistic interpretability (MI) aims to explain how neural networks work by uncovering their underlying mechanisms. As the field grows in influence, it is increasingly important to examine not just models themselves, but the assumptions, concepts and explanatory strategies implicit in MI research. We argue that mechanistic interpretability needs philosophy as an ongoing partner in clarifying its concepts, refining its methods, and navigating the epistemic and ethical complexities of interpreting AI systems. There is significant unrealised potential for progress in MI to be gained through deeper engagement with philosophers and philosophical frameworks. Taking three open problems from the MI literature as examples, this paper illustrates the value philosophy can add to MI research, and outlines a path toward deeper interdisciplinary dialogue.",
+    "published": "2025-06-23",
+    "pdf_url": "https://arxiv.org/pdf/2506.18852v2.pdf",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "filename": "2506.18852v2_Mechanistic_Interpretability_Needs_Philo.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2506.18852v2_Mechanistic_Interpretability_Needs_Philo.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2504.13151v2",
+    "title": "MIB: A Mechanistic Interpretability Benchmark",
+    "summary": "How can we know whether new mechanistic interpretability methods achieve real improvements? In pursuit of lasting evaluation standards, we propose MIB, a Mechanistic Interpretability Benchmark, with two tracks spanning four tasks and five models. MIB favors methods that precisely and concisely recover relevant causal pathways or causal variables in neural language models. The circuit localization track compares methods that locate the model components - and connections between them - most important for performing a task (e.g., attribution patching or information flow routes). The causal variable localization track compares methods that featurize a hidden vector, e.g., sparse autoencoders (SAEs) or distributed alignment search (DAS), and align those features to a task-relevant causal variable. Using MIB, we find that attribution and mask optimization methods perform best on circuit localization. For causal variable localization, we find that the supervised DAS method performs best, while SAE features are not better than neurons, i.e., non-featurized hidden vectors. These findings illustrate that MIB enables meaningful comparisons, and increases our confidence that there has been real progress in the field.",
+    "published": "2025-04-17",
+    "pdf_url": "https://arxiv.org/pdf/2504.13151v2.pdf",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "filename": "2504.13151v2_MIB_A_Mechanistic_Interpretability_Benc.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2504.13151v2_MIB_A_Mechanistic_Interpretability_Benc.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2501.16496v1",
+    "title": "Open Problems in Mechanistic Interpretability",
+    "summary": "Mechanistic interpretability aims to understand the computational mechanisms underlying neural networks' capabilities in order to accomplish concrete scientific and engineering goals. Progress in this field thus promises to provide greater assurance over AI system behavior and shed light on exciting scientific questions about the nature of intelligence. Despite recent progress toward these goals, there are many open problems in the field that require solutions before many scientific and practical benefits can be realized: Our methods require both conceptual and practical improvements to reveal deeper insights; we must figure out how best to apply our methods in pursuit of specific goals; and the field must grapple with socio-technical challenges that influence and are influenced by our work. This forward-facing review discusses the current frontier of mechanistic interpretability and the open problems that the field may benefit from prioritizing.",
+    "published": "2025-01-27",
+    "pdf_url": "https://arxiv.org/pdf/2501.16496v1.pdf",
+    "categories": [
+      "cs.LG"
+    ],
+    "filename": "2501.16496v1_Open_Problems_in_Mechanistic_Interpretab.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2501.16496v1_Open_Problems_in_Mechanistic_Interpretab.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2605.14347v3",
+    "title": "Exemplar Partitioning for Mechanistic Interpretability",
+    "summary": "We introduce Exemplar Partitioning (EP), an unsupervised method for building interpretable feature dictionaries from large language model activations. An EP dictionary is a Voronoi partition of activation space, built by leader-clustering streamed activations within a distance threshold. Each region is defined by an observed exemplar and an average of its member activations, which define region membership and provide directions for intervention. Dictionary size is determined by the activation stream at the chosen threshold rather than pre-selected. Exemplars link regions to observed inputs, allowing dictionaries built from the same input stream to be compared across layers, training checkpoints, and architectures.   We demonstrate how EP can be used to interpret and intervene on model behaviour, track changes in activation space through training, and detect hidden concepts. Comparing EP dictionaries on base and instruction-tuned Gemma-2-2B and Llama-3.1-8B reveals that instruction tuning reorganises harmful prompt activations similarly across the two models, but at different granularities. Interventions on these regions make both models answer harmful requests they previously refused. In 19 of 21 Taboo models trained to hide a secret word, EP finds new regions that do not exist in the base model, whose decoded tokens relate to the known secret on inspection.   Although EP assigns each token to a single region, linear probes built from EP regions achieve up to $90.5\\%$ of full-activation probe accuracy.   On AxBench concept detection at Gemma-2-2B-it layer 20, EP achieves the highest mean AUROC of all unsupervised methods ($0.937$), outperforming SAE-A ($0.911$) and approaching supervised probes ($0.946$). Building EP dictionaries is fast and cheap: EP uses $\\sim 10^3$ times fewer construction tokens than comparable SAEs.",
+    "published": "2026-05-14",
+    "pdf_url": "https://arxiv.org/pdf/2605.14347v3.pdf",
+    "categories": [
+      "cs.LG"
+    ],
+    "filename": "2605.14347v3_Exemplar_Partitioning_for_Mechanistic_In.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2605.14347v3_Exemplar_Partitioning_for_Mechanistic_In.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2508.15882v1",
+    "title": "Beyond Transcription: Mechanistic Interpretability in ASR",
+    "summary": "Interpretability methods have recently gained significant attention, particularly in the context of large language models, enabling insights into linguistic representations, error detection, and model behaviors such as hallucinations and repetitions. However, these techniques remain underexplored in automatic speech recognition (ASR), despite their potential to advance both the performance and interpretability of ASR systems. In this work, we adapt and systematically apply established interpretability methods such as logit lens, linear probing, and activation patching, to examine how acoustic and semantic information evolves across layers in ASR systems. Our experiments reveal previously unknown internal dynamics, including specific encoder-decoder interactions responsible for repetition hallucinations and semantic biases encoded deep within acoustic representations. These insights demonstrate the benefits of extending and applying interpretability techniques to speech recognition, opening promising directions for future research on improving model transparency and robustness.",
+    "published": "2025-08-21",
+    "pdf_url": "https://arxiv.org/pdf/2508.15882v1.pdf",
+    "categories": [
+      "cs.SD",
+      "cs.CL",
+      "cs.LG",
+      "eess.AS"
+    ],
+    "filename": "2508.15882v1_Beyond_Transcription_Mechanistic_Interp.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2508.15882v1_Beyond_Transcription_Mechanistic_Interp.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2008.02067v1",
+    "title": "Parallel, Self Organizing, Consensus Neural Networks",
+    "summary": "A new neural network architecture (PSCNN) is developed to improve performance and speed of such networks. The architecture has all the advantages of the previous models such as self-organization and possesses some other superior characteristics such as input parallelism and decision making based on consensus. Due to the properties of this network, it was studied with respect to implementation on a Parallel Processor (Ncube Machine) as well as a regular sequential machine. The architecture self organizes its own modules in a way to maximize performance. Since it is completely parallel, both recall and learning procedures are very fast. The performance of the network was compared to the Backpropagation networks in problems of language perception, remote sensing and binary logic (Exclusive-Or). PSCNN showed superior performance in all cases studied.",
+    "published": "2020-07-30",
+    "pdf_url": "https://arxiv.org/pdf/2008.02067v1.pdf",
+    "categories": [
+      "cs.NE",
+      "cs.LG"
+    ],
+    "filename": "2008.02067v1_Parallel_Self_Organizing_Consensus_Neu.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2008.02067v1_Parallel_Self_Organizing_Consensus_Neu.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "1908.00617v2",
+    "title": "A self-organizing fuzzy neural network for sequence learning",
+    "summary": "In this paper, a new self-organizing fuzzy neural network model is presented which is able to learn and reproduce different sequences accurately. Sequence learning is important in performing skillful tasks, such as writing and playing piano. The structure of the proposed network is composed of two parts: 1-sequence identifier which computes a novel sequence identity value based on initial samples of a sequence, and detects the sequence identity based on proper fuzzy rules, and 2-sequence locator, which locates the input sample in the sequence. Therefore, by integrating outputs of these two parts in fuzzy rules, the network is able to produce the proper output based on current state of the sequence. To learn the proposed structure, a gradual learning procedure is proposed. First, learning is performed by adding new fuzzy rules, based on coverage measure, using available correct data. Next, the initialized parameters are fine-tuned, by gradient descent algorithm, based on fed back approximated network output as the next input. The proposed method has a dynamic structure which is able to learn new sequences online. The proposed method is used to learn and reproduce different sequences simultaneously which is the novelty of this method.",
+    "published": "2019-08-01",
+    "pdf_url": "https://arxiv.org/pdf/1908.00617v2.pdf",
+    "categories": [
+      "cs.NE",
+      "cs.LG"
+    ],
+    "filename": "1908.00617v2_A_self-organizing_fuzzy_neural_network_f.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/1908.00617v2_A_self-organizing_fuzzy_neural_network_f.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "cs/0504056v1",
+    "title": "Self-Organizing Multilayered Neural Networks of Optimal Complexity",
+    "summary": "The principles of self-organizing the neural networks of optimal complexity is considered under the unrepresentative learning set. The method of self-organizing the multi-layered neural networks is offered and used to train the logical neural networks which were applied to the medical diagnostics.",
+    "published": "2005-04-13",
+    "pdf_url": "https://arxiv.org/pdf/cs/0504056v1.pdf",
+    "categories": [
+      "cs.NE",
+      "cs.AI"
+    ],
+    "filename": "cs/0504056v1_Self-Organizing_Multilayered_Neural_Netw.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/cs/0504056v1_Self-Organizing_Multilayered_Neural_Netw.pdf",
+    "downloaded": false
+  },
+  {
+    "arxiv_id": "1807.09374v1",
+    "title": "Unsupervised Learning with Self-Organizing Spiking Neural Networks",
+    "summary": "We present a system comprising a hybridization of self-organized map (SOM) properties with spiking neural networks (SNNs) that retain many of the features of SOMs. Networks are trained in an unsupervised manner to learn a self-organized lattice of filters via excitatory-inhibitory interactions among populations of neurons. We develop and test various inhibition strategies, such as growing with inter-neuron distance and two distinct levels of inhibition. The quality of the unsupervised learning algorithm is evaluated using examples with known labels. Several biologically-inspired classification tools are proposed and compared, including population-level confidence rating, and n-grams using spike motif algorithm. Using the optimal choice of parameters, our approach produces improvements over state-of-art spiking neural networks.",
+    "published": "2018-07-24",
+    "pdf_url": "https://arxiv.org/pdf/1807.09374v1.pdf",
+    "categories": [
+      "cs.NE",
+      "cs.LG"
+    ],
+    "filename": "1807.09374v1_Unsupervised_Learning_with_Self-Organizi.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/1807.09374v1_Unsupervised_Learning_with_Self-Organizi.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "cs/0406047v1",
+    "title": "Self-organizing neural networks in classification and image recognition",
+    "summary": "Self-organizing neural networks are used for brick finding in OPERA experiment. Self-organizing neural networks and wavelet analysis used for recognition and extraction of car numbers from images.",
+    "published": "2004-06-24",
+    "pdf_url": "https://arxiv.org/pdf/cs/0406047v1.pdf",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "filename": "cs/0406047v1_Self-organizing_neural_networks_in_class.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/cs/0406047v1_Self-organizing_neural_networks_in_class.pdf",
+    "downloaded": false
+  },
+  {
+    "arxiv_id": "2307.16236v1",
+    "title": "Synaptic Plasticity Models and Bio-Inspired Unsupervised Deep Learning: A Survey",
+    "summary": "Recently emerged technologies based on Deep Learning (DL) achieved outstanding results on a variety of tasks in the field of Artificial Intelligence (AI). However, these encounter several challenges related to robustness to adversarial inputs, ecological impact, and the necessity of huge amounts of training data. In response, researchers are focusing more and more interest on biologically grounded mechanisms, which are appealing due to the impressive capabilities exhibited by biological brains. This survey explores a range of these biologically inspired models of synaptic plasticity, their application in DL scenarios, and the connections with models of plasticity in Spiking Neural Networks (SNNs). Overall, Bio-Inspired Deep Learning (BIDL) represents an exciting research direction, aiming at advancing not only our current technologies but also our understanding of intelligence.",
+    "published": "2023-07-30",
+    "pdf_url": "https://arxiv.org/pdf/2307.16236v1.pdf",
+    "categories": [
+      "cs.NE",
+      "cs.AI",
+      "cs.CV",
+      "cs.LG"
+    ],
+    "filename": "2307.16236v1_Synaptic_Plasticity_Models_and_Bio-Inspi.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2307.16236v1_Synaptic_Plasticity_Models_and_Bio-Inspi.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2510.21908v2",
+    "title": "Enabling Robust In-Context Memory and Rapid Task Adaptation in Transformers with Hebbian and Gradient-Based Plasticity",
+    "summary": "Large language models display in-context learning as an emergent effect of scale, but they rely on static weights during inference. In contrast, biological systems continually adapt via synaptic plasticity. We investigate whether explicit, biologically inspired plasticity can endow Transformers with faster in-sequence adaptation. To this end, we augment decoder-only Transformers with fast-weight modules updated either by (i) a neuromodulated Hebbian rule or (ii) the gradient-based plasticity mechanism of Duan et al. (2023). Across copying, regression, and few-shot classification tasks (CIFAR-FS, Omniglot), Hebbian plasticity consistently achieves lower loss and stronger few-shot generalization, while gradient-based updates perform best on long-horizon credit assignment. When associations are short and linearly separable, static weights suffice, defining a clear boundary condition for when plasticity helps. Analysis of learned modulatory signals reveals that gradient-based rules maintain large, persistent updates, whereas Hebbian plasticity is sharply gated around salient events. Together, these results show that explicit plasticity complements attention by enabling rapid, task-specific adaptation, and clarify when different plasticity mechanisms are most effective.",
+    "published": "2025-10-24",
+    "pdf_url": "https://arxiv.org/pdf/2510.21908v2.pdf",
+    "categories": [
+      "cs.NE",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "filename": "2510.21908v2_Enabling_Robust_In-Context_Memory_and_Ra.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2510.21908v2_Enabling_Robust_In-Context_Memory_and_Ra.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "1807.09374v1",
+    "title": "Unsupervised Learning with Self-Organizing Spiking Neural Networks",
+    "summary": "We present a system comprising a hybridization of self-organized map (SOM) properties with spiking neural networks (SNNs) that retain many of the features of SOMs. Networks are trained in an unsupervised manner to learn a self-organized lattice of filters via excitatory-inhibitory interactions among populations of neurons. We develop and test various inhibition strategies, such as growing with inter-neuron distance and two distinct levels of inhibition. The quality of the unsupervised learning algorithm is evaluated using examples with known labels. Several biologically-inspired classification tools are proposed and compared, including population-level confidence rating, and n-grams using spike motif algorithm. Using the optimal choice of parameters, our approach produces improvements over state-of-art spiking neural networks.",
+    "published": "2018-07-24",
+    "pdf_url": "https://arxiv.org/pdf/1807.09374v1.pdf",
+    "categories": [
+      "cs.NE",
+      "cs.LG"
+    ],
+    "filename": "1807.09374v1_Unsupervised_Learning_with_Self-Organizi.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/1807.09374v1_Unsupervised_Learning_with_Self-Organizi.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2006.06902v1",
+    "title": "Self-organization of multi-layer spiking neural networks",
+    "summary": "Living neural networks in our brains autonomously self-organize into large, complex architectures during early development to result in an organized and functional organic computational device. A key mechanism that enables the formation of complex architecture in the developing brain is the emergence of traveling spatio-temporal waves of neuronal activity across the growing brain. Inspired by this strategy, we attempt to efficiently self-organize large neural networks with an arbitrary number of layers into a wide variety of architectures. To achieve this, we propose a modular tool-kit in the form of a dynamical system that can be seamlessly stacked to assemble multi-layer neural networks. The dynamical system encapsulates the dynamics of spiking units, their inter/intra layer interactions as well as the plasticity rules that control the flow of information between layers. The key features of our tool-kit are (1) autonomous spatio-temporal waves across multiple layers triggered by activity in the preceding layer and (2) Spike-timing dependent plasticity (STDP) learning rules that update the inter-layer connectivity based on wave activity in the connecting layers. Our framework leads to the self-organization of a wide variety of architectures, ranging from multi-layer perceptrons to autoencoders. We also demonstrate that emergent waves can self-organize spiking network architecture to perform unsupervised learning, and networks can be coupled with a linear classifier to perform classification on classic image datasets like MNIST. Broadly, our work shows that a dynamical systems framework for learning can be used to self-organize large computational devices.",
+    "published": "2020-06-12",
+    "pdf_url": "https://arxiv.org/pdf/2006.06902v1.pdf",
+    "categories": [
+      "cs.NE",
+      "cs.LG",
+      "q-bio.NC"
+    ],
+    "filename": "2006.06902v1_Self-organization_of_multi-layer_spiking.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2006.06902v1_Self-organization_of_multi-layer_spiking.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "1808.08173v1",
+    "title": "STDP Learning of Image Patches with Convolutional Spiking Neural Networks",
+    "summary": "Spiking neural networks are motivated from principles of neural systems and may possess unexplored advantages in the context of machine learning. A class of \\textit{convolutional spiking neural networks} is introduced, trained to detect image features with an unsupervised, competitive learning mechanism. Image features can be shared within subpopulations of neurons, or each may evolve independently to capture different features in different regions of input space. We analyze the time and memory requirements of learning with and operating such networks. The MNIST dataset is used as an experimental testbed, and comparisons are made between the performance and convergence speed of a baseline spiking neural network.",
+    "published": "2018-08-24",
+    "pdf_url": "https://arxiv.org/pdf/1808.08173v1.pdf",
+    "categories": [
+      "cs.NE"
+    ],
+    "filename": "1808.08173v1_STDP_Learning_of_Image_Patches_with_Conv.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/1808.08173v1_STDP_Learning_of_Image_Patches_with_Conv.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2203.03379v1",
+    "title": "An STDP-Based Supervised Learning Algorithm for Spiking Neural Networks",
+    "summary": "Compared with rate-based artificial neural networks, Spiking Neural Networks (SNN) provide a more biological plausible model for the brain. But how they perform supervised learning remains elusive. Inspired by recent works of Bengio et al., we propose a supervised learning algorithm based on Spike-Timing Dependent Plasticity (STDP) for a hierarchical SNN consisting of Leaky Integrate-and-fire (LIF) neurons. A time window is designed for the presynaptic neuron and only the spikes in this window take part in the STDP updating process. The model is trained on the MNIST dataset. The classification accuracy approach that of a Multilayer Perceptron (MLP) with similar architecture trained by the standard back-propagation algorithm.",
+    "published": "2022-03-07",
+    "pdf_url": "https://arxiv.org/pdf/2203.03379v1.pdf",
+    "categories": [
+      "cs.NE",
+      "cs.AI"
+    ],
+    "filename": "2203.03379v1_An_STDP-Based_Supervised_Learning_Algori.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2203.03379v1_An_STDP-Based_Supervised_Learning_Algori.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2306.04410v1",
+    "title": "Meta-Learning in Spiking Neural Networks with Reward-Modulated STDP",
+    "summary": "The human brain constantly learns and rapidly adapts to new situations by integrating acquired knowledge and experiences into memory. Developing this capability in machine learning models is considered an important goal of AI research since deep neural networks perform poorly when there is limited data or when they need to adapt quickly to new unseen tasks. Meta-learning models are proposed to facilitate quick learning in low-data regimes by employing absorbed information from the past. Although some models have recently been introduced that reached high-performance levels, they are not biologically plausible. We have proposed a bio-plausible meta-learning model inspired by the hippocampus and the prefrontal cortex using spiking neural networks with a reward-based learning system. Our proposed model includes a memory designed to prevent catastrophic forgetting, a phenomenon that occurs when meta-learning models forget what they have learned as soon as the new task begins. Also, our new model can easily be applied to spike-based neuromorphic devices and enables fast learning in neuromorphic hardware. The final analysis will discuss the implications and predictions of the model for solving few-shot classification tasks. In solving these tasks, our model has demonstrated the ability to compete with the existing state-of-the-art meta-learning techniques.",
+    "published": "2023-06-07",
+    "pdf_url": "https://arxiv.org/pdf/2306.04410v1.pdf",
+    "categories": [
+      "cs.AI"
+    ],
+    "filename": "2306.04410v1_Meta-Learning_in_Spiking_Neural_Networks.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2306.04410v1_Meta-Learning_in_Spiking_Neural_Networks.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2304.12431v1",
+    "title": "Neuroevolution of Recurrent Architectures on Control Tasks",
+    "summary": "Modern artificial intelligence works typically train the parameters of fixed-sized deep neural networks using gradient-based optimization techniques. Simple evolutionary algorithms have recently been shown to also be capable of optimizing deep neural network parameters, at times matching the performance of gradient-based techniques, e.g. in reinforcement learning settings. In addition to optimizing network parameters, many evolutionary computation techniques are also capable of progressively constructing network architectures. However, constructing network architectures from elementary evolution rules has not yet been shown to scale to modern reinforcement learning benchmarks. In this paper we therefore propose a new approach in which the architectures of recurrent neural networks dynamically evolve according to a small set of mutation rules. We implement a massively parallel evolutionary algorithm and run experiments on all 19 OpenAI Gym state-based reinforcement learning control tasks. We find that in most cases, dynamic agents match or exceed the performance of gradient-based agents while utilizing orders of magnitude fewer parameters. We believe our work to open avenues for real-life applications where network compactness and autonomous design are of critical importance. We provide our source code, final model checkpoints and full results at github.com/MaximilienLC/nra.",
+    "published": "2023-04-03",
+    "pdf_url": "https://arxiv.org/pdf/2304.12431v1.pdf",
+    "categories": [
+      "cs.NE",
+      "cs.LG"
+    ],
+    "filename": "2304.12431v1_Neuroevolution_of_Recurrent_Architecture.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2304.12431v1_Neuroevolution_of_Recurrent_Architecture.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2503.10869v1",
+    "title": "Evaluating a Novel Neuroevolution and Neural Architecture Search System",
+    "summary": "The choice of neural network features can have a large impact on both the accuracy and speed of the network. Despite the current industry shift towards large transformer models, specialized binary classifiers remain critical for numerous practical applications where computational efficiency and low latency are essential. Neural network features tend to be developed homogeneously, resulting in slower or less accurate networks when testing against multiple datasets. In this paper, we show the effectiveness of Neuvo NAS+ a novel Python implementation of an extended Neural Architecture Search (NAS+) which allows the user to optimise the training parameters of a network as well as the network's architecture. We provide an in-depth analysis of the importance of catering a network's architecture to each dataset. We also describe the design of the Neuvo NAS+ system that selects network features on a task-specific basis including network training hyper-parameters such as the number of epochs and batch size. Results show that the Neuvo NAS+ task-specific approach significantly outperforms several machine learning approaches such as Naive Bayes, C4.5, Support Vector Machine and a standard Artificial Neural Network for solving a range of binary classification problems in terms of accuracy. Our experiments demonstrate substantial diversity in evolved network architectures across different datasets, confirming the value of task-specific optimization. Additionally, Neuvo NAS+ outperforms other evolutionary algorithm optimisers in terms of both accuracy and computational efficiency, showing that properly optimized binary classifiers can match or exceed the performance of more complex models while requiring significantly fewer computational resources.",
+    "published": "2025-03-13",
+    "pdf_url": "https://arxiv.org/pdf/2503.10869v1.pdf",
+    "categories": [
+      "cs.NE",
+      "cs.AI"
+    ],
+    "filename": "2503.10869v1_Evaluating_a_Novel_Neuroevolution_and_Ne.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2503.10869v1_Evaluating_a_Novel_Neuroevolution_and_Ne.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2002.04634v1",
+    "title": "Neuroevolution of Neural Network Architectures Using CoDeepNEAT and Keras",
+    "summary": "Machine learning is a huge field of study in computer science and statistics dedicated to the execution of computational tasks through algorithms that do not require explicit instructions but instead rely on learning patterns from data samples to automate inferences. A large portion of the work involved in a machine learning project is to define the best type of algorithm to solve a given problem. Neural networks - especially deep neural networks - are the predominant type of solution in the field. However, the networks themselves can produce very different results according to the architectural choices made for them. Finding the optimal network topology and configurations for a given problem is a challenge that requires domain knowledge and testing efforts due to a large number of parameters that need to be considered. The purpose of this work is to propose an adapted implementation of a well-established evolutionary technique from the neuroevolution field that manages to automate the tasks of topology and hyperparameter selection. It uses a popular and accessible machine learning framework - Keras - as the back-end, presenting results and proposed changes concerning the original algorithm. The implementation is available at GitHub (https://github.com/sbcblab/Keras-CoDeepNEAT) with documentation and examples to reproduce the experiments performed for this work.",
+    "published": "2020-02-11",
+    "pdf_url": "https://arxiv.org/pdf/2002.04634v1.pdf",
+    "categories": [
+      "cs.NE",
+      "cs.CV",
+      "cs.LG"
+    ],
+    "filename": "2002.04634v1_Neuroevolution_of_Neural_Network_Archite.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2002.04634v1_Neuroevolution_of_Neural_Network_Archite.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2606.07664v1",
+    "title": "Seq103: A Unified Neuroevolution Framework for Compact Sequence Architecture Discovery",
+    "summary": "Neuroevolution is a representative neural architecture search paradigm that evolves both network topology and weights through evolutionary algorithms. In this paper, we propose Seq103, a unified NEAT-style neuroevolution framework for compact sequence architecture discovery. Seq103 consists of a shared evolutionary backbone and an optional recurrent extension. The shared backbone includes an elementary node-and-connection representation, per-class RMSE-based evaluation, mutation-based evolution with class-wise recombination, and elitism. The optional hidden-state mechanism extends the search space with hidden-state nodes and hidden connections, enabling temporal memory when step-wise recurrent inference is required. With this design, Seq103 applies the same core search pipeline to both step-wise recurrent and sample-wise feedforward sequence classification. In recurrent tasks, the hidden-state extension is enabled to provide temporal memory; in feedforward tasks, it is disabled while the shared evolutionary backbone remains unchanged. We evaluate Seq103 on 8 text classification datasets and the full UCRArchive2018 benchmark with 128 univariate time-series datasets. On step-wise tasks, Seq103 retains 86.96% of the best-baseline accuracy on average while using 34.6x to 3218.0x fewer parameters. On sample-wise tasks over the full UCRArchive2018 benchmark, Seq103 retains 81.95% of the best-baseline accuracy on average while using 11.8x to 160,601.0x fewer parameters.",
+    "published": "2026-06-03",
+    "pdf_url": "https://arxiv.org/pdf/2606.07664v1.pdf",
+    "categories": [
+      "cs.NE",
+      "cs.AI"
+    ],
+    "filename": "2606.07664v1_Seq103_A_Unified_Neuroevolution_Framewo.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2606.07664v1_Seq103_A_Unified_Neuroevolution_Framewo.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2404.07968v1",
+    "title": "AD-NEv++ : The multi-architecture neuroevolution-based multivariate anomaly detection framework",
+    "summary": "Anomaly detection tools and methods enable key analytical capabilities in modern cyberphysical and sensor-based systems. Despite the fast-paced development in deep learning architectures for anomaly detection, model optimization for a given dataset is a cumbersome and time-consuming process. Neuroevolution could be an effective and efficient solution to this problem, as a fully automated search method for learning optimal neural networks, supporting both gradient and non-gradient fine tuning. However, existing frameworks incorporating neuroevolution lack of support for new layers and architectures and are typically limited to convolutional and LSTM layers. In this paper we propose AD-NEv++, a three-stage neuroevolution-based method that synergically combines subspace evolution, model evolution, and fine-tuning. Our method overcomes the limitations of existing approaches by optimizing the mutation operator in the neuroevolution process, while supporting a wide spectrum of neural layers, including attention, dense, and graph convolutional layers. Our extensive experimental evaluation was conducted with widely adopted multivariate anomaly detection benchmark datasets, and showed that the models generated by AD-NEv++ outperform well-known deep learning architectures and neuroevolution-based approaches for anomaly detection. Moreover, results show that AD-NEv++ can improve and outperform the state-of-the-art GNN (Graph Neural Networks) model architecture in all anomaly detection benchmarks.",
+    "published": "2024-03-25",
+    "pdf_url": "https://arxiv.org/pdf/2404.07968v1.pdf",
+    "categories": [
+      "cs.NE",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "filename": "2404.07968v1_AD-NEv__The_multi-architecture_neuroe.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2404.07968v1_AD-NEv__The_multi-architecture_neuroe.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2310.07711v1",
+    "title": "Growing Brains: Co-emergence of Anatomical and Functional Modularity in Recurrent Neural Networks",
+    "summary": "Recurrent neural networks (RNNs) trained on compositional tasks can exhibit functional modularity, in which neurons can be clustered by activity similarity and participation in shared computational subtasks. Unlike brains, these RNNs do not exhibit anatomical modularity, in which functional clustering is correlated with strong recurrent coupling and spatial localization of functional clusters. Contrasting with functional modularity, which can be ephemerally dependent on the input, anatomically modular networks form a robust substrate for solving the same subtasks in the future. To examine whether it is possible to grow brain-like anatomical modularity, we apply a recent machine learning method, brain-inspired modular training (BIMT), to a network being trained to solve a set of compositional cognitive tasks. We find that functional and anatomical clustering emerge together, such that functionally similar neurons also become spatially localized and interconnected. Moreover, compared to standard $L_1$ or no regularization settings, the model exhibits superior performance by optimally balancing task performance and network sparsity. In addition to achieving brain-like organization in RNNs, our findings also suggest that BIMT holds promise for applications in neuromorphic computing and enhancing the interpretability of neural network architectures.",
+    "published": "2023-10-11",
+    "pdf_url": "https://arxiv.org/pdf/2310.07711v1.pdf",
+    "categories": [
+      "q-bio.NC",
+      "cs.AI",
+      "cs.LG",
+      "cs.NE"
+    ],
+    "filename": "2310.07711v1_Growing_Brains_Co-emergence_of_Anatomic.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2310.07711v1_Growing_Brains_Co-emergence_of_Anatomic.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2405.18587v3",
+    "title": "Emergence and maintenance of modularity in neural networks with Hebbian and anti-Hebbian inhibitory STDP",
+    "summary": "The modular and hierarchical organization of the brain is believed to support the coexistence of segregated (specialization) and integrated (binding) information processes. A relevant question is yet to understand how such architecture naturally emerges and is sustained over time, given the plastic nature of the brain's wiring. Following evidences that the sensory cortices organize into assemblies under selective stimuli, it has been shown that stable neuronal assemblies can emerge due to targeted stimulation, embedding various forms of synaptic plasticity in presence of homeostatic and/or control mechanisms. Here, we show that simple spike-timing-dependent plasticity (STDP) rules, based only on pre- and post-synaptic spike times, can also lead to the stable encoding of memories in the absence of any control mechanism. We develop a model of spiking neurons, trained by stimuli targeting different subpopulations. The model satisfies some biologically plausible features: (i) it contains excitatory and inhibitory neurons with Hebbian and anti-Hebbian STDP; (ii) neither the neuronal activity nor the synaptic weights are frozen after the learning phase. Instead, the neurons are allowed to fire spontaneously while synaptic plasticity remains active. We find that only the combination of two inhibitory STDP subpopulations allows for the formation of stable modules in the network, with each subpopulation playing a distinctive role. The Hebbian subpopulation controls for the firing activity, while the anti-Hebbian neurons promote pattern selectivity. After the learning phase, the network settles into an asynchronous irregular resting-state. This post-learning activity is associated with spontaneous memory recalls which turn out to be fundamental for the long-term consolidation of the learned memories.",
+    "published": "2024-05-28",
+    "pdf_url": "https://arxiv.org/pdf/2405.18587v3.pdf",
+    "categories": [
+      "q-bio.NC",
+      "nlin.AO"
+    ],
+    "filename": "2405.18587v3_Emergence_and_maintenance_of_modularity.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2405.18587v3_Emergence_and_maintenance_of_modularity.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2310.07908v3",
+    "title": "Phase codes emerge in recurrent neural networks optimized for modular arithmetic",
+    "summary": "Recurrent neural networks (RNNs) can implement complex computations by leveraging a range of dynamics, such as oscillations, attractors, and transient trajectories. A growing body of work has highlighted the emergence of phase codes, a type of oscillatory activity where information is encoded in the relative phase of network activity, in RNNs trained for working memory tasks. However, these studies rely on architectural constraints or regularization schemes that explicitly promote oscillatory solutions. Here, we investigate whether phase coding can emerge purely from task optimization by training continuous-time RNNs to perform a simple modular arithmetic task without oscillatory-promoting biases. We find that in the absence of such biases, RNNs can learn phase code solutions. Surprisingly, we also uncover a rich diversity of alternative solutions that solve our modular arithmetic task via qualitatively distinct dynamics and dynamical mechanisms. We map the solution space for our task and show that the phase code solution occupies a distinct region. These results suggest that phase coding can be a natural but not inevitable outcome of training RNNs on modular arithmetic, and highlight the diversity of solutions RNNs can learn to solve simple tasks.",
+    "published": "2023-10-11",
+    "pdf_url": "https://arxiv.org/pdf/2310.07908v3.pdf",
+    "categories": [
+      "q-bio.NC",
+      "cs.AI",
+      "cs.NE"
+    ],
+    "filename": "2310.07908v3_Phase_codes_emerge_in_recurrent_neural_n.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2310.07908v3_Phase_codes_emerge_in_recurrent_neural_n.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2311.05862v1",
+    "title": "Emergence and reconfiguration of modular structure for synaptic neural networks during continual familiarity detection",
+    "summary": "While advances in artificial intelligence and neuroscience have enabled the emergence of neural networks capable of learning a wide variety of tasks, our understanding of the temporal dynamics of these networks remains limited. Here, we study the temporal dynamics during learning of Hebbian Feedforward (HebbFF) neural networks in tasks of continual familiarity detection. Drawing inspiration from the field of network neuroscience, we examine the network's dynamic reconfiguration, focusing on how network modules evolve throughout learning. Through a comprehensive assessment involving metrics like network accuracy, modular flexibility, and distribution entropy across diverse learning modes, our approach reveals various previously unknown patterns of network reconfiguration. In particular, we find that the emergence of network modularity is a salient predictor of performance, and that modularization strengthens with increasing flexibility throughout learning. These insights not only elucidate the nuanced interplay of network modularity, accuracy, and learning dynamics but also bridge our understanding of learning in artificial and biological realms.",
+    "published": "2023-11-10",
+    "pdf_url": "https://arxiv.org/pdf/2311.05862v1.pdf",
+    "categories": [
+      "q-bio.NC",
+      "q-bio.QM"
+    ],
+    "filename": "2311.05862v1_Emergence_and_reconfiguration_of_modular.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2311.05862v1_Emergence_and_reconfiguration_of_modular.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2512.13707v1",
+    "title": "Modular connectivity in neural networks emerges from Poisson noise-motivated regularisation, and promotes robustness and compositional generalisation",
+    "summary": "Circuits in the brain commonly exhibit modular architectures that factorise complex tasks, resulting in the ability to compositionally generalise and reduce catastrophic forgetting. In contrast, artificial neural networks (ANNs) appear to mix all processing, because modular solutions are difficult to find as they are vanishing subspaces in the space of possible solutions. Here, we draw inspiration from fault-tolerant computation and the Poisson-like firing of real neurons to show that activity-dependent neural noise, combined with nonlinear neural responses, drives the emergence of solutions that reflect an accurate understanding of modular tasks, corresponding to acquisition of a correct world model. We find that noise-driven modularisation can be recapitulated by a deterministic regulariser that multiplicatively combines weights and activations, revealing rich phenomenology not captured in linear networks or by standard regularisation methods. Though the emergence of modular structure requires sufficiently many training samples (exponential in the number of modular task dimensions), we show that pre-modularised ANNs exhibit superior noise-robustness and the ability to generalise and extrapolate well beyond training data, compared to ANNs without such inductive biases. Together, our work demonstrates a regulariser and architectures that could encourage modularity emergence to yield functional benefits.",
+    "published": "2025-12-05",
+    "pdf_url": "https://arxiv.org/pdf/2512.13707v1.pdf",
+    "categories": [
+      "physics.bio-ph",
+      "cs.LG",
+      "cs.NE",
+      "stat.ML"
+    ],
+    "filename": "2512.13707v1_Modular_connectivity_in_neural_networks.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2512.13707v1_Modular_connectivity_in_neural_networks.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2503.24016v1",
+    "title": "Bayesian Predictive Coding",
+    "summary": "Predictive coding (PC) is an influential theory of information processing in the brain, providing a biologically plausible alternative to backpropagation. It is motivated in terms of Bayesian inference, as hidden states and parameters are optimised via gradient descent on variational free energy. However, implementations of PC rely on maximum \\textit{a posteriori} (MAP) estimates of hidden states and maximum likelihood (ML) estimates of parameters, limiting their ability to quantify epistemic uncertainty. In this work, we investigate a Bayesian extension to PC that estimates a posterior distribution over network parameters. This approach, termed Bayesian Predictive coding (BPC), preserves the locality of PC and results in closed-form Hebbian weight updates. Compared to PC, our BPC algorithm converges in fewer epochs in the full-batch setting and remains competitive in the mini-batch setting. Additionally, we demonstrate that BPC offers uncertainty quantification comparable to existing methods in Bayesian deep learning, while also improving convergence properties. Together, these results suggest that BPC provides a biologically plausible method for Bayesian learning in the brain, as well as an attractive approach to uncertainty quantification in deep learning.",
+    "published": "2025-03-31",
+    "pdf_url": "https://arxiv.org/pdf/2503.24016v1.pdf",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "stat.ML"
+    ],
+    "filename": "2503.24016v1_Bayesian_Predictive_Coding.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2503.24016v1_Bayesian_Predictive_Coding.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2505.23415v2",
+    "title": "Bidirectional predictive coding",
+    "summary": "Predictive coding (PC) is an influential computational model of visual learning and inference in the brain. Classical PC was proposed as a top-down generative model, where the brain actively predicts upcoming visual inputs, and inference minimises the prediction errors. Recent studies have also shown that PC can be formulated as a discriminative model, where sensory inputs predict neural activities in a feedforward manner. However, experimental evidence suggests that the brain employs both generative and discriminative inference, while unidirectional PC models show degraded performance in tasks requiring bidirectional processing. In this work, we propose bidirectional PC (bPC), a PC model that incorporates both generative and discriminative inference while maintaining a biologically plausible circuit implementation. We show that bPC matches or outperforms unidirectional models in their specialised generative or discriminative tasks, by developing an energy landscape that simultaneously suits both tasks. We also demonstrate bPC's superior performance in two biologically relevant tasks including multimodal learning and inference with missing information, suggesting that bPC resembles biological visual inference more closely.",
+    "published": "2025-05-29",
+    "pdf_url": "https://arxiv.org/pdf/2505.23415v2.pdf",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "filename": "2505.23415v2_Bidirectional_predictive_coding.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2505.23415v2_Bidirectional_predictive_coding.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2104.11946v3",
+    "title": "Aligned Contrastive Predictive Coding",
+    "summary": "We investigate the possibility of forcing a self-supervised model trained using a contrastive predictive loss to extract slowly varying latent representations. Rather than producing individual predictions for each of the future representations, the model emits a sequence of predictions shorter than that of the upcoming representations to which they will be aligned. In this way, the prediction network solves a simpler task of predicting the next symbols, but not their exact timing, while the encoding network is trained to produce piece-wise constant latent codes. We evaluate the model on a speech coding task and demonstrate that the proposed Aligned Contrastive Predictive Coding (ACPC) leads to higher linear phone prediction accuracy and lower ABX error rates, while being slightly faster to train due to the reduced number of prediction heads.",
+    "published": "2021-04-24",
+    "pdf_url": "https://arxiv.org/pdf/2104.11946v3.pdf",
+    "categories": [
+      "cs.LG",
+      "cs.SD",
+      "eess.AS"
+    ],
+    "filename": "2104.11946v3_Aligned_Contrastive_Predictive_Coding.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2104.11946v3_Aligned_Contrastive_Predictive_Coding.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2112.03378v2",
+    "title": "Differentiable Generalised Predictive Coding",
+    "summary": "This paper deals with differentiable dynamical models congruent with neural process theories that cast brain function as the hierarchical refinement of an internal generative model explaining observations. Our work extends existing implementations of gradient-based predictive coding with automatic differentiation and allows to integrate deep neural networks for non-linear state parameterization. Gradient-based predictive coding optimises inferred states and weights locally in for each layer by optimising precision-weighted prediction errors that propagate from stimuli towards latent states. Predictions flow backwards, from latent states towards lower layers. The model suggested here optimises hierarchical and dynamical predictions of latent states. Hierarchical predictions encode expected content and hierarchical structure. Dynamical predictions capture changes in the encoded content along with higher order derivatives. Hierarchical and dynamical predictions interact and address different aspects of the same latent states. We apply the model to various perception and planning tasks on sequential data and show their mutual dependence. In particular, we demonstrate how learning sampling distances in parallel address meaningful locations data sampled at discrete time steps. We discuss possibilities to relax the assumption of linear hierarchies in favor of more flexible graph structure with emergent properties. We compare the granular structure of the model with canonical microcircuits describing predictive coding in biological networks and review the connection to Markov Blankets as a tool to characterize modularity. A final section sketches out ideas for efficient perception and planning in nested spatio-temporal hierarchies.",
+    "published": "2021-12-02",
+    "pdf_url": "https://arxiv.org/pdf/2112.03378v2.pdf",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.NE"
+    ],
+    "filename": "2112.03378v2_Differentiable_Generalised_Predictive_Co.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2112.03378v2_Differentiable_Generalised_Predictive_Co.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2605.31022v1",
+    "title": "Augmented Lagrangian Predictive Coding",
+    "summary": "Predictive coding (PC) is a local-learning alternative to backpropagation (BP), training deep networks via local energy-minimization dynamics rather than a global backward pass. We introduce Augmented Lagrangian Predictive Coding (PC-ALM), which maintains PC's inference budget but aligns each weight update toward BP by accumulating per-layer constraint errors into a layer-local Lagrange multiplier. In linear PC networks, PC-ALM converges to an equilibrium with exact BP gradients distributed across the network via only layer-local updates. We analyze PC-ALM in nonlinear PC networks up to depth 128 and show that it matches BP performance across all width-depth regimes, notably in deep narrow networks where PC underperforms. PC-ALM introduces recurrent dynamics in each layer's activations. Compared to PC's heat flow on a scalar energy, PC-ALM dynamics are driven by dual ascent on the augmented Lagrangian. We observe \"ballistic\" credit propagation across very deep networks, with credit signals evenly distributed across layers, compared to PC's slow, diffusive credit propagation. Beyond the algorithm itself, the augmented Lagrangian framework offers a generalization of PC, and may yield insights into how distributed systems could compute and propagate BP-like credit signals through purely local dynamics.",
+    "published": "2026-05-29",
+    "pdf_url": "https://arxiv.org/pdf/2605.31022v1.pdf",
+    "categories": [
+      "cs.LG"
+    ],
+    "filename": "2605.31022v1_Augmented_Lagrangian_Predictive_Coding.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2605.31022v1_Augmented_Lagrangian_Predictive_Coding.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "1806.07366v5",
+    "title": "Neural Ordinary Differential Equations",
+    "summary": "We introduce a new family of deep neural network models. Instead of specifying a discrete sequence of hidden layers, we parameterize the derivative of the hidden state using a neural network. The output of the network is computed using a black-box differential equation solver. These continuous-depth models have constant memory cost, adapt their evaluation strategy to each input, and can explicitly trade numerical precision for speed. We demonstrate these properties in continuous-depth residual networks and continuous-time latent variable models. We also construct continuous normalizing flows, a generative model that can train by maximum likelihood, without partitioning or ordering the data dimensions. For training, we show how to scalably backpropagate through any ODE solver, without access to its internal operations. This allows end-to-end training of ODEs within larger models.",
+    "published": "2018-06-19",
+    "pdf_url": "https://arxiv.org/pdf/1806.07366v5.pdf",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "stat.ML"
+    ],
+    "filename": "1806.07366v5_Neural_Ordinary_Differential_Equations.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/1806.07366v5_Neural_Ordinary_Differential_Equations.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2209.12898v1",
+    "title": "Optical Neural Ordinary Differential Equations",
+    "summary": "Increasing the layer number of on-chip photonic neural networks (PNNs) is essential to improve its model performance. However, the successively cascading of network hidden layers results in larger integrated photonic chip areas. To address this issue, we propose the optical neural ordinary differential equations (ON-ODE) architecture that parameterizes the continuous dynamics of hidden layers with optical ODE solvers. The ON-ODE comprises the PNNs followed by the photonic integrator and optical feedback loop, which can be configured to represent residual neural networks (ResNet) and recurrent neural networks with effectively reduced chip area occupancy. For the interference-based optoelectronic nonlinear hidden layer, the numerical experiments demonstrate that the single hidden layer ON-ODE can achieve approximately the same accuracy as the two-layer optical ResNet in image classification tasks. Besides, the ONODE improves the model classification accuracy for the diffraction-based all-optical linear hidden layer. The time-dependent dynamics property of ON-ODE is further applied for trajectory prediction with high accuracy.",
+    "published": "2022-09-26",
+    "pdf_url": "https://arxiv.org/pdf/2209.12898v1.pdf",
+    "categories": [
+      "cs.LG",
+      "physics.optics"
+    ],
+    "filename": "2209.12898v1_Optical_Neural_Ordinary_Differential_Equ.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2209.12898v1_Optical_Neural_Ordinary_Differential_Equ.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "1911.07532v4",
+    "title": "Graph Neural Ordinary Differential Equations",
+    "summary": "We introduce the framework of continuous--depth graph neural networks (GNNs). Graph neural ordinary differential equations (GDEs) are formalized as the counterpart to GNNs where the input-output relationship is determined by a continuum of GNN layers, blending discrete topological structures and differential equations. The proposed framework is shown to be compatible with various static and autoregressive GNN models. Results prove general effectiveness of GDEs: in static settings they offer computational advantages by incorporating numerical methods in their forward pass; in dynamic settings, on the other hand, they are shown to improve performance by exploiting the geometry of the underlying dynamics.",
+    "published": "2019-11-18",
+    "pdf_url": "https://arxiv.org/pdf/1911.07532v4.pdf",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "stat.ML"
+    ],
+    "filename": "1911.07532v4_Graph_Neural_Ordinary_Differential_Equat.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/1911.07532v4_Graph_Neural_Ordinary_Differential_Equat.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2111.13207v4",
+    "title": "Characteristic Neural Ordinary Differential Equations",
+    "summary": "We propose Characteristic-Neural Ordinary Differential Equations (C-NODEs), a framework for extending Neural Ordinary Differential Equations (NODEs) beyond ODEs. While NODEs model the evolution of a latent variables as the solution to an ODE, C-NODE models the evolution of the latent variables as the solution of a family of first-order quasi-linear partial differential equations (PDEs) along curves on which the PDEs reduce to ODEs, referred to as characteristic curves. This in turn allows the application of the standard frameworks for solving ODEs, namely the adjoint method. Learning optimal characteristic curves for given tasks improves the performance and computational efficiency, compared to state of the art NODE models. We prove that the C-NODE framework extends the classical NODE on classification tasks by demonstrating explicit C-NODE representable functions not expressible by NODEs. Additionally, we present C-NODE-based continuous normalizing flows, which describe the density evolution of latent variables along multiple dimensions. Empirical results demonstrate the improvements provided by the proposed method for classification and density estimation on CIFAR-10, SVHN, and MNIST datasets under a similar computational budget as the existing NODE methods. The results also provide empirical evidence that the learned curves improve the efficiency of the system through a lower number of parameters and function evaluations compared with baselines.",
+    "published": "2021-11-25",
+    "pdf_url": "https://arxiv.org/pdf/2111.13207v4.pdf",
+    "categories": [
+      "cs.LG"
+    ],
+    "filename": "2111.13207v4_Characteristic_Neural_Ordinary_Different.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2111.13207v4_Characteristic_Neural_Ordinary_Different.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2109.07359v2",
+    "title": "Modular Neural Ordinary Differential Equations",
+    "summary": "The laws of physics have been written in the language of dif-ferential equations for centuries. Neural Ordinary Differen-tial Equations (NODEs) are a new machine learning architecture which allows these differential equations to be learned from a dataset. These have been applied to classical dynamics simulations in the form of Lagrangian Neural Net-works (LNNs) and Second Order Neural Differential Equations (SONODEs). However, they either cannot represent the most general equations of motion or lack interpretability. In this paper, we propose Modular Neural ODEs, where each force component is learned with separate modules. We show how physical priors can be easily incorporated into these models. Through a number of experiments, we demonstrate these result in better performance, are more interpretable, and add flexibility due to their modularity.",
+    "published": "2021-09-15",
+    "pdf_url": "https://arxiv.org/pdf/2109.07359v2.pdf",
+    "categories": [
+      "cs.LG"
+    ],
+    "filename": "2109.07359v2_Modular_Neural_Ordinary_Differential_Equ.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2109.07359v2_Modular_Neural_Ordinary_Differential_Equ.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "0806.1655v1",
+    "title": "Self-Organization and Complex Networks",
+    "summary": "In this chapter we discuss how the results developed within the theory of fractals and Self-Organized Criticality (SOC) can be fruitfully exploited as ingredients of adaptive network models. In order to maintain the presentation self-contained, we first review the basic ideas behind fractal theory and SOC. We then briefly review some results in the field of complex networks, and some of the models that have been proposed. Finally, we present a self-organized model recently proposed by Garlaschelli et al. [Nat. Phys. 3, 813 (2007)] that couples the fitness network model defined by Caldarelli et al. [Phys. Rev. Lett. 89, 258702 (2002)] with the evolution model proposed by Bak and Sneppen [Phys. Rev. Lett. 71, 4083 (1993)] as a prototype of SOC. Remarkably, we show that the results obtained for the two models separately change dramatically when they are coupled together. This indicates that self-organized networks may represent an entirely novel class of complex systems, whose properties cannot be straightforwardly understood in terms of what we have learnt so far.",
+    "published": "2008-06-10",
+    "pdf_url": "https://arxiv.org/pdf/0806.1655v1.pdf",
+    "categories": [
+      "cond-mat.dis-nn",
+      "cond-mat.stat-mech",
+      "nlin.AO",
+      "physics.soc-ph"
+    ],
+    "filename": "0806.1655v1_Self-Organization_and_Complex_Networks.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/0806.1655v1_Self-Organization_and_Complex_Networks.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "0809.4642v2",
+    "title": "Emergent self-organized complex network topology out of stability constraints",
+    "summary": "Although most networks in nature exhibit complex topology the origins of such complexity remains unclear. We introduce a model of a growing network of interacting agents in which each new agent's membership to the network is determined by the agent's effect on the network's global stability. It is shown that out of this stability constraint, scale free networks emerges in a self organized manner, offering an explanation for the ubiquity of complex topological properties observed in biological networks.",
+    "published": "2008-09-26",
+    "pdf_url": "https://arxiv.org/pdf/0809.4642v2.pdf",
+    "categories": [
+      "cond-mat.dis-nn",
+      "physics.soc-ph",
+      "q-bio.PE"
+    ],
+    "filename": "0809.4642v2_Emergent_self-organized_complex_network.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/0809.4642v2_Emergent_self-organized_complex_network.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2005.04347v1",
+    "title": "GPU Acceleration of Sparse Neural Networks",
+    "summary": "In this paper, we use graphics processing units(GPU) to accelerate sparse and arbitrary structured neural networks. Sparse networks have nodes in the network that are not fully connected with nodes in preceding and following layers, and arbitrary structure neural networks have different number of nodes in each layers. Sparse Neural networks with arbitrary structures are generally created in the processes like neural network pruning and evolutionary machine learning strategies. We show that we can gain significant speedup for full activation of such neural networks using graphical processing units. We do a prepossessing step to determine dependency groups for all the nodes in a network, and use that information to guide the progression of activation in the neural network. Then we compute activation for each nodes in its own separate thread in the GPU, which allows for massive parallelization. We use CUDA framework to implement our approach and compare the results of sequential and GPU implementations. Our results show that the activation of sparse neural networks lends very well to GPU acceleration and can help speed up machine learning strategies which generate such networks or other processes that have similar structure.",
+    "published": "2020-05-09",
+    "pdf_url": "https://arxiv.org/pdf/2005.04347v1.pdf",
+    "categories": [
+      "cs.DC",
+      "cs.LG",
+      "cs.NE"
+    ],
+    "filename": "2005.04347v1_GPU_Acceleration_of_Sparse_Neural_Networ.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2005.04347v1_GPU_Acceleration_of_Sparse_Neural_Networ.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2009.06489v2",
+    "title": "The Hardware Lottery",
+    "summary": "Hardware, systems and algorithms research communities have historically had different incentive structures and fluctuating motivation to engage with each other explicitly. This historical treatment is odd given that hardware and software have frequently determined which research ideas succeed (and fail). This essay introduces the term hardware lottery to describe when a research idea wins because it is suited to the available software and hardware and not because the idea is superior to alternative research directions. Examples from early computer science history illustrate how hardware lotteries can delay research progress by casting successful ideas as failures. These lessons are particularly salient given the advent of domain specialized hardware which make it increasingly costly to stray off of the beaten path of research ideas. This essay posits that the gains from progress in computing are likely to become even more uneven, with certain research directions moving into the fast-lane while progress on others is further obstructed.",
+    "published": "2020-09-14",
+    "pdf_url": "https://arxiv.org/pdf/2009.06489v2.pdf",
+    "categories": [
+      "cs.CY",
+      "cs.AI",
+      "cs.AR",
+      "cs.LG"
+    ],
+    "filename": "2009.06489v2_The_Hardware_Lottery.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2009.06489v2_The_Hardware_Lottery.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "1812.01164v1",
+    "title": "Pre-Defined Sparse Neural Networks with Hardware Acceleration",
+    "summary": "Neural networks have proven to be extremely powerful tools for modern artificial intelligence applications, but computational and storage complexity remain limiting factors. This paper presents two compatible contributions towards reducing the time, energy, computational, and storage complexities associated with multilayer perceptrons. Pre-defined sparsity is proposed to reduce the complexity during both training and inference, regardless of the implementation platform. Our results show that storage and computational complexity can be reduced by factors greater than 5X without significant performance loss. The second contribution is an architecture for hardware acceleration that is compatible with pre-defined sparsity. This architecture supports both training and inference modes and is flexible in the sense that it is not tied to a specific number of neurons. For example, this flexibility implies that various sized neural networks can be supported on various sized Field Programmable Gate Array (FPGA)s.",
+    "published": "2018-12-04",
+    "pdf_url": "https://arxiv.org/pdf/1812.01164v1.pdf",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "filename": "1812.01164v1_Pre-Defined_Sparse_Neural_Networks_with.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/1812.01164v1_Pre-Defined_Sparse_Neural_Networks_with.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2204.09797v1",
+    "title": "Multiply-and-Fire (MNF): An Event-driven Sparse Neural Network Accelerator",
+    "summary": "Machine learning, particularly deep neural network inference, has become a vital workload for many computing systems, from data centers and HPC systems to edge-based computing. As advances in sparsity have helped improve the efficiency of AI acceleration, there is a continued need for improved system efficiency for both high-performance and system-level acceleration.   This work takes a unique look at sparsity with an event (or activation-driven) approach to ANN acceleration that aims to minimize useless work, improve utilization, and increase performance and energy efficiency. Our analytical and experimental results show that this event-driven solution presents a new direction to enable highly efficient AI inference for both CNN and MLP workloads.   This work demonstrates state-of-the-art energy efficiency and performance centring on activation-based sparsity and a highly-parallel dataflow method that improves the overall functional unit utilization (at 30 fps). This work enhances energy efficiency over a state-of-the-art solution by 1.46$\\times$. Taken together, this methodology presents a novel, new direction to achieve high-efficiency, high-performance designs for next-generation AI acceleration platforms.",
+    "published": "2022-04-20",
+    "pdf_url": "https://arxiv.org/pdf/2204.09797v1.pdf",
+    "categories": [
+      "cs.AR",
+      "cs.AI"
+    ],
+    "filename": "2204.09797v1_Multiply-and-Fire_MNF_An_Event-driven.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2204.09797v1_Multiply-and-Fire_MNF_An_Event-driven.pdf",
+    "downloaded": true
+  },
+  {
+    "arxiv_id": "2109.04459v1",
+    "title": "SONIC: A Sparse Neural Network Inference Accelerator with Silicon Photonics for Energy-Efficient Deep Learning",
+    "summary": "Sparse neural networks can greatly facilitate the deployment of neural networks on resource-constrained platforms as they offer compact model sizes while retaining inference accuracy. Because of the sparsity in parameter matrices, sparse neural networks can, in principle, be exploited in accelerator architectures for improved energy-efficiency and latency. However, to realize these improvements in practice, there is a need to explore sparsity-aware hardware-software co-design. In this paper, we propose a novel silicon photonics-based sparse neural network inference accelerator called SONIC. Our experimental analysis shows that SONIC can achieve up to 5.8x better performance-per-watt and 8.4x lower energy-per-bit than state-of-the-art sparse electronic neural network accelerators; and up to 13.8x better performance-per-watt and 27.6x lower energy-per-bit than the best known photonic neural network accelerators.",
+    "published": "2021-09-09",
+    "pdf_url": "https://arxiv.org/pdf/2109.04459v1.pdf",
+    "categories": [
+      "cs.LG",
+      "cs.AR",
+      "cs.NE"
+    ],
+    "filename": "2109.04459v1_SONIC_A_Sparse_Neural_Network_Inference.pdf",
+    "path": "/Users/samreedhbhuyan/Desktop/Win_C/youtube_videos/self_adapting_ai/papers/2109.04459v1_SONIC_A_Sparse_Neural_Network_Inference.pdf",
+    "downloaded": true
+  }
+]

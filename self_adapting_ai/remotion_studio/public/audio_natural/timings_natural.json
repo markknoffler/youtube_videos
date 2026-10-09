@@ -1,0 +1,53 @@
+{
+  "Scene01_TheMonolith": {
+    "title": "The Monolith of Modern AI",
+    "file": "remotion_studio/public/audio_natural/Scene01_TheMonolith_natural.wav",
+    "duration": 122.65573696145125
+  },
+  "Scene02_TheBiologicalDream": {
+    "title": "The Biological Dream: Brains vs Static Silos",
+    "file": "remotion_studio/public/audio_natural/Scene02_TheBiologicalDream_natural.wav",
+    "duration": 115.94281179138322
+  },
+  "Scene03_TheSelfOrganizingHypothesis": {
+    "title": "The Self-Organizing Hypothesis",
+    "file": "remotion_studio/public/audio_natural/Scene03_TheSelfOrganizingHypothesis_natural.wav",
+    "duration": 108.59197278911564
+  },
+  "Scene04_TheParadox": {
+    "title": "The Modular Emergence Paradox",
+    "file": "remotion_studio/public/audio_natural/Scene04_TheParadox_natural.wav",
+    "duration": 122.13582766439909
+  },
+  "Scene05_Theorem1_RankCollapse": {
+    "title": "Theorem 1: Rank Collapse & The Oja Trap",
+    "file": "remotion_studio/public/audio_natural/Scene05_Theorem1_RankCollapse_natural.wav",
+    "duration": 108.71022675736961
+  },
+  "Scene06_Theorem2_RoutingBounds": {
+    "title": "Theorem 2: Routing Expressivity & Graph Latency",
+    "file": "remotion_studio/public/audio_natural/Scene06_Theorem2_RoutingBounds_natural.wav",
+    "duration": 101.83537414965987
+  },
+  "Scene07_Theorem3_HardwareBarrier": {
+    "title": "Theorem 3: The Hardware Lottery & Credit Assignment",
+    "file": "remotion_studio/public/audio_natural/Scene07_Theorem3_HardwareBarrier_natural.wav",
+    "duration": 122.6140589569161
+  },
+  "Scene08_EmpiricalBenchmarks": {
+    "title": "Empirical Proof: The Live Diagnostic Benchmark",
+    "file": "remotion_studio/public/audio_natural/Scene08_EmpiricalBenchmarks_natural.wav",
+    "duration": 112.33975056689343
+  },
+  "Scene09_FrontierLabs": {
+    "title": "What Frontier Labs Discovered",
+    "file": "remotion_studio/public/audio_natural/Scene09_FrontierLabs_natural.wav",
+    "duration": 111.04181405895692
+  },
+  "Scene10_The10YearFrontier": {
+    "title": "The 10-Year Frontier: Hybrid Self-Adapting Intelligence",
+    "file": "remotion_studio/public/audio_natural/Scene10_The10YearFrontier_natural.wav",
+    "duration": 103.68433106575964
+  },
+  "total_duration": 1129.5519047619048
+}

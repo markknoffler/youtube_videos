@@ -1,0 +1,47 @@
+# Operating System Files
+.DS_Store
+*.DS_Store
+Thumbs.db
+
+# Heavy Output Videos & Renders (>100MB / Video binaries)
+**/output/
+output/
+*.mp4
+*.m4v
+*.mov
+*.avi
+
+# Heavy Raw Audio Dumps & Intermediate Speech Tracks (>500MB)
+self_adapting_ai/audio/
+**/audio/temp_Scene*/
+**/audio/masterclass_25min/
+self_adapting_ai/remotion_studio/public/audio_natural/Scene*.wav
+self_adapting_ai/remotion_studio/public/audio_natural/test_*.wav
+self_adapting_ai/test_*.mp3
+
+# Heavy Research Paper PDFs (>220MB)
+self_adapting_ai/papers/*.pdf
+papers/*.pdf
+
+# Manim video media caches
+**/manim/media/
+
+# Node & Package Managers
+**/node_modules/
+**/.remotion/
+
+# Build & Bundle Artifacts
+**/build/
+**/dist/
+**/out/
+
+# Python Cache & Environments
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.env
+.venv/
+venv/
+
+# Tool & MCP Temporary Caches
+.playwright-mcp/

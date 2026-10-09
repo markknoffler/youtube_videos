@@ -1,0 +1,36 @@
+export interface ChoreographySentence {
+  sentence_id: string;
+  chapter: string;
+  chapter_num: number;
+  sentence_index_in_chapter: number;
+  start_time_sec: number;
+  end_time_sec: number;
+  duration_sec: number;
+  start_frame: number;
+  end_frame: number;
+  spoken_text: string;
+  semantic_action: string;
+  visual_verb: string;
+  primary_object: string;
+  secondary_objects: string[];
+  entry_state: string;
+  action_0_00_to_0_15: string;
+  action_0_15_to_0_40: string;
+  action_0_40_to_0_70: string;
+  action_0_70_to_0_90: string;
+  action_0_90_to_1_00: string;
+  camera_motion: string;
+  camera_target: string;
+  object_translation: string;
+  object_rotation: string;
+  object_scale: string;
+  topology_change: string;
+  particle_flow: string;
+  glow_change: string;
+  equation_state: string;
+  label_state: string;
+  graph_state: string;
+  telemetry_change: string;
+  visual_consequence: string;
+  next_state: string;
+}
