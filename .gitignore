@@ -45,6 +45,7 @@ venv/
 
 # Tool & MCP Temporary Caches
 .playwright-mcp/
+*.log
 
 # Model Checkpoints and Weights (>1GB)
 **/checkpoints/
