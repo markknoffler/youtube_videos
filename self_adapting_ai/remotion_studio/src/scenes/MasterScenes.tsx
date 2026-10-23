@@ -14,95 +14,100 @@ import { Scene08_BenchmarkBlackboard } from "../components/Scene08_BenchmarkBlac
 import { Scene09_FrontierBlackboard } from "../components/Scene09_FrontierBlackboard";
 import { Scene10_SynthesisBlackboard } from "../components/Scene10_SynthesisBlackboard";
 
+export interface SceneProps {
+  voiceType?: "cloned" | "standard";
+}
+
 // ==============================================================================
 // 10 CONTINUOUS 3D PEDAGOGICAL MASTERCLASS CHAPTERS (BESPOKE MATHEMATICAL BLACKBOARDS)
+// Supports Dual-Audio Pipeline: 'cloned' (User's Voice) & 'standard' (Studio Deep Voice)
 // ==============================================================================
 
-export const Scene01_Composition: React.FC = () => (
+export const Scene01_Composition: React.FC<SceneProps> = ({ voiceType = "cloned" }) => (
   <AbsoluteFill style={{ backgroundColor: "#06010F" }}>
-    <Audio src={staticFile("audio_natural/Scene01_TheMonolith_natural.wav")} />
-    <Audio src={staticFile("audio_natural/ambient_bed.wav")} volume={0.04} loop />
+    <Audio src={staticFile(`audio_${voiceType}/Scene01_TheMonolith_${voiceType}.wav`)} />
+    <Audio src={staticFile("audio_natural/ambient_bed.wav")} volume={0.035} loop />
     <Scene01_MonolithBlackboard />
     <CyberSubtitles sceneKey="Scene01" />
   </AbsoluteFill>
 );
 
-export const Scene02_Composition: React.FC = () => (
+export const Scene02_Composition: React.FC<SceneProps> = ({ voiceType = "cloned" }) => (
   <AbsoluteFill style={{ backgroundColor: "#06010F" }}>
-    <Audio src={staticFile("audio_natural/Scene02_TheBiologicalDream_natural.wav")} />
-    <Audio src={staticFile("audio_natural/ambient_bed.wav")} volume={0.04} loop />
+    <Audio src={staticFile(`audio_${voiceType}/Scene02_TheBiologicalDream_${voiceType}.wav`)} />
+    <Audio src={staticFile("audio_natural/ambient_bed.wav")} volume={0.035} loop />
     <Scene02_BiologicalBlackboard />
     <CyberSubtitles sceneKey="Scene02" />
   </AbsoluteFill>
 );
 
-export const Scene03_Composition: React.FC = () => (
+export const Scene03_Composition: React.FC<SceneProps> = ({ voiceType = "cloned" }) => (
   <AbsoluteFill style={{ backgroundColor: "#06010F" }}>
-    <Audio src={staticFile("audio_natural/Scene03_TheSelfOrganizingHypothesis_natural.wav")} />
-    <Audio src={staticFile("audio_natural/ambient_bed.wav")} volume={0.04} loop />
+    <Audio src={staticFile(`audio_${voiceType}/Scene03_TheSelfOrganizingHypothesis_${voiceType}.wav`)} />
+    <Audio src={staticFile("audio_natural/ambient_bed.wav")} volume={0.035} loop />
     <Scene03_SelfOrganizingBlackboard />
     <CyberSubtitles sceneKey="Scene03" />
   </AbsoluteFill>
 );
 
-export const Scene04_Composition: React.FC = () => (
+export const Scene04_Composition: React.FC<SceneProps> = ({ voiceType = "cloned" }) => (
   <AbsoluteFill style={{ backgroundColor: "#06010F" }}>
-    <Audio src={staticFile("audio_natural/Scene04_TheParadox_natural.wav")} />
-    <Audio src={staticFile("audio_natural/ambient_bed.wav")} volume={0.04} loop />
+    <Audio src={staticFile(`audio_${voiceType}/Scene04_TheParadox_${voiceType}.wav`)} />
+    <Audio src={staticFile("audio_natural/ambient_bed.wav")} volume={0.035} loop />
     <Scene04_ParadoxBlackboard />
     <CyberSubtitles sceneKey="Scene04" />
   </AbsoluteFill>
 );
 
-export const Scene05_Composition: React.FC = () => (
+export const Scene05_Composition: React.FC<SceneProps> = ({ voiceType = "cloned" }) => (
   <AbsoluteFill style={{ backgroundColor: "#06010F" }}>
-    <Audio src={staticFile("audio_natural/Scene05_Theorem1_RankCollapse_natural.wav")} />
-    <Audio src={staticFile("audio_natural/ambient_bed.wav")} volume={0.04} loop />
+    <Audio src={staticFile(`audio_${voiceType}/Scene05_Theorem1_RankCollapse_${voiceType}.wav`)} />
+    <Audio src={staticFile("audio_natural/ambient_bed.wav")} volume={0.035} loop />
     <Scene05_Theorem1Blackboard />
     <CyberSubtitles sceneKey="Scene05" />
   </AbsoluteFill>
 );
 
-export const Scene06_Composition: React.FC = () => (
+export const Scene06_Composition: React.FC<SceneProps> = ({ voiceType = "cloned" }) => (
   <AbsoluteFill style={{ backgroundColor: "#06010F" }}>
-    <Audio src={staticFile("audio_natural/Scene06_Theorem2_RoutingBounds_natural.wav")} />
-    <Audio src={staticFile("audio_natural/ambient_bed.wav")} volume={0.04} loop />
+    <Audio src={staticFile(`audio_${voiceType}/Scene06_Theorem2_RoutingBounds_${voiceType}.wav`)} />
+    <Audio src={staticFile("audio_natural/ambient_bed.wav")} volume={0.035} loop />
     <Scene06_Theorem2Blackboard />
     <CyberSubtitles sceneKey="Scene06" />
   </AbsoluteFill>
 );
 
-export const Scene07_Composition: React.FC = () => (
+export const Scene07_Composition: React.FC<SceneProps> = ({ voiceType = "cloned" }) => (
   <AbsoluteFill style={{ backgroundColor: "#06010F" }}>
-    <Audio src={staticFile("audio_natural/Scene07_Theorem3_HardwareBarrier_natural.wav")} />
-    <Audio src={staticFile("audio_natural/ambient_bed.wav")} volume={0.04} loop />
+    <Audio src={staticFile(`audio_${voiceType}/Scene07_Theorem3_HardwareBarrier_${voiceType}.wav`)} />
+    <Audio src={staticFile("audio_natural/ambient_bed.wav")} volume={0.035} loop />
     <Scene07_Theorem3Blackboard />
     <CyberSubtitles sceneKey="Scene07" />
   </AbsoluteFill>
 );
 
-export const Scene08_Composition: React.FC = () => (
+export const Scene08_Composition: React.FC<SceneProps> = ({ voiceType = "cloned" }) => (
   <AbsoluteFill style={{ backgroundColor: "#06010F" }}>
-    <Audio src={staticFile("audio_natural/Scene08_EmpiricalBenchmarks_natural.wav")} />
-    <Audio src={staticFile("audio_natural/ambient_bed.wav")} volume={0.04} loop />
+    <Audio src={staticFile(`audio_${voiceType}/Scene08_EmpiricalBenchmarks_${voiceType}.wav`)} />
+    <Audio src={staticFile("audio_natural/ambient_bed.wav")} volume={0.035} loop />
     <Scene08_BenchmarkBlackboard />
     <CyberSubtitles sceneKey="Scene08" />
   </AbsoluteFill>
 );
 
-export const Scene09_Composition: React.FC = () => (
+export const Scene09_Composition: React.FC<SceneProps> = ({ voiceType = "cloned" }) => (
   <AbsoluteFill style={{ backgroundColor: "#06010F" }}>
-    <Audio src={staticFile("audio_natural/Scene09_FrontierLabs_natural.wav")} />
-    <Audio src={staticFile("audio_natural/ambient_bed.wav")} volume={0.04} loop />
+    <Audio src={staticFile(`audio_${voiceType}/Scene09_FrontierLabs_${voiceType}.wav`)} />
+    <Audio src={staticFile("audio_natural/ambient_bed.wav")} volume={0.035} loop />
     <Scene09_FrontierBlackboard />
     <CyberSubtitles sceneKey="Scene09" />
   </AbsoluteFill>
 );
 
-export const Scene10_Composition: React.FC = () => (
+export const Scene10_Composition: React.FC<SceneProps> = ({ voiceType = "cloned" }) => (
   <AbsoluteFill style={{ backgroundColor: "#06010F" }}>
-    <Audio src={staticFile("audio_natural/Scene10_The10YearFrontier_natural.wav")} />
-    <Audio src={staticFile("audio_natural/ambient_bed.wav")} volume={0.04} loop />
+    <Audio src={staticFile(`audio_${voiceType}/Scene10_The10YearFrontier_${voiceType}.wav`)} />
+    <Audio src={staticFile("audio_natural/ambient_bed.wav")} volume={0.035} loop />
     <Scene10_SynthesisBlackboard />
     <CyberSubtitles sceneKey="Scene10" />
   </AbsoluteFill>

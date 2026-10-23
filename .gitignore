@@ -17,6 +17,8 @@ self_adapting_ai/audio/
 **/audio/masterclass_25min/
 self_adapting_ai/remotion_studio/public/audio_natural/Scene*.wav
 self_adapting_ai/remotion_studio/public/audio_natural/test_*.wav
+self_adapting_ai/remotion_studio/public/audio_cloned/
+self_adapting_ai/remotion_studio/public/audio_standard/
 self_adapting_ai/test_*.mp3
 
 # Heavy Research Paper PDFs (>220MB)

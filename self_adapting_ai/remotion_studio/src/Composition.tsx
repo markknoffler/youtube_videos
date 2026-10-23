@@ -27,38 +27,42 @@ export const SCENE_DURATIONS = {
   Scene10: 4500,
 };
 
-export const MasterclassFullTimeline: React.FC = () => {
+export interface MasterclassProps {
+  voiceType?: "cloned" | "standard";
+}
+
+export const MasterclassFullTimeline: React.FC<MasterclassProps> = ({ voiceType = "cloned" }) => {
   return (
     <Series>
       <Series.Sequence durationInFrames={SCENE_DURATIONS.Scene01}>
-        <Scene01_Composition />
+        <Scene01_Composition voiceType={voiceType} />
       </Series.Sequence>
       <Series.Sequence durationInFrames={SCENE_DURATIONS.Scene02}>
-        <Scene02_Composition />
+        <Scene02_Composition voiceType={voiceType} />
       </Series.Sequence>
       <Series.Sequence durationInFrames={SCENE_DURATIONS.Scene03}>
-        <Scene03_Composition />
+        <Scene03_Composition voiceType={voiceType} />
       </Series.Sequence>
       <Series.Sequence durationInFrames={SCENE_DURATIONS.Scene04}>
-        <Scene04_Composition />
+        <Scene04_Composition voiceType={voiceType} />
       </Series.Sequence>
       <Series.Sequence durationInFrames={SCENE_DURATIONS.Scene05}>
-        <Scene05_Composition />
+        <Scene05_Composition voiceType={voiceType} />
       </Series.Sequence>
       <Series.Sequence durationInFrames={SCENE_DURATIONS.Scene06}>
-        <Scene06_Composition />
+        <Scene06_Composition voiceType={voiceType} />
       </Series.Sequence>
       <Series.Sequence durationInFrames={SCENE_DURATIONS.Scene07}>
-        <Scene07_Composition />
+        <Scene07_Composition voiceType={voiceType} />
       </Series.Sequence>
       <Series.Sequence durationInFrames={SCENE_DURATIONS.Scene08}>
-        <Scene08_Composition />
+        <Scene08_Composition voiceType={voiceType} />
       </Series.Sequence>
       <Series.Sequence durationInFrames={SCENE_DURATIONS.Scene09}>
-        <Scene09_Composition />
+        <Scene09_Composition voiceType={voiceType} />
       </Series.Sequence>
       <Series.Sequence durationInFrames={SCENE_DURATIONS.Scene10}>
-        <Scene10_Composition />
+        <Scene10_Composition voiceType={voiceType} />
       </Series.Sequence>
     </Series>
   );
