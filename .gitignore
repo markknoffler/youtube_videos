@@ -61,3 +61,11 @@ checkpoints/
 fish_speech/
 **/fish_speech_engine/
 fish_speech_engine/
+
+# Manim (m3b) render outputs, caches and regenerable assets
+self_adapting_ai/m3b/media*/
+self_adapting_ai/m3b/out_*/
+self_adapting_ai/m3b/*.log
+self_adapting_ai/m3b/experiments/*.log
+self_adapting_ai/m3b/assets/pdf/
+self_adapting_ai/m3b/assets/pages/
