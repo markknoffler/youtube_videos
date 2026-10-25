@@ -120,79 +120,79 @@
   {
    "i": 19,
    "s": 125.739,
-   "e": 127.996,
+   "e": 128.423,
    "text": "We measured it on this very laptop."
   },
   {
    "i": 20,
-   "s": 128.545,
-   "e": 135.545,
+   "s": 128.972,
+   "e": 135.972,
    "text": "The same useful arithmetic, laid out as a dense matrix multiplication, ran at nearly fourteen hundred gigaflops."
   },
   {
    "i": 21,
-   "s": 135.778,
-   "e": 141.178,
+   "s": 136.206,
+   "e": 141.606,
    "text": "Scattered as sparse graph gathers, it crawled at under four."
   },
   {
    "i": 22,
-   "s": 141.439,
-   "e": 144.879,
+   "s": 141.867,
+   "e": 145.307,
    "text": "A gap of more than three hundred and sixty times."
   },
   {
    "i": 23,
-   "s": 146.479,
-   "e": 149.031,
+   "s": 146.907,
+   "e": 149.459,
    "text": "Furthermore, consider credit assignment."
   },
   {
    "i": 24,
-   "s": 149.456,
-   "e": 156.736,
+   "s": 149.883,
+   "e": 157.163,
    "text": "Reverse-mode automatic differentiation calculates the exact analytical gradient of the global loss function"
   },
   {
    "i": 25,
-   "s": 157.07,
-   "e": 159.39,
+   "s": 157.498,
+   "e": 159.818,
    "text": "in a single backward pass."
   },
   {
    "i": 26,
-   "s": 160.09,
-   "e": 164.29,
+   "s": 160.518,
+   "e": 164.718,
    "text": "Local plasticity rules lack a global backward signal."
   },
   {
    "i": 27,
-   "s": 165.031,
-   "e": 168.191,
+   "s": 165.458,
+   "e": 168.618,
    "text": "They must rely on localized node perturbations,"
   },
   {
    "i": 28,
-   "s": 168.7,
-   "e": 174.14,
+   "s": 169.127,
+   "e": 174.567,
    "text": "where the variance of the gradient estimator grows rapidly with sequence length T."
   },
   {
    "i": 29,
-   "s": 175.179,
-   "e": 177.419,
+   "s": 175.607,
+   "e": 177.847,
    "text": "Without global backpropagation,"
   },
   {
    "i": 30,
-   "s": 177.587,
-   "e": 184.547,
+   "s": 178.015,
+   "e": 184.975,
    "text": "self-organizing networks wander blindly in high-dimensional optimization space,"
   },
   {
    "i": 31,
-   "s": 184.922,
-   "e": 190.808,
+   "s": 185.349,
+   "e": 191.236,
    "text": "while dense Transformers scale monotonically with every compute dollar spent."
   }
  ]
