@@ -56,9 +56,9 @@ def higgs_text(seg):
     t += HIGGS_SPEED.get(seg.get("s"), "") + HIGGS_PITCH.get(seg.get("p"), "") + HIGGS_EXPR.get(seg.get("x"), "")
     body = seg["text"]
     if seg.get("nv") == "laugh":
-        body = "<|sfx:laughter|>Heh, " + body
+        body = "<|sfx:laughter|>Heh. " + body
     elif seg.get("nv") == "sigh":
-        body = "<|sfx:sigh|>Hhh, " + body
+        body = "<|sfx:sigh|>Hhh. " + body
     return t + body
 
 
