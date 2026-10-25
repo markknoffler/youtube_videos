@@ -1,0 +1,8 @@
+{
+ "cpu": {
+  "dense_gflops": 745.6669909028275,
+  "unstructured_gflops": 2.5027284295338506,
+  "tile16_gflops": 13.90878328228183,
+  "sparsity": 0.9
+ }
+}

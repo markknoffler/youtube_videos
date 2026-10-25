@@ -69,3 +69,7 @@ self_adapting_ai/m3b/*.log
 self_adapting_ai/m3b/experiments/*.log
 self_adapting_ai/m3b/assets/pdf/
 self_adapting_ai/m3b/assets/pages/
+
+# Downloaded papers and their parsed text (re-downloadable)
+self_adapting_ai/papers/**/*.pdf
+self_adapting_ai/papers/**/*.txt

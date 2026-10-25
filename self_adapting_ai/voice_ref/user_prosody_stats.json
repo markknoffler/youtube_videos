@@ -1,0 +1,18 @@
+{
+ "comma_pause_ms": {
+  "median": 260,
+  "p10": 88,
+  "p90": 516
+ },
+ "sentence_pause_ms": {
+  "median": 420,
+  "p10": 0,
+  "p90": 1684
+ },
+ "words_per_sec": {
+  "median": 2.98,
+  "p10": 1.87,
+  "p90": 4.11
+ },
+ "source": "my_voice/my_voice_3mins.m4a (faster-whisper small.en word timings)"
+}
