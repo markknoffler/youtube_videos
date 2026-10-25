@@ -36,9 +36,9 @@ SR = 24000
 CALIBRATION = ("Every great idea in science begins as a question. Some questions take a lifetime to answer, "
                "and some of them, quietly, change the way we see everything around us.")
 
-HIGGS_SPEED = {"vs": "<|speed_very_slow|>", "s": "<|speed_slow|>", "f": "<|speed_fast|>"}
-HIGGS_PITCH = {"lo": "<|pitch_low|>", "hi": "<|pitch_high|>"}
-HIGGS_EXPR = {"hi": "<|expressive_high|>", "lo": "<|expressive_low|>"}
+HIGGS_SPEED = {"vs": "<|prosody:speed_very_slow|>", "s": "<|prosody:speed_slow|>", "f": "<|prosody:speed_fast|>"}
+HIGGS_PITCH = {"lo": "<|prosody:pitch_low|>", "hi": "<|prosody:pitch_high|>"}
+HIGGS_EXPR = {"hi": "<|prosody:expressive_high|>", "lo": "<|prosody:expressive_low|>"}
 FISH_SPEED = {"vs": "speaking very slowly", "s": "speaking slowly", "f": "speaking a little faster"}
 FISH_PITCH = {"lo": "in a lower, deeper pitch", "hi": "with a slightly raised pitch"}
 FISH_EXPR = {"hi": "with strong emphasis", "lo": "softly, understated"}
@@ -56,9 +56,9 @@ def higgs_text(seg):
     t += HIGGS_SPEED.get(seg.get("s"), "") + HIGGS_PITCH.get(seg.get("p"), "") + HIGGS_EXPR.get(seg.get("x"), "")
     body = seg["text"]
     if seg.get("nv") == "laugh":
-        body = "<|sfx:laughter|>Heh. " + body
+        body = "<|sfx:laughter|>Heh, " + body
     elif seg.get("nv") == "sigh":
-        body = "<|sfx:sigh|>Hhh. " + body
+        body = "<|sfx:sigh|>Hhh, " + body
     return t + body
 
 
