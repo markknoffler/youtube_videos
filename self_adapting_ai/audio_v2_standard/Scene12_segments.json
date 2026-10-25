@@ -1,0 +1,163 @@
+{
+ "chapter": 12,
+ "voice": "standard",
+ "backend": "higgs",
+ "segments": [
+  {
+   "i": 0,
+   "s": 0.35,
+   "e": 8.537,
+   "text": "Where does this leave the grand frontier of self-adapting artificial intelligence over the next decade?"
+  },
+  {
+   "i": 1,
+   "s": 9.789,
+   "e": 15.304,
+   "text": "The future of intelligence will not be a regression to biological chaos,"
+  },
+  {
+   "i": 2,
+   "s": 15.589,
+   "e": 21.874,
+   "text": "nor will it be an indefinite continuation of brute-force frozen weights."
+  },
+  {
+   "i": 3,
+   "s": 22.987,
+   "e": 30.188,
+   "text": "The true frontier is the profound unification of global bilinear attention"
+  },
+  {
+   "i": 4,
+   "s": 30.339,
+   "e": 34.604,
+   "text": "with continuous, localized structural plasticity."
+  },
+  {
+   "i": 5,
+   "s": 35.435,
+   "e": 42.519,
+   "text": "Over the next ten years, this revolution will unfold across four pioneering technical pillars."
+  },
+  {
+   "i": 6,
+   "s": 43.807,
+   "e": 46.864,
+   "text": "First, Neuromorphic and Analog Hardware:"
+  },
+  {
+   "i": 7,
+   "s": 47.169,
+   "e": 53.292,
+   "text": "next-generation silicon, like Intel Loihi 2 and memristor crossbar arrays,"
+  },
+  {
+   "i": 8,
+   "s": 53.419,
+   "e": 63.144,
+   "text": "designed from the physical layer up to execute continuous local plasticity without memory thrashing or von Neumann bottlenecks."
+  },
+  {
+   "i": 9,
+   "s": 64.209,
+   "e": 67.328,
+   "text": "Second, Fast-Weights and Test-Time Training:"
+  },
+  {
+   "i": 10,
+   "s": 67.729,
+   "e": 76.786,
+   "text": "pioneering frameworks like TTT, where neural weights dynamically update during inference using localized meta-gradients,"
+  },
+  {
+   "i": 11,
+   "s": 77.005,
+   "e": 81.244,
+   "text": "bridging the gap between static weights and episodic memory."
+  },
+  {
+   "i": 12,
+   "s": 82.066,
+   "e": 85.879,
+   "text": "Third, Liquid State Networks and Neural ODEs:"
+  },
+  {
+   "i": 13,
+   "s": 86.388,
+   "e": 95.189,
+   "text": "continuous-time dynamical systems whose internal time constants adapt to unpredictable real-time streaming environments"
+  },
+  {
+   "i": 14,
+   "s": 95.383,
+   "e": 97.859,
+   "text": "without losing stability."
+  },
+  {
+   "i": 15,
+   "s": 98.749,
+   "e": 102.149,
+   "text": "And fourth, Self-Compiling Cognitive Graphs:"
+  },
+  {
+   "i": 16,
+   "s": 102.444,
+   "e": 111.524,
+   "text": "autonomous agentic systems that continuously inspect and rewrite their own high-level computational graphs at runtime"
+  },
+  {
+   "i": 17,
+   "s": 112.144,
+   "e": 114.283,
+   "text": "based on task performance."
+  },
+  {
+   "i": 18,
+   "s": 115.473,
+   "e": 120.116,
+   "text": "As hardware designers create native support for asynchronous sparsity,"
+  },
+  {
+   "i": 19,
+   "s": 120.546,
+   "e": 127.035,
+   "text": "and algorithmic theorists solve credit assignment in continuous dynamical systems,"
+  },
+  {
+   "i": 20,
+   "s": 127.204,
+   "e": 133.634,
+   "text": "the boundary between static silicon and living intelligence will finally dissolve."
+  },
+  {
+   "i": 21,
+   "s": 134.548,
+   "e": 143.589,
+   "text": "The monolith of modern artificial intelligence has carried humanity to the threshold of superhuman reasoning."
+  },
+  {
+   "i": 22,
+   "s": 144.512,
+   "e": 153.594,
+   "text": "Yet the artificial minds of tomorrow will not be frozen statues etched in silicon stone."
+  },
+  {
+   "i": 23,
+   "s": 153.897,
+   "e": 160.136,
+   "text": "They will be living, breathing, self-adapting cognitive architectures."
+  },
+  {
+   "i": 24,
+   "s": 160.941,
+   "e": 164.798,
+   "text": "Thank you for joining this technical masterclass."
+  },
+  {
+   "i": 25,
+   "s": 165.411,
+   "e": 174.742,
+   "text": "All mathematical proofs, experimental source code, benchmark data, and research papers are indexed in the description below."
+  }
+ ]
+}

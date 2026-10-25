@@ -1,0 +1,265 @@
+{
+ "chapter": 11,
+ "voice": "standard",
+ "backend": "higgs",
+ "segments": [
+  {
+   "i": 0,
+   "s": 0.35,
+   "e": 6.143,
+   "text": "Before we look ten years ahead, I want to share a few ideas of my own."
+  },
+  {
+   "i": 1,
+   "s": 7.115,
+   "e": 10.608,
+   "text": "They are research directions, not results."
+  },
+  {
+   "i": 2,
+   "s": 11.12,
+   "e": 13.882,
+   "text": "Some of them may be wrong."
+  },
+  {
+   "i": 3,
+   "s": 14.802,
+   "e": 18.95,
+   "text": "But I think each one is worth someone's PhD."
+  },
+  {
+   "i": 4,
+   "s": 19.681,
+   "e": 20.937,
+   "text": "The first idea:"
+  },
+  {
+   "i": 5,
+   "s": 21.091,
+   "e": 24.825,
+   "text": "rewire tiles, not synapses."
+  },
+  {
+   "i": 6,
+   "s": 25.338,
+   "e": 30.97,
+   "text": "Theorem three told us that random sparse graphs starve the GPU."
+  },
+  {
+   "i": 7,
+   "s": 31.613,
+   "e": 35.307,
+   "text": "But a tensor core does not see synapses."
+  },
+  {
+   "i": 8,
+   "s": 35.443,
+   "e": 38.637,
+   "text": "It sees small dense tiles."
+  },
+  {
+   "i": 9,
+   "s": 39.518,
+   "e": 45.615,
+   "text": "So what if structural plasticity worked at exactly that granularity,"
+  },
+  {
+   "i": 10,
+   "s": 45.772,
+   "e": 54.949,
+   "text": "growing and pruning whole sixteen-by-sixteen blocks, the way RigL grows and prunes individual weights during training?"
+  },
+  {
+   "i": 11,
+   "s": 56.199,
+   "e": 60.116,
+   "text": "The network still rewires its own topology,"
+  },
+  {
+   "i": 12,
+   "s": 60.293,
+   "e": 63.903,
+   "text": "but every piece that survives stays dense."
+  },
+  {
+   "i": 13,
+   "s": 64.945,
+   "e": 76.019,
+   "text": "On my laptop, the same ninety percent sparsity ran five and a half times faster as sixteen-by-sixteen tiles than as scattered synapses,"
+  },
+  {
+   "i": 14,
+   "s": 76.639,
+   "e": 79.049,
+   "text": "even with a naive implementation."
+  },
+  {
+   "i": 15,
+   "s": 80.299,
+   "e": 84.824,
+   "text": "A real block-sparse kernel should close much more of the gap."
+  },
+  {
+   "i": 16,
+   "s": 86.117,
+   "e": 87.293,
+   "text": "The second idea:"
+  },
+  {
+   "i": 17,
+   "s": 87.481,
+   "e": 89.664,
+   "text": "spectral homeostasis."
+  },
+  {
+   "i": 18,
+   "s": 89.979,
+   "e": 96.24,
+   "text": "Theorem one showed that local Hebbian learning collapses toward a single eigenvector."
+  },
+  {
+   "i": 19,
+   "s": 96.46,
+   "e": 101.009,
+   "text": "Real neurons fight a similar runaway with homeostatic plasticity."
+  },
+  {
+   "i": 20,
+   "s": 101.379,
+   "e": 107.488,
+   "text": "What if the homeostatic target were the shape of the spectrum itself,"
+  },
+  {
+   "i": 21,
+   "s": 107.706,
+   "e": 117.499,
+   "text": "so that every layer is gently pushed back whenever its effective rank starts to fall, using only statistics it can measure locally?"
+  },
+  {
+   "i": 22,
+   "s": 117.746,
+   "e": 121.795,
+   "text": "The question I would most like answered is simple:"
+  },
+  {
+   "i": 23,
+   "s": 121.98,
+   "e": 128.541,
+   "text": "can a purely local rule keep many modes alive, the way attention does?"
+  },
+  {
+   "i": 24,
+   "s": 129.785,
+   "e": 130.906,
+   "text": "The third idea:"
+  },
+  {
+   "i": 25,
+   "s": 131.176,
+   "e": 133.233,
+   "text": "let the network sleep."
+  },
+  {
+   "i": 26,
+   "s": 133.885,
+   "e": 138.518,
+   "text": "Brains separate fast learning from slow consolidation."
+  },
+  {
+   "i": 27,
+   "s": 138.854,
+   "e": 141.134,
+   "text": "The hippocampus records the day,"
+  },
+  {
+   "i": 28,
+   "s": 141.68,
+   "e": 145.811,
+   "text": "and sleep replays it into the cortex."
+  },
+  {
+   "i": 29,
+   "s": 146.386,
+   "e": 148.655,
+   "text": "A language model could do the same."
+  },
+  {
+   "i": 30,
+   "s": 148.881,
+   "e": 154.227,
+   "text": "Fast weights and delta-rule memories, written during every conversation."
+  },
+  {
+   "i": 31,
+   "s": 154.447,
+   "e": 162.49,
+   "text": "Then, offline, replayed and distilled into the slow weights with ordinary backpropagation."
+  },
+  {
+   "i": 32,
+   "s": 162.935,
+   "e": 166.702,
+   "text": "Plasticity at inference, stability in training."
+  },
+  {
+   "i": 33,
+   "s": 167.56,
+   "e": 169.015,
+   "text": "Two timescales,"
+  },
+  {
+   "i": 34,
+   "s": 169.558,
+   "e": 175.438,
+   "text": "and perhaps no catastrophic forgetting, if the replay is chosen well."
+  },
+  {
+   "i": 35,
+   "s": 176.944,
+   "e": 178.082,
+   "text": "And the fourth:"
+  },
+  {
+   "i": 36,
+   "s": 178.337,
+   "e": 180.639,
+   "text": "three-factor learning for credit."
+  },
+  {
+   "i": 37,
+   "s": 181.398,
+   "e": 190.234,
+   "text": "A method called e-prop showed that eligibility traces stored at each synapse, combined with a single broadcast learning signal,"
+  },
+  {
+   "i": 38,
+   "s": 190.651,
+   "e": 195.488,
+   "text": "can approximate backpropagation through time in spiking networks."
+  },
+  {
+   "i": 39,
+   "s": 195.708,
+   "e": 198.171,
+   "text": "Pair that with neuromorphic hardware,"
+  },
+  {
+   "i": 40,
+   "s": 198.337,
+   "e": 203.709,
+   "text": "and the variance explosion of Theorem three might finally be tamed."
+  },
+  {
+   "i": 41,
+   "s": 204.579,
+   "e": 209.063,
+   "text": "If any of these sparks something for you, run with it."
+  },
+  {
+   "i": 42,
+   "s": 209.434,
+   "e": 212.98,
+   "text": "That is how this field moves forward."
+  }
+ ]
+}

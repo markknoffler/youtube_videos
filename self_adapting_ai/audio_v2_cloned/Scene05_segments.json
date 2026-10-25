@@ -1,0 +1,163 @@
+{
+ "chapter": 5,
+ "voice": "cloned",
+ "backend": "higgs",
+ "segments": [
+  {
+   "i": 0,
+   "s": 0.35,
+   "e": 4.914,
+   "text": "Our first theoretical barrier concerns representational dimensionality:"
+  },
+  {
+   "i": 1,
+   "s": 5.411,
+   "e": 9.691,
+   "text": "Theorem 1, Rank Collapse in Homogeneous Local Plasticity."
+  },
+  {
+   "i": 2,
+   "s": 10.897,
+   "e": 19.177,
+   "text": "Let us mathematically formalize what happens inside a self-organizing network governed by local Hebbian rules."
+  },
+  {
+   "i": 3,
+   "s": 20.348,
+   "e": 25.068,
+   "text": "Consider a layer of neurons with synaptic weight matrix W."
+  },
+  {
+   "i": 4,
+   "s": 25.304,
+   "e": 34.024,
+   "text": "The continuous-time update under generalized Hebbian learning with local weight decay is given by the differential equation shown on our analysis screen:"
+  },
+  {
+   "i": 5,
+   "s": 34.466,
+   "e": 41.546,
+   "text": "dW over dt equals eta times the expectation of y times x-transpose,"
+  },
+  {
+   "i": 6,
+   "s": 41.648,
+   "e": 45.488,
+   "text": "minus alpha times y times y-transpose times W."
+  },
+  {
+   "i": 7,
+   "s": 46.415,
+   "e": 51.935,
+   "text": "When we analyze the dynamical stability of this system under stationary input distributions,"
+  },
+  {
+   "i": 8,
+   "s": 52.307,
+   "e": 55.587,
+   "text": "a fatal spectral catastrophe unfolds."
+  },
+  {
+   "i": 9,
+   "s": 56.834,
+   "e": 59.227,
+   "text": "By Lyapunov stability analysis,"
+  },
+  {
+   "i": 10,
+   "s": 59.587,
+   "e": 66.667,
+   "text": "the weight vector of each neuron is mathematically attracted to the dominant eigenvector of the input covariance matrix"
+  },
+  {
+   "i": 11,
+   "s": 67.07,
+   "e": 71.95,
+   "text": "C equals expectation of x times x-transpose."
+  },
+  {
+   "i": 12,
+   "s": 73.056,
+   "e": 78.256,
+   "text": "In formal terms: as time approaches infinity,"
+  },
+  {
+   "i": 13,
+   "s": 78.716,
+   "e": 82.396,
+   "text": "the asymptotic rank of the weight matrix collapses to one."
+  },
+  {
+   "i": 14,
+   "s": 83.379,
+   "e": 89.619,
+   "text": "Every neuron in the layer converges toward encoding the identical, largest principal component."
+  },
+  {
+   "i": 15,
+   "s": 90.508,
+   "e": 98.668,
+   "text": "Even when researchers introduce multi-neuron anti-Hebbian lateral inhibition, such as Sanger's Generalized Hebbian Algorithm,"
+  },
+  {
+   "i": 16,
+   "s": 98.926,
+   "e": 106.086,
+   "text": "the network can only ever extract the top k orthogonal principal components of the static data distribution."
+  },
+  {
+   "i": 17,
+   "s": 106.306,
+   "e": 111.906,
+   "text": "It acts as a linear projection operator onto fixed subspace eigenvectors."
+  },
+  {
+   "i": 18,
+   "s": 112.927,
+   "e": 116.852,
+   "text": "Now look at what is fundamentally required for intelligence:"
+  },
+  {
+   "i": 19,
+   "s": 117.252,
+   "e": 119.932,
+   "text": "dynamic in-context reasoning."
+  },
+  {
+   "i": 20,
+   "s": 120.751,
+   "e": 123.831,
+   "text": "In a Transformer, the attention mechanism computes"
+  },
+  {
+   "i": 21,
+   "s": 124.094,
+   "e": 129.174,
+   "text": "softmax of Q times K-transpose divided by square root of d."
+  },
+  {
+   "i": 22,
+   "s": 129.418,
+   "e": 139.458,
+   "text": "This is a dynamic, input-dependent bilinear form that can instantiate a full-rank associative memory across arbitrary token pairs at runtime."
+  },
+  {
+   "i": 23,
+   "s": 140.573,
+   "e": 145.985,
+   "text": "Local Hebbian rewiring is fundamentally trapped in the static statistics of the dataset."
+  },
+  {
+   "i": 24,
+   "s": 146.493,
+   "e": 153.499,
+   "text": "It squanders its representational capacity collapsing onto dominant eigenvalues,"
+  },
+  {
+   "i": 25,
+   "s": 153.744,
+   "e": 158.824,
+   "text": "permanently barring it from learning dynamic, context-sensitive attention."
+  }
+ ]
+}

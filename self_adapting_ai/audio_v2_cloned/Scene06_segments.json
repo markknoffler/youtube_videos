@@ -1,0 +1,145 @@
+{
+ "chapter": 6,
+ "voice": "cloned",
+ "backend": "higgs",
+ "segments": [
+  {
+   "i": 0,
+   "s": 0.35,
+   "e": 4.79,
+   "text": "Our second fundamental barrier originates in topological graph theory:"
+  },
+  {
+   "i": 1,
+   "s": 5.122,
+   "e": 9.956,
+   "text": "Theorem 2, Routing Expressivity and Graph Latency Bounds."
+  },
+  {
+   "i": 2,
+   "s": 10.973,
+   "e": 18.613,
+   "text": "Advocates of self-organizing networks frequently argue that neural connectivity should be highly sparse and strictly localized,"
+  },
+  {
+   "i": 3,
+   "s": 18.897,
+   "e": 22.377,
+   "text": "just like the six layers of the mammalian cerebral cortex."
+  },
+  {
+   "i": 4,
+   "s": 22.597,
+   "e": 26.877,
+   "text": "Let us subject this argument to mathematical scrutiny."
+  },
+  {
+   "i": 5,
+   "s": 27.816,
+   "e": 35.656,
+   "text": "Consider a dynamic neural network of N neurons, where each neuron maintains at most d synaptic connections to its immediate neighbors."
+  },
+  {
+   "i": 6,
+   "s": 36.945,
+   "e": 45.065,
+   "text": "From extremal graph theory, the Moore Bound dictates that the diameter of any graph with maximum vertex degree d and N nodes"
+  },
+  {
+   "i": 7,
+   "s": 45.469,
+   "e": 51.269,
+   "text": "is bounded below by Omega of log N divided by log d."
+  },
+  {
+   "i": 8,
+   "s": 52.202,
+   "e": 58.541,
+   "text": "What does this lower bound imply for the flow of information across the cognitive architecture?"
+  },
+  {
+   "i": 9,
+   "s": 59.722,
+   "e": 64.762,
+   "text": "If token A needs to communicate with token B located on the opposite side of the network,"
+  },
+  {
+   "i": 10,
+   "s": 64.997,
+   "e": 67.82,
+   "text": "the signal cannot travel instantaneously."
+  },
+  {
+   "i": 11,
+   "s": 68.556,
+   "e": 73.223,
+   "text": "It must traverse a multi-hop relay path through intermediate neurons."
+  },
+  {
+   "i": 12,
+   "s": 73.52,
+   "e": 77.36,
+   "text": "Each intermediate hop incurs computational latency,"
+  },
+  {
+   "i": 13,
+   "s": 77.69,
+   "e": 80.103,
+   "text": "accumulates nonlinear distortion,"
+  },
+  {
+   "i": 14,
+   "s": 80.254,
+   "e": 82.774,
+   "text": "and attenuates gradient signals."
+  },
+  {
+   "i": 15,
+   "s": 83.559,
+   "e": 87.719,
+   "text": "If an architecture contains one million sparse units with degree sixteen,"
+  },
+  {
+   "i": 16,
+   "s": 88.271,
+   "e": 92.951,
+   "text": "routing a signal across the graph requires at least five to six sequential hops."
+  },
+  {
+   "i": 17,
+   "s": 94.025,
+   "e": 103.665,
+   "text": "In recurrent execution, gradients backpropagating through multiple non-linear hops decay exponentially as the product of operator spectral norms,"
+  },
+  {
+   "i": 18,
+   "s": 103.967,
+   "e": 106.967,
+   "text": "causing severe vanishing or exploding gradients."
+  },
+  {
+   "i": 19,
+   "s": 107.952,
+   "e": 112.205,
+   "text": "In stark contrast, consider the geometric topology of a Transformer."
+  },
+  {
+   "i": 20,
+   "s": 112.532,
+   "e": 120.987,
+   "text": "A multi-head attention layer is a dynamic bipartite graph with a diameter of exactly one."
+  },
+  {
+   "i": 21,
+   "s": 122.171,
+   "e": 129.571,
+   "text": "Every single token attends directly to every other token in a single, parallelized computational step with O-of-one depth."
+  },
+  {
+   "i": 22,
+   "s": 129.807,
+   "e": 139.07,
+   "text": "Sparse self-organizing graphs pay an insurmountable routing latency penalty whenever global context must be synthesized."
+  }
+ ]
+}

@@ -1,0 +1,169 @@
+{
+ "chapter": 2,
+ "voice": "standard",
+ "backend": "higgs",
+ "segments": [
+  {
+   "i": 0,
+   "s": 0.35,
+   "e": 11.326,
+   "text": "To understand our architectural predicament, let us turn our attention to the only definitive proof of general intelligence in the known universe:"
+  },
+  {
+   "i": 1,
+   "s": 11.655,
+   "e": 13.267,
+   "text": "the biological brain."
+  },
+  {
+   "i": 2,
+   "s": 13.967,
+   "e": 20.857,
+   "text": "A human brain operates on an astonishingly modest power budget of approximately twenty watts."
+  },
+  {
+   "i": 3,
+   "s": 21.098,
+   "e": 26.333,
+   "text": "That is roughly the energy consumed by a dim refrigerator light bulb."
+  },
+  {
+   "i": 4,
+   "s": 27.493,
+   "e": 35.908,
+   "text": "Yet within that microscopic energy footprint, the brain coordinates eighty-six billion living neurons"
+  },
+  {
+   "i": 5,
+   "s": 35.998,
+   "e": 42.469,
+   "text": "and over one hundred trillion synaptic junctions with breathtaking cognitive efficiency."
+  },
+  {
+   "i": 6,
+   "s": 43.53,
+   "e": 48.197,
+   "text": "Crucially, the biological brain is never static."
+  },
+  {
+   "i": 7,
+   "s": 48.628,
+   "e": 51.902,
+   "text": "It is in perpetual topological motion."
+  },
+  {
+   "i": 8,
+   "s": 52.222,
+   "e": 58.812,
+   "text": "Through continuous neurogenesis, dendritic arborization, and synaptic spine pruning,"
+  },
+  {
+   "i": 9,
+   "s": 59.038,
+   "e": 65.61,
+   "text": "neural circuits physically restructure themselves in real time based on sensory experience."
+  },
+  {
+   "i": 10,
+   "s": 66.846,
+   "e": 70.988,
+   "text": "Under the governing laws of spike-timing-dependent plasticity,"
+  },
+  {
+   "i": 11,
+   "s": 71.142,
+   "e": 75.133,
+   "text": "if two neurons repeatedly fire in temporal synchrony,"
+  },
+  {
+   "i": 12,
+   "s": 75.622,
+   "e": 85.38,
+   "text": "the biochemical junction between them physically thickens, synthesizing new AMPA and NMDA receptors to reinforce the connection."
+  },
+  {
+   "i": 13,
+   "s": 86.455,
+   "e": 89.956,
+   "text": "Conversely, if a pathway remains inactive,"
+  },
+  {
+   "i": 14,
+   "s": 90.41,
+   "e": 99.551,
+   "text": "microglia and astrocytic processes prune the unused synapses to conserve precious metabolic energy."
+  },
+  {
+   "i": 15,
+   "s": 101.016,
+   "e": 104.956,
+   "text": "The living brain does not separate training from inference."
+  },
+  {
+   "i": 16,
+   "s": 105.215,
+   "e": 109.718,
+   "text": "Every single percept you process, every sentence you read,"
+  },
+  {
+   "i": 17,
+   "s": 110.055,
+   "e": 112.326,
+   "text": "and every thought you formulate"
+  },
+  {
+   "i": 18,
+   "s": 112.761,
+   "e": 117.715,
+   "text": "physically alters the wiring of your cerebral cortex."
+  },
+  {
+   "i": 19,
+   "s": 118.98,
+   "e": 123.966,
+   "text": "Biological computation is event-driven and asynchronous."
+  },
+  {
+   "i": 20,
+   "s": 125.216,
+   "e": 133.523,
+   "text": "Neurons communicate via sparse millisecond electrical action potentials at frequencies of only one to ten hertz,"
+  },
+  {
+   "i": 21,
+   "s": 133.642,
+   "e": 137.79,
+   "text": "avoiding wasteful continuous synchronization clocks."
+  },
+  {
+   "i": 22,
+   "s": 138.588,
+   "e": 147.014,
+   "text": "Now compare this living, breathing architecture to a modern artificial intelligence data center."
+  },
+  {
+   "i": 23,
+   "s": 148.024,
+   "e": 158.433,
+   "text": "A frontier GPU cluster consumes megawatts of electrical power, requiring massive liquid cooling towers and industrial substations."
+  },
+  {
+   "i": 24,
+   "s": 159.469,
+   "e": 168.848,
+   "text": "Inside, millions of identical matrix operations are broadcast across rigid, invariant systolic arrays."
+  },
+  {
+   "i": 25,
+   "s": 169.978,
+   "e": 174.801,
+   "text": "Why couldn't our artificial neural networks work like living biology?"
+  },
+  {
+   "i": 26,
+   "s": 176.051,
+   "e": 187.797,
+   "text": "Why did computer science abandon the living dream of continuous, self-organizing plasticity in favor of frozen tensors?"
+  }
+ ]
+}

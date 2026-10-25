@@ -1,0 +1,211 @@
+{
+ "chapter": 8,
+ "voice": "cloned",
+ "backend": "higgs",
+ "segments": [
+  {
+   "i": 0,
+   "s": 0.35,
+   "e": 5.888,
+   "text": "To test these theorems for ourselves, we built a live diagnostic experiment in PyTorch,"
+  },
+  {
+   "i": 1,
+   "s": 6.116,
+   "e": 8.196,
+   "text": "and ran it on this laptop."
+  },
+  {
+   "i": 2,
+   "s": 9.079,
+   "e": 16.439,
+   "text": "We pitted two competing architectures against each other on the defining capability of modern foundational models:"
+  },
+  {
+   "i": 3,
+   "s": 16.628,
+   "e": 19.228,
+   "text": "In-Context Associative Recall."
+  },
+  {
+   "i": 4,
+   "s": 20.165,
+   "e": 24.805,
+   "text": "In this benchmark, the network is presented with arbitrary key-value pairs"
+  },
+  {
+   "i": 5,
+   "s": 24.993,
+   "e": 31.353,
+   "text": "and must dynamically retrieve the correct value when queried with a corresponding key later in the sequence."
+  },
+  {
+   "i": 6,
+   "s": 32.211,
+   "e": 36.251,
+   "text": "The first contender is a Self-Organizing Dynamic Rewiring Network,"
+  },
+  {
+   "i": 7,
+   "s": 36.405,
+   "e": 43.565,
+   "text": "equipped with continuous Hebbian updates, localized synaptic competition, and top-k structural edge pruning."
+  },
+  {
+   "i": 8,
+   "s": 43.869,
+   "e": 49.949,
+   "text": "The second contender is a small two-layer attention Transformer, trained with ordinary backpropagation."
+  },
+  {
+   "i": 9,
+   "s": 50.651,
+   "e": 52.891,
+   "text": "Both models saw identical data:"
+  },
+  {
+   "i": 10,
+   "s": 53.264,
+   "e": 61.744,
+   "text": "sixty-four dimensional embeddings, sixteen key-value pairs per sequence, thirteen possible values, for one hundred epochs."
+  },
+  {
+   "i": 11,
+   "s": 62.582,
+   "e": 64.876,
+   "text": "The results were unequivocal."
+  },
+  {
+   "i": 12,
+   "s": 66.15,
+   "e": 70.91,
+   "text": "For the first forty epochs, nothing seemed to happen."
+  },
+  {
+   "i": 13,
+   "s": 71.38,
+   "e": 74.02,
+   "text": "Both networks hovered just above chance,"
+  },
+  {
+   "i": 14,
+   "s": 74.326,
+   "e": 78.886,
+   "text": "which for thirteen possible values is seven point seven percent."
+  },
+  {
+   "i": 15,
+   "s": 79.946,
+   "e": 83.586,
+   "text": "The self-organizing network never left that floor."
+  },
+  {
+   "i": 16,
+   "s": 84.152,
+   "e": 87.432,
+   "text": "Its recall accuracy flatlined near twelve percent,"
+  },
+  {
+   "i": 17,
+   "s": 87.851,
+   "e": 94.413,
+   "text": "completely unable to bind dynamic keys to their values in context."
+  },
+  {
+   "i": 18,
+   "s": 96.013,
+   "e": 99.653,
+   "text": "Its local updates kept compressing its representation anyway."
+  },
+  {
+   "i": 19,
+   "s": 100.072,
+   "e": 104.432,
+   "text": "Its effective rank drifted down from forty-nine toward thirty,"
+  },
+  {
+   "i": 20,
+   "s": 104.618,
+   "e": 106.588,
+   "text": "without ever learning the task."
+  },
+  {
+   "i": 21,
+   "s": 108.112,
+   "e": 110.872,
+   "text": "And the gradient paths explain why."
+  },
+  {
+   "i": 22,
+   "s": 111.158,
+   "e": 113.798,
+   "text": "Structural mutations are discrete."
+  },
+  {
+   "i": 23,
+   "s": 114.347,
+   "e": 118.427,
+   "text": "A pruning mask is a step function, with no useful derivative."
+  },
+  {
+   "i": 24,
+   "s": 119.677,
+   "e": 124.477,
+   "text": "The optimization could not send credit across the links it was busy creating and destroying,"
+  },
+  {
+   "i": 25,
+   "s": 124.725,
+   "e": 128.565,
+   "text": "locking the architecture into poor local minima."
+  },
+  {
+   "i": 26,
+   "s": 129.553,
+   "e": 133.311,
+   "text": "The Transformer, meanwhile, did something remarkable."
+  },
+  {
+   "i": 27,
+   "s": 134.269,
+   "e": 138.069,
+   "text": "Around epoch forty-five, its accuracy suddenly jumped,"
+  },
+  {
+   "i": 28,
+   "s": 138.481,
+   "e": 142.913,
+   "text": "from under thirty percent to ninety-nine percent in just four epochs,"
+  },
+  {
+   "i": 29,
+   "s": 143.313,
+   "e": 145.513,
+   "text": "and then settled at one hundred."
+  },
+  {
+   "i": 30,
+   "s": 146.32,
+   "e": 153.96,
+   "text": "That sudden leap looks exactly like the phase change Olsson and colleagues tied to the formation of induction heads."
+  },
+  {
+   "i": 31,
+   "s": 155.414,
+   "e": 159.134,
+   "text": "The theory survived contact with real silicon."
+  },
+  {
+   "i": 32,
+   "s": 159.48,
+   "e": 165.8,
+   "text": "Without all-to-all bilinear attention, local rewiring algorithms cannot sustain dynamic in-context memory."
+  },
+  {
+   "i": 33,
+   "s": 166.744,
+   "e": 172.368,
+   "text": "The Transformer's dense matrix multiplications win decisively."
+  }
+ ]
+}

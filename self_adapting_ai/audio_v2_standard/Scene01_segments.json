@@ -1,0 +1,199 @@
+{
+ "chapter": 1,
+ "voice": "standard",
+ "backend": "higgs",
+ "segments": [
+  {
+   "i": 0,
+   "s": 0.35,
+   "e": 8.214,
+   "text": "In nineteen forty-nine, a psychologist wrote one sentence about how brains learn."
+  },
+  {
+   "i": 1,
+   "s": 9.066,
+   "e": 17.429,
+   "text": "Seventy-seven years later, that sentence is hiding inside every chatbot you have ever talked to."
+  },
+  {
+   "i": 2,
+   "s": 17.866,
+   "e": 20.488,
+   "text": "Just not where anyone expected it."
+  },
+  {
+   "i": 3,
+   "s": 21.432,
+   "e": 29.476,
+   "text": "To find it, we first have to understand why every attempt to build a brain-like AI has failed."
+  },
+  {
+   "i": 4,
+   "s": 30.841,
+   "e": 33.396,
+   "text": "Welcome to this technical masterclass."
+  },
+  {
+   "i": 5,
+   "s": 33.622,
+   "e": 38.28,
+   "text": "Look around at the current frontier of artificial intelligence:"
+  },
+  {
+   "i": 6,
+   "s": 38.88,
+   "e": 48.429,
+   "text": "OpenAI's GPT-6 Astra, Anthropic's Claude 5.5, Google DeepMind's Gemini 4, and Mythos."
+  },
+  {
+   "i": 7,
+   "s": 49.187,
+   "e": 55.903,
+   "text": "Across every benchmark in mathematical reasoning, software synthesis, and multi-turn dialogue,"
+  },
+  {
+   "i": 8,
+   "s": 56.208,
+   "e": 61.028,
+   "text": "these systems exhibit remarkable cognitive capabilities."
+  },
+  {
+   "i": 9,
+   "s": 61.388,
+   "e": 69.7,
+   "text": "Yet behind the dazzling demonstrations lies a profound and unsettling architectural truth."
+  },
+  {
+   "i": 10,
+   "s": 70.824,
+   "e": 79.112,
+   "text": "Every single foundational model in production today is a frozen, static monolith of computation."
+  },
+  {
+   "i": 11,
+   "s": 80.712,
+   "e": 84.965,
+   "text": "Consider the computational lifecycle of a modern language model."
+  },
+  {
+   "i": 12,
+   "s": 85.185,
+   "e": 87.459,
+   "text": "Over several months of pre-training,"
+  },
+  {
+   "i": 13,
+   "s": 88.079,
+   "e": 94.147,
+   "text": "clusters of tens of thousands of GPUs consume millions of kilowatt hours"
+  },
+  {
+   "i": 14,
+   "s": 94.451,
+   "e": 101.599,
+   "text": "to optimize hundreds of billions of numerical parameters across trillions of tokens."
+  },
+  {
+   "i": 15,
+   "s": 102.492,
+   "e": 110.48,
+   "text": "During this training epoch, the system learns by updating its numerical weights through stochastic gradient descent."
+  },
+  {
+   "i": 16,
+   "s": 111.73,
+   "e": 115.486,
+   "text": "But the exact instant that training completes,"
+  },
+  {
+   "i": 17,
+   "s": 115.589,
+   "e": 118.469,
+   "text": "the learning process halts forever."
+  },
+  {
+   "i": 18,
+   "s": 119.794,
+   "e": 125.44,
+   "text": "The neural weights are etched into silicon like ancient stone monuments."
+  },
+  {
+   "i": 19,
+   "s": 125.668,
+   "e": 135.009,
+   "text": "When you query the model at inference time, whether you ask it to compose a simple haiku or prove a subtle theorem in algebraic geometry,"
+  },
+  {
+   "i": 20,
+   "s": 135.243,
+   "e": 138.043,
+   "text": "not a single synapse moves."
+  },
+  {
+   "i": 21,
+   "s": 138.949,
+   "e": 141.092,
+   "text": "No new connections form."
+  },
+  {
+   "i": 22,
+   "s": 141.391,
+   "e": 144.299,
+   "text": "No outdated pathways dissolve."
+  },
+  {
+   "i": 23,
+   "s": 144.519,
+   "e": 152.246,
+   "text": "The network cannot dynamically reallocate its internal routing topology to adapt to the complexity of your request."
+  },
+  {
+   "i": 24,
+   "s": 152.946,
+   "e": 156.678,
+   "text": "In our live terminal, examine the attention implementation."
+  },
+  {
+   "i": 25,
+   "s": 157.184,
+   "e": 169.872,
+   "text": "The projection weights, W Q, W K, and W V, are loaded into GPU high-bandwidth memory as fixed FP16 tensors."
+  },
+  {
+   "i": 26,
+   "s": 170.721,
+   "e": 179.161,
+   "text": "Every single incoming token vector is multiplied against these identical, immutable arrays."
+  },
+  {
+   "i": 27,
+   "s": 180.694,
+   "e": 184.846,
+   "text": "While activations change dynamically from token to token,"
+  },
+  {
+   "i": 28,
+   "s": 185.063,
+   "e": 190.897,
+   "text": "the underlying parametric landscape is completely rigid and invariant."
+  },
+  {
+   "i": 29,
+   "s": 191.724,
+   "e": 201.408,
+   "text": "Why has the entire multi-billion dollar enterprise of artificial intelligence consolidated around this rigid, unyielding architectural paradigm?"
+  },
+  {
+   "i": 30,
+   "s": 202.108,
+   "e": 212.136,
+   "text": "In this investigation, we explore the deep mathematical, physical, and hardware forces that created the modern AI monolith..."
+  },
+  {
+   "i": 31,
+   "s": 212.39,
+   "e": 224.101,
+   "text": "and why the tantalizing dream of truly self-adapting intelligence has proven so fiercely difficult to realize in physical silicon."
+  }
+ ]
+}

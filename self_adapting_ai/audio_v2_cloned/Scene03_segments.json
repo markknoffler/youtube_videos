@@ -1,0 +1,163 @@
+{
+ "chapter": 3,
+ "voice": "cloned",
+ "backend": "higgs",
+ "segments": [
+  {
+   "i": 0,
+   "s": 0.35,
+   "e": 4.641,
+   "text": "The dream of self-adapting neural networks is not a new idea."
+  },
+  {
+   "i": 1,
+   "s": 4.861,
+   "e": 9.101,
+   "text": "In fact, it is historically older than backpropagation itself."
+  },
+  {
+   "i": 2,
+   "s": 9.801,
+   "e": 16.213,
+   "text": "In 1949, Canadian psychologist Donald Hebb published The Organization of Behavior,"
+  },
+  {
+   "i": 3,
+   "s": 16.512,
+   "e": 20.192,
+   "text": "introducing his foundational postulate of synaptic plasticity:"
+  },
+  {
+   "i": 4,
+   "s": 20.635,
+   "e": 25.275,
+   "text": "when an axon of cell A is near enough to excite cell B"
+  },
+  {
+   "i": 5,
+   "s": 25.472,
+   "e": 27.952,
+   "text": "and repeatedly takes part in firing it,"
+  },
+  {
+   "i": 6,
+   "s": 28.042,
+   "e": 32.642,
+   "text": "some growth process or metabolic change takes place."
+  },
+  {
+   "i": 7,
+   "s": 33.564,
+   "e": 37.096,
+   "text": "In popular culture, this became the famous adage:"
+  },
+  {
+   "i": 8,
+   "s": 37.192,
+   "e": 40.419,
+   "text": "neurons that fire together, wire together."
+  },
+  {
+   "i": 9,
+   "s": 41.142,
+   "e": 50.502,
+   "text": "In the decades that followed, mathematical theorists attempted to transform Hebb's intuitive biological principle into rigorous computational learning algorithms."
+  },
+  {
+   "i": 10,
+   "s": 51.544,
+   "e": 57.424,
+   "text": "In 1982, Finnish mathematician Erkki Oja introduced normalized Hebbian learning,"
+  },
+  {
+   "i": 11,
+   "s": 58.033,
+   "e": 73.56,
+   "text": "proving that a single neuron equipped with local weight decay could mathematically discover the principal eigenvector of its input distribution"
+  },
+  {
+   "i": 12,
+   "s": 73.915,
+   "e": 77.955,
+   "text": "without any external teacher or global loss function."
+  },
+  {
+   "i": 13,
+   "s": 79.116,
+   "e": 84.036,
+   "text": "Concurrently, Teuvo Kohonen invented Self-Organizing Maps,"
+  },
+  {
+   "i": 14,
+   "s": 84.205,
+   "e": 88.485,
+   "text": "showing that uncoordinated, localized competition between neighboring units"
+  },
+  {
+   "i": 15,
+   "s": 88.589,
+   "e": 97.349,
+   "text": "could spontaneously fold a high-dimensional feature space into a beautifully ordered topological manifold."
+  },
+  {
+   "i": 16,
+   "s": 98.194,
+   "e": 103.354,
+   "text": "Later, researchers expanded this with BCM theory and Dynamic Rewiring Networks,"
+  },
+  {
+   "i": 17,
+   "s": 103.727,
+   "e": 113.127,
+   "text": "adding structural plasticity rules where weak connections were pruned and new synaptic edges were randomly sprouted in response to local activity levels."
+  },
+  {
+   "i": 18,
+   "s": 113.956,
+   "e": 118.05,
+   "text": "The self-organizing hypothesis was breathtakingly elegant:"
+  },
+  {
+   "i": 19,
+   "s": 118.339,
+   "e": 123.019,
+   "text": "if we simply give a network the freedom to sculpt its own wiring using local rules,"
+  },
+  {
+   "i": 20,
+   "s": 123.19,
+   "e": 131.742,
+   "text": "general intelligence, modular specialization, and dynamic routing will organically emerge from the bottom up."
+  },
+  {
+   "i": 21,
+   "s": 132.543,
+   "e": 136.676,
+   "text": "For decades, this was viewed as the holy grail of artificial intelligence."
+  },
+  {
+   "i": 22,
+   "s": 137.899,
+   "e": 145.179,
+   "text": "It promised networks that could learn continuously without catastrophic forgetting, growing new modules dynamically as needed."
+  },
+  {
+   "i": 23,
+   "s": 145.979,
+   "e": 151.299,
+   "text": "Yet when these ideas were pushed to the scale of modern deep learning,"
+  },
+  {
+   "i": 24,
+   "s": 151.611,
+   "e": 153.891,
+   "text": "an unexpected crisis emerged."
+  },
+  {
+   "i": 25,
+   "s": 154.111,
+   "e": 160.997,
+   "text": "The promised organic modularity failed to materialize, stalling in chaotic representational collapse."
+  }
+ ]
+}

@@ -1,0 +1,199 @@
+{
+ "chapter": 7,
+ "voice": "standard",
+ "backend": "higgs",
+ "segments": [
+  {
+   "i": 0,
+   "s": 0.35,
+   "e": 6.342,
+   "text": "Our third and most insurmountable barrier is forged in physical silicon:"
+  },
+  {
+   "i": 1,
+   "s": 6.61,
+   "e": 11.55,
+   "text": "Theorem 3, The Hardware Lottery and the Credit Assignment Barrier."
+  },
+  {
+   "i": 2,
+   "s": 12.831,
+   "e": 21.711,
+   "text": "In 2019, artificial intelligence pioneer Rich Sutton published his landmark essay, The Bitter Lesson."
+  },
+  {
+   "i": 3,
+   "s": 22.452,
+   "e": 24.82,
+   "text": "His conclusion was unequivocal:"
+  },
+  {
+   "i": 4,
+   "s": 25.003,
+   "e": 36.094,
+   "text": "the biggest lesson from seventy years of AI research is that general methods that leverage massive computation are ultimately the most effective."
+  },
+  {
+   "i": 5,
+   "s": 36.885,
+   "e": 42.208,
+   "text": "This principle was compounded by Sara Hooker's formulation of the Hardware Lottery:"
+  },
+  {
+   "i": 6,
+   "s": 42.521,
+   "e": 49.16,
+   "text": "the success of an AI algorithm is largely determined by how well it fits existing specialized hardware,"
+  },
+  {
+   "i": 7,
+   "s": 49.288,
+   "e": 51.969,
+   "text": "rather than its theoretical elegance."
+  },
+  {
+   "i": 8,
+   "s": 53.019,
+   "e": 63.068,
+   "text": "Modern AI supercomputers, powered by NVIDIA H100s, Google TPU v5es, and Cerebras wafer-scale engines,"
+  },
+  {
+   "i": 9,
+   "s": 63.28,
+   "e": 66.423,
+   "text": "are not biological brain emulators."
+  },
+  {
+   "i": 10,
+   "s": 67.673,
+   "e": 70.876,
+   "text": "They are dense systolic tensor engines."
+  },
+  {
+   "i": 11,
+   "s": 71.75,
+   "e": 80.806,
+   "text": "When performing dense matrix multiplications, modern tensor cores achieve over ninety percent computational utilization,"
+  },
+  {
+   "i": 12,
+   "s": 81.022,
+   "e": 90.119,
+   "text": "delivering petaflops of mathematical throughput by streaming contiguous memory blocks directly into on-chip SRAM."
+  },
+  {
+   "i": 13,
+   "s": 91.136,
+   "e": 102.26,
+   "text": "On modern NVIDIA Hopper architecture, tensor cores consume the computation as small dense matrix tiles, cycle after cycle."
+  },
+  {
+   "i": 14,
+   "s": 102.894,
+   "e": 113.082,
+   "text": "Any deviation from dense tensor geometry stalls the execution pipeline, sacrificing most of the theoretical compute."
+  },
+  {
+   "i": 15,
+   "s": 113.963,
+   "e": 123.571,
+   "text": "Now examine what happens when you attempt to train a dynamic, self-rewiring sparse graph on this hardware."
+  },
+  {
+   "i": 16,
+   "s": 124.271,
+   "e": 133.303,
+   "text": "Pointers, irregular memory lookups, and dynamic edge mutations completely thrash the high-bandwidth memory caches."
+  },
+  {
+   "i": 17,
+   "s": 133.842,
+   "e": 140.205,
+   "text": "DRAM latency exceeds one hundred nanoseconds for uncoalesced memory access,"
+  },
+  {
+   "i": 18,
+   "s": 140.365,
+   "e": 143.216,
+   "text": "and effective throughput collapses."
+  },
+  {
+   "i": 19,
+   "s": 144.291,
+   "e": 146.848,
+   "text": "We measured it on this very laptop."
+  },
+  {
+   "i": 20,
+   "s": 147.397,
+   "e": 156.122,
+   "text": "The same useful arithmetic, laid out as a dense matrix multiplication, ran at nearly fourteen hundred gigaflops."
+  },
+  {
+   "i": 21,
+   "s": 156.355,
+   "e": 162.382,
+   "text": "Scattered as sparse graph gathers, it crawled at under four."
+  },
+  {
+   "i": 22,
+   "s": 162.643,
+   "e": 166.293,
+   "text": "A gap of more than three hundred and sixty times."
+  },
+  {
+   "i": 23,
+   "s": 167.893,
+   "e": 170.618,
+   "text": "Furthermore, consider credit assignment."
+  },
+  {
+   "i": 24,
+   "s": 171.042,
+   "e": 179.061,
+   "text": "Reverse-mode automatic differentiation calculates the exact analytical gradient of the global loss function"
+  },
+  {
+   "i": 25,
+   "s": 179.396,
+   "e": 181.691,
+   "text": "in a single backward pass."
+  },
+  {
+   "i": 26,
+   "s": 182.391,
+   "e": 187.126,
+   "text": "Local plasticity rules lack a global backward signal."
+  },
+  {
+   "i": 27,
+   "s": 187.866,
+   "e": 191.581,
+   "text": "They must rely on localized node perturbations,"
+  },
+  {
+   "i": 28,
+   "s": 192.09,
+   "e": 197.206,
+   "text": "where the variance of the gradient estimator grows rapidly with sequence length T."
+  },
+  {
+   "i": 29,
+   "s": 198.246,
+   "e": 200.55,
+   "text": "Without global backpropagation,"
+  },
+  {
+   "i": 30,
+   "s": 200.718,
+   "e": 206.968,
+   "text": "self-organizing networks wander blindly in high-dimensional optimization space,"
+  },
+  {
+   "i": 31,
+   "s": 207.343,
+   "e": 213.791,
+   "text": "while dense Transformers scale monotonically with every compute dollar spent."
+  }
+ ]
+}
