@@ -214,6 +214,8 @@ def main():
     ap.add_argument("--min-asr", type=float, default=0.86)
     ap.add_argument("--std-voice", default="default", help="backend preset for the standard (non-cloned) voice")
     ap.add_argument("--std-seed", type=int, default=7, help="seed for the standard-voice calibration passage")
+    ap.add_argument("--std-shift", type=float, default=0.0,
+                    help="semitones to lower the frozen standard reference (pitch + formants) before reuse, e.g. -3")
     args = ap.parse_args()
 
     D = direction_chapters()
@@ -233,6 +235,13 @@ def main():
             cal = dict(text=CALIBRATION, e="contemplation", p="lo", s="s")
             y = trim(be.synth(cal, None, None, seed=args.std_seed, voice=args.std_voice))
             sf.write(std_ref, y, SR); open(std_ref + ".txt", "w").write(CALIBRATION)
+            if args.std_shift:
+                # lower pitch and formants together: a larger, deeper vocal tract, still the model's own voice
+                r = 2 ** (args.std_shift / 12)
+                tmp = std_ref + ".shift.wav"
+                subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", std_ref, "-af",
+                                f"asetrate={SR * r:.0f},aresample={SR},atempo={1 / r:.4f}", tmp], check=True)
+                os.replace(tmp, std_ref)
         ref_wav, ref_text = std_ref, open(std_ref + ".txt").read()
 
     for ch in chs:
