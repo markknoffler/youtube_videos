@@ -213,6 +213,7 @@ def main():
     ap.add_argument("--retries", type=int, default=3)
     ap.add_argument("--min-asr", type=float, default=0.86)
     ap.add_argument("--std-voice", default="default", help="backend preset for the standard (non-cloned) voice")
+    ap.add_argument("--std-seed", type=int, default=7, help="seed for the standard-voice calibration passage")
     args = ap.parse_args()
 
     D = direction_chapters()
@@ -228,8 +229,9 @@ def main():
         # Freeze the model's own built-in voice once: synthesise a neutral calibration passage with
         # the preset, then use it as the fixed reference so timbre never drifts between segments.
         if not os.path.exists(std_ref):
-            cal = dict(text=CALIBRATION, e="contemplation")
-            y = trim(be.synth(cal, None, None, seed=7, voice=args.std_voice))
+            # pitch_low deepens the model's own default voice (~-3 semitones) without cloning anyone
+            cal = dict(text=CALIBRATION, e="contemplation", p="lo", s="s")
+            y = trim(be.synth(cal, None, None, seed=args.std_seed, voice=args.std_voice))
             sf.write(std_ref, y, SR); open(std_ref + ".txt", "w").write(CALIBRATION)
         ref_wav, ref_text = std_ref, open(std_ref + ".txt").read()
 
