@@ -1,5 +1,12 @@
-"""Chapter 10 — The 10-year horizon: four converging mechanisms, and the monolith comes alive."""
+"""Chapter 10 — The Hidden Hebb: linear attention is a fast-weight Hebbian memory."""
 from common import *
+
+HVD = json.load(open(os.path.join(ROOT, "experiments", "hebb_vs_delta.json")))
+
+
+def outer_heat(v, k, cell=0.22, col=C_GREEN):
+    M_ = np.outer(v, k)
+    return heatmap((M_ - M_.min()) / (np.ptp(M_) + 1e-9), cell=cell, cmap=(BLACK, col, WHITE))
 
 
 class Ch10(Chapter):
@@ -7,215 +14,252 @@ class Ch10(Chapter):
 
     def construct(self):
         C = self.times(
-            "Where does this leave", "next decade", "The future of intelligence", "biological chaos", "brute-force frozen",
-            "The true frontier", "global bilinear attention", "localized structural plasticity", "Over the next ten years",
-            "four pioneering", "First, Neuromorphic", "Next-generation silicon", "crossbar arrays", "physical layer",
-            "continuous local plasticity", "von Neumann", "Second, Fast-Weights", "pioneering frameworks", "dynamically update",
-            "meta-gradients", "episodic memory", "Third, Liquid", "Continuous-time dynamical", "internal time constants",
-            "unpredictable real-time", "without losing stability", "And fourth", "autonomous agentic", "inspect and rewrite",
-            "at runtime", "task performance", "As hardware designers", "asynchronous sparsity", "algorithmic theorists",
-            "credit assignment in continuous", "finally dissolve", "The monolith of modern", "threshold of superhuman",
-            "Yet the artificial minds", "frozen statues", "silicon stone", "They will be living", "self-adapting cognitive",
-            "Thank you for joining", "mathematical proofs", "experimental source", "benchmark data", "research papers", "description below")
+            "So far, this has been", "But there is a twist", "changes everything", "Go back to the Hebbian", "adding up outer products",
+            "drown in crosstalk", "Now look closely", "Strip the softmax", "something extraordinary", "Every new token writes",
+            "running matrix", "Every query reads", "That is Hebb's rule", "Exactly", "In 2021", "proved it formally",
+            "fast weight programmer", "slow network that learns", "while it is thinking", "The idea is older", "In 2016",
+            "faster than learning", "slower than thought", "neurally plausible", "So the Transformer never", "out of the synapse",
+            "into the activations", "And the crosstalk", "capacity wall", "delta rule", "read what the memory", "store only the error",
+            "We tested this", "thirty-two associations", "forty-nine percent", "seventy-eight percent", "every single one after three",
+            "This is exactly where", "forgetting gate", "Titans go further", "rewrites its own weights", "driven by surprise",
+            "Self-adapting intelligence did arrive", "Not as a brain-shaped", "dense, differentiable memory", "inside the monolith")
         frame = self.camera.frame
-        tag = T("10 · THE 10-YEAR HORIZON", size=16, color=C_GREY).to_corner(UL, buff=0.35)
+        tag = T("10 · THE HIDDEN HEBB", size=16, color=C_GREY).to_corner(UL, buff=0.35)
         self.add(tag)
+        rng = np.random.default_rng(10)
 
-        # ── bridge: routing streams from ch09 flow into a decade axis ─────────────────
-        axis = NumberLine(x_range=[2026, 2036, 2], length=11, color=C_GREY, include_numbers=True, font_size=18,
-                          decimal_number_config=dict(group_with_commas=False, num_decimal_places=0)).to_edge(DOWN, buff=0.6)
-        rs = [Stream(VMobject().set_points_smoothly([LEFT * 7 + UP * (1.5 - 0.6 * i), LEFT * 2 + UP * 0.2 * i, RIGHT * 7 + UP * (0.5 - 0.4 * i)]),
-                     n=6, speed=0.3, color=c, radius=0.05, square=True) for i, c in enumerate([C_YELLOW, C_TEAL, C_PINK, C_BLUE])]
-        self.add(*rs)
-        q = T("What comes next?", size=40, weight=BOLD).move_to(UP * 2.4)
-        self.go("Where does this leave", Write(q), rt=1.2)
-        self.go("next decade", Create(axis), rt=1.2, upto="The future of intelligence")
+        # ── recap strip of failures, then the twist ───────────────────────────────────
+        spec = VGroup(*[Rectangle(width=0.18, height=2.0 if i == 0 else 0.05).set_stroke(width=0).set_fill(C_PINK, 0.9) for i in range(9)]).arrange(RIGHT, buff=0.06, aligned_edge=DOWN)
+        hops = VGroup(*[Dot(radius=0.07, color=C_GREEN) for _ in range(7)]).arrange(RIGHT, buff=0.32)
+        hops.add(*[Line(hops[i].get_center(), hops[i + 1].get_center(), color=C_GREEN, stroke_width=2) for i in range(6)])
+        thr = VGroup(Rectangle(width=2.4, height=0.3).set_stroke(width=0).set_fill(C_ORANGE, 0.9),
+                     Rectangle(width=0.05, height=0.3).set_stroke(width=0).set_fill(C_GREEN, 0.9)).arrange(DOWN, aligned_edge=LEFT, buff=0.15)
+        strip = VGroup(*[VGroup(m, T(l, size=16, color=C_GREY).next_to(m, DOWN, buff=0.25)) for m, l in
+                         [(spec, "rank collapse"), (hops, "routing latency"), (thr, "hardware lottery")]]).arrange(RIGHT, buff=1.2).move_to(UP * 0.4)
+        self.go("So far, this has been", LaggedStart(*[FadeIn(s_, shift=UP * 0.2) for s_ in strip], lag_ratio=0.3), rt=1.6)
+        self.go("But there is a twist", strip.animate.set_opacity(0.25), rt=0.8)
+        self.go("changes everything", Rotate(strip, PI / 2, axis=UP), rt=0.8)
+        self.remove(strip)
 
-        # ── neither chaos nor ice ─────────────────────────────────────────────────────
-        for s in rs:
-            s.clear_updaters()
-        self.go("The future of intelligence", FadeOut(VGroup(*rs)), q.animate.scale(0.6).to_edge(UP, buff=0.4), rt=0.8)
-        chaos = living_graph(22, center=LEFT * 3.6 + UP * 0.4, radius=1.5, seed=9)
-        chaos.nodes.amp.set_value(0.7)
-        ice = monolith(6, w=2.2, h=0.36, color=C_ICE).move_to(RIGHT * 3.6 + UP * 0.4)
-        self.add(chaos[0])
-        self.go("biological chaos", FadeIn(chaos.nodes), rt=0.6)
-        x1 = cross(s=0.5).move_to(LEFT * 3.6 + UP * 0.4)
-        self.then(Create(x1), rt=0.6)
-        self.go("brute-force frozen", FadeIn(ice), rt=0.6)
-        x2 = cross(s=0.5).move_to(RIGHT * 3.6 + UP * 0.4)
-        self.then(Create(x2), rt=0.6, upto="The true frontier")
+        # ── the Hebbian memory from ch04: M = Σ v kᵀ, built from outer products ───────
+        d = 8
+        Ms = np.zeros((d, d))
+        Mg = heatmap(Ms + 0.5, cell=0.3, cmap=(BLACK, C_GREEN, WHITE)).move_to(RIGHT * 2.6)
+        Ml = M(r"M = \sum_i v_i\, k_i^{\top}", size=34, color=C_GREEN).next_to(Mg, UP, buff=0.25)
+        self.go("Go back to the Hebbian", FadeIn(Mg), Write(Ml), rt=1.0)
+        for j in range(3):
+            v, k = rng.normal(size=d), rng.normal(size=d)
+            vc = heatmap((v[:, None] - v.min()) / np.ptp(v), cell=0.3, cmap=(BLACK, V_COL, WHITE)).move_to(LEFT * 4.4)
+            kr = heatmap((k[None] - k.min()) / np.ptp(k), cell=0.3, cmap=(BLACK, K_COL, WHITE)).next_to(vc, UR, buff=0.15)
+            op = outer_heat(v, k, cell=0.3).move_to(LEFT * 1.6)
+            Ms += np.outer(v, k)
+            self.play(FadeIn(vc), FadeIn(kr), run_time=0.3)
+            self.play(ReplacementTransform(VGroup(vc, kr), op), run_time=0.45)
+            self.play(op.animate.move_to(Mg).set_opacity(0),
+                      *[sq.animate.set_fill(heat_color(val, (BLACK, C_GREEN, WHITE))) for sq, val in zip(Mg, ((Ms - Ms.min()) / np.ptp(Ms)).flatten())],
+                      run_time=0.5)
+            self.remove(op)
+        bars = VGroup(*[Rectangle(width=0.32, height=0.2 + 1.4 * v).set_stroke(width=0).set_fill(C_PINK if i else C_GREEN, 0.9)
+                        for i, v in enumerate([1.0, 0.8, 0.55, 0.62, 0.4, 0.7])]).arrange(RIGHT, buff=0.08, aligned_edge=DOWN).move_to(LEFT * 3.4 + DOWN * 1.6)
+        bl = T("recall: crosstalk", size=16, color=C_PINK).next_to(bars, DOWN, buff=0.15)
+        self.go("drown in crosstalk", *[GrowFromEdge(b, DOWN) for b in bars], FadeIn(bl), rt=1.0, upto="Now look closely")
+        memory = VGroup(Mg, Ml)
 
-        # ── unification: attention arcs + local plastic edges on the same nodes ───────
-        self.go("The true frontier", FadeOut(VGroup(chaos.nodes, x1, x2, ice)), rt=0.8)
-        self.remove(chaos[0])
-        pts = [np.array([np.cos(a) * 3.0, np.sin(a) * 1.5, 0]) + UP * 0.3 for a in np.linspace(0, TAU, 12, endpoint=False)]
-        nodes = VGroup(*[Dot(p, radius=0.09, color=WHITE) for p in pts])
-        arcs = VGroup(*[ArcBetweenPoints(pts[i], pts[j], angle=0.5).set_stroke(C_BLUE, 1.6, 0.6) for i in range(12) for j in range(i + 3, 12, 3)])
-        local = VGroup(*[Line(pts[i], pts[(i + 1) % 12], color=C_GREEN, stroke_width=3) for i in range(12)])
-        self.then(FadeIn(nodes, lag_ratio=0.05), rt=0.6)
-        self.go("global bilinear attention", Create(arcs, lag_ratio=0.03), rt=1.2)
-        self.go("localized structural plasticity", Create(local, lag_ratio=0.05), rt=1.0)
-        uni = M(r"h' =", r"\mathrm{softmax}(QK^{\top}/\sqrt d)\,V", r"\;+\;", r"\Delta W_{\text{local}}(t)\,h", size=34).next_to(nodes, DOWN, buff=0.5)
-        uni[1].set_color(C_BLUE); uni[3].set_color(C_GREEN)
-        wobble = ValueTracker(0)
-        local.add_updater(lambda m, dt: [l.set_stroke(width=2 + 1.5 * np.sin(wobble.get_value() * 3 + i)) for i, l in enumerate(m)])
-        self.then(Write(uni), wobble.animate.set_value(3), rt=1.4, upto="Over the next ten years")
+        # ── strip the softmax: (QKᵀ)V → Q(KᵀV) — the running matrix ──────────────────
+        self.go("Now look closely", FadeOut(VGroup(bars, bl)), memory.animate.scale(0.75).to_corner(UR, buff=0.5).shift(DOWN * 0.4), rt=1.0)
+        eq1 = M(r"y = ", r"\mathrm{softmax}", r"\big(QK^{\top}\big)", r"V", size=48).move_to(UP * 2.2 + LEFT * 1.2)
+        self.then(Write(eq1), rt=0.9, upto="Strip the softmax")
+        self.go("Strip the softmax", eq1[1].animate.set_color(C_RED).set_opacity(0.0), rt=1.0)
+        eq2 = M(r"y_t = ", r"\Big(\sum_{i\le t} v_i\, k_i^{\top}\Big)", r"\,q_t", size=48).move_to(eq1)
+        eq2[2].set_color(Q_COL); eq2[1].set_color(C_GREEN)
+        self.go("something extraordinary", TransformMatchingShapes(eq1, eq2), rt=1.4)
+        # token stream writing into S_t
+        S = np.zeros((d, d))
+        Sg = heatmap(S + 0.5, cell=0.28, cmap=(BLACK, C_GREEN, WHITE)).move_to(DOWN * 0.9)
+        Sl = always_redraw(lambda: M(r"S_t", size=32, color=C_GREEN).next_to(Sg, LEFT, buff=0.25))
+        toks = token_row(["the", "cat", "sat", "on", "the", "mat"], color=C_GREY, size=20).move_to(DOWN * 3.0)
+        self.go("Every new token writes", FadeIn(toks, lag_ratio=0.1), FadeIn(Sg), rt=0.8)
+        self.add(Sl)
+        Seq = M(r"S_t = S_{t-1} + v_t\, k_t^{\top}", size=34, color=C_GREEN).next_to(Sg, RIGHT, buff=0.6)
+        self.go("running matrix", Write(Seq), rt=0.8)
+        for j, tk in enumerate(toks):
+            v, k = rng.normal(size=d), rng.normal(size=d)
+            S += np.outer(v, k)
+            Sn = (S - S.min()) / (np.ptp(S) + 1e-9)
+            pulse = outer_heat(v, k, cell=0.12).move_to(tk.get_top() + UP * 0.5)
+            self.play(FadeIn(pulse, shift=UP * 0.2), Indicate(tk, color=C_GREEN), run_time=0.22)
+            self.play(pulse.animate.move_to(Sg).scale(2.3).set_opacity(0), *[sq.animate.set_fill(heat_color(val, (BLACK, C_GREEN, WHITE))) for sq, val in zip(Sg, Sn.flatten())], run_time=0.33)
+            self.remove(pulse)
+        qv = heatmap(rng.random((d, 1)), cell=0.28, cmap=(BLACK, Q_COL, WHITE)).next_to(Sg, RIGHT, buff=0.3)
+        yv = heatmap(rng.random((d, 1)), cell=0.28, cmap=(BLACK, C_YELLOW, WHITE))
+        read = M(r"y = S_t\, q", size=34)
+        self.go("Every query reads", FadeOut(Seq), FadeIn(qv, shift=LEFT * 0.3), rt=0.6)
+        yv.next_to(qv, RIGHT, buff=0.5)
+        self.then(ShowPassingFlash(SurroundingRectangle(Sg, color=Q_COL, buff=0.05)), TransformFromCopy(qv, yv), Write(read.next_to(Sg, UP, buff=0.3)), rt=1.0, upto="That is Hebb's rule")
 
-        # ── four pillars, each its own live mechanism ─────────────────────────────────
-        local.clear_updaters()
-        self.go("Over the next ten years", FadeOut(VGroup(nodes, arcs, local, uni, q)), rt=0.8)
-        quads = [LEFT * 3.55 + UP * 1.45, RIGHT * 3.55 + UP * 1.45, LEFT * 3.55 + DOWN * 1.75, RIGHT * 3.55 + DOWN * 1.75]
-        frames_ = VGroup(*[RoundedRectangle(width=6.8, height=3.0, corner_radius=0.15, stroke_color=c, stroke_width=1.6).set_fill(c, 0.04).move_to(p)
-                           for p, c in zip(quads, [C_ORANGE, C_PINK, C_TEAL, C_PURPLE])])
-        titles = VGroup(*[T(s, size=18, color=c, weight=BOLD).next_to(f.get_corner(UL), DR, buff=0.12) for s, c, f in
-                          zip(["① neuromorphic & analog", "② fast weights · test-time training", "③ liquid networks · neural ODEs", "④ self-compiling graphs"],
-                              [C_ORANGE, C_PINK, C_TEAL, C_PURPLE], frames_)])
-        self.go("four pioneering", FadeOut(axis), LaggedStart(*[Create(f) for f in frames_], lag_ratio=0.2), rt=1.4)
+        # ── side by side with Hebb's rule; matching terms light up together ──────────
+        hebb = M(r"\Delta w_{ij}", "=", r"\eta", r"\;y_i", r"\;x_j", size=46).move_to(LEFT * 3.4 + UP * 0.6)
+        attn = M(r"\Delta S", "=", r"\;", r"\;v_t", r"\;k_t^{\top}", size=46).move_to(RIGHT * 3.0 + UP * 0.6)
+        hebb[3].set_color(C_PINK); hebb[4].set_color(C_BLUE); attn[3].set_color(V_COL); attn[4].set_color(K_COL)
+        hl_ = T("Hebb, 1949: post × pre", size=18, color=C_GREY).next_to(hebb, DOWN, buff=0.3)
+        al_ = T("linear attention: value × key", size=18, color=C_GREY).next_to(attn, DOWN, buff=0.3)
+        self.go("That is Hebb's rule", FadeOut(VGroup(toks, Sg, qv, yv, read, eq2, memory)), rt=0.6)
+        self.remove(Sl)
+        self.then(Write(hebb), Write(attn), FadeIn(hl_), FadeIn(al_), rt=1.2)
+        links = VGroup(CurvedArrow(hebb[3].get_top(), attn[3].get_top(), angle=-0.5, color=C_YELLOW), CurvedArrow(hebb[4].get_bottom(), attn[4].get_bottom(), angle=0.5, color=C_YELLOW))
+        eqs = M(r"\equiv", size=80, color=C_YELLOW).move_to(UP * 0.6 + LEFT * 0.2)
+        self.go("Exactly", Create(links), FadeIn(eqs, scale=1.6), rt=0.9)
 
-        # ① memristor crossbar: I_j = Σ_i G_ij V_i, conductances update in place
-        o1 = quads[0] + LEFT * 1.0 + DOWN * 0.15
-        rows, cols = 5, 6
-        wl = VGroup(*[Line(o1 + LEFT * 1.6 + UP * (0.9 - 0.45 * i), o1 + RIGHT * 1.4 + UP * (0.9 - 0.45 * i), color=C_ORANGE, stroke_width=2) for i in range(rows)])
-        bl = VGroup(*[Line(o1 + LEFT * 1.2 + RIGHT * 0.5 * j + UP * 1.1, o1 + LEFT * 1.2 + RIGHT * 0.5 * j + DOWN * 1.1, color=C_BLUE, stroke_width=2) for j in range(cols)])
-        rngG = np.random.default_rng(4)
-        G = rngG.random((rows, cols))
-        mem = VGroup(*[Square(0.16).set_stroke(width=0).set_fill(heat_color(G[i, j], (BLACK, C_ORANGE, C_YELLOW)), 1).move_to(wl[i].get_start() * [0, 1, 0] + bl[j].get_start() * [1, 0, 0])
-                       for i in range(rows) for j in range(cols)])
-        vin = VGroup(*[M(f"V_{i + 1}", size=18, color=C_ORANGE).next_to(wl[i], LEFT, buff=0.08) for i in range(rows)])
-        bitstreams = [Stream(Line(b.get_start(), b.get_end()), n=4, speed=0.5, color=C_BLUE, radius=0.035) for b in bl]
-        ohm = M(r"I_j=\sum_i G_{ij}V_i", size=26, color=C_ORANGE).move_to(quads[0] + RIGHT * 2.2 + UP * 0.2)
-        loihi = T("Loihi 2 · memristor arrays", size=14, color=C_GREY).next_to(ohm, DOWN, buff=0.2)
-        self.go("First, Neuromorphic", FadeIn(titles[0]), rt=0.5)
-        self.go("Next-generation silicon", Create(wl, lag_ratio=0.1), Create(bl, lag_ratio=0.1), FadeIn(vin), FadeIn(loihi), rt=1.2)
-        self.go("crossbar arrays", FadeIn(mem, lag_ratio=0.02), rt=0.9)
-        self.go("physical layer", Write(ohm), *[FadeIn(s) for s in bitstreams], rt=1.0)
-        G2 = np.clip(G + rngG.normal(size=G.shape) * 0.35, 0, 1)
-        self.go("continuous local plasticity", *[sq.animate.set_fill(heat_color(v, (BLACK, C_ORANGE, C_YELLOW))) for sq, v in zip(mem, G2.flatten())], rt=1.4)
-        vn = VGroup(T("CPU ⇄ memory bus", size=14, color=C_RED), cross(s=0.15)).arrange(RIGHT, buff=0.15).next_to(loihi, DOWN, buff=0.15)
-        self.go("von Neumann", FadeIn(vn), rt=0.8, upto="Second, Fast-Weights")
+        # ── Schlag, Irie & Schmidhuber 2021 — the exact sentence ──────────────────────
+        pg = PaperPage("schlag", 0, height=6.8).move_to(RIGHT * 3.4 + DOWN * 1.8)
+        h1 = pg.hl("We show the formal equivalence of linearised self-")
+        h2 = pg.hl("attention mechanisms and fast weight controllers")
+        self.go("In 2021", VGroup(hebb, attn, hl_, al_, links, eqs).animate.scale(0.6).to_edge(LEFT, buff=0.4).shift(UP * 1.6), FadeIn(pg, shift=UP), rt=1.2)
+        self.go("proved it formally", frame.animate.scale(0.5).move_to(h1.get_center() + DOWN * 0.15), rt=1.0)
+        self.then(FadeIn(h1), FadeIn(h2), rt=0.8, upto="fast weight programmer")
+        self.go("fast weight programmer", frame.animate.scale(2.0).move_to(ORIGIN), FadeOut(Group(pg, h1, h2)), rt=1.2)
+        slow = VGroup(RoundedRectangle(width=2.8, height=2.2, corner_radius=0.15, color=C_ICE, stroke_width=2.5).set_fill(C_ICE, 0.08),
+                      T("slow net", size=20, color=C_ICE)).move_to(LEFT * 2.4 + DOWN * 0.8)
+        slow[1].next_to(slow[0], DOWN, buff=0.12)
+        slow_w = heatmap(rng.random((6, 6)), cell=0.28, cmap=(BLACK, C_ICE, WHITE)).move_to(slow[0])
+        fast = heatmap(np.full((6, 6), 0.5), cell=0.34, cmap=(BLACK, C_GREEN, WHITE)).move_to(RIGHT * 2.6 + DOWN * 0.8)
+        fast_l = T("fast weights", size=20, color=C_GREEN).next_to(fast, DOWN, buff=0.12)
+        instr = VGroup(*[Arrow(slow[0].get_right(), fast.get_left(), buff=0.15, color=C, stroke_width=3).shift(UP * dy) for C, dy in [(K_COL, 0.3), (V_COL, -0.3)]])
+        il = VGroup(M("k_t", color=K_COL, size=26).next_to(instr[0], UP, buff=0.05), M("v_t", color=V_COL, size=26).next_to(instr[1], DOWN, buff=0.05))
+        self.then(FadeIn(slow), FadeIn(slow_w), FadeIn(fast), FadeIn(fast_l), rt=0.6)
+        grad = Arrow(slow[0].get_top() + UP * 0.6, slow[0].get_top(), buff=0.05, color=C_RED)
+        grl = M(r"\nabla\mathcal{L}", size=26, color=C_RED).next_to(grad, RIGHT, buff=0.1)
+        self.go("slow network that learns", GrowArrow(grad), FadeIn(grl), *[sq.animate.set_fill(heat_color(rng.random(), (BLACK, C_ICE, WHITE))) for sq in slow_w], rt=1.2)
+        fv = np.full(36, 0.5)
+        flick = ValueTracker(1.0)
 
-        # ② test-time training: hidden state is a weight matrix updated per token
-        o2 = quads[1]
-        Wt = heatmap(rngG.random((5, 5)), cell=0.3, cmap=(BLACK, C_PINK, WHITE)).move_to(o2 + LEFT * 1.6 + DOWN * 0.2)
-        Wl_ = M("W_t", size=26, color=C_PINK).next_to(Wt, UP, buff=0.1)
-        ttt = M(r"W_t = W_{t-1} - \eta\,\nabla_W \ell(W_{t-1}; x_t)", size=24, color=C_PINK).move_to(o2 + RIGHT * 1.3 + UP * 0.5)
-        ttt_l = T("Sun et al. 2024 · TTT layers", size=14, color=C_GREY).next_to(ttt, DOWN, buff=0.15)
-        trow = token_row(["x₁", "x₂", "x₃", "x₄", "x₅"], color=C_PINK, size=16).move_to(o2 + RIGHT * 1.3 + DOWN * 0.7)
-        self.go("Second, Fast-Weights", FadeIn(titles[1]), FadeIn(Wt), FadeIn(Wl_), rt=0.8)
-        self.go("pioneering frameworks", Write(ttt), FadeIn(ttt_l), rt=1.2)
-        self.go("dynamically update", FadeIn(trow, lag_ratio=0.1), rt=0.5)
-        for k in range(5):
-            Wv = rngG.random(25)
-            self.play(Indicate(trow[k], color=WHITE), ShowPassingFlash(Line(trow[k].get_left(), Wt.get_right()).set_stroke(C_PINK, 3)),
-                      *[sq.animate.set_fill(heat_color(v, (BLACK, C_PINK, WHITE))) for sq, v in zip(Wt, Wv)], run_time=0.5)
-        self.go("episodic memory", Indicate(Wt, color=WHITE), rt=0.8, upto="Third, Liquid")
+        def fl(m, dt):
+            nonlocal fv
+            fv = np.clip(fv + flick.get_value() * rng.normal(size=36) * 0.12, 0, 1)
+            for sq, val in zip(m, fv):
+                sq.set_fill(heat_color(val, (BLACK, C_GREEN, WHITE)))
+        self.go("while it is thinking", *[GrowArrow(a) for a in instr], FadeIn(il), rt=0.8)
+        fast.add_updater(fl)
+        self.add(fast)
 
-        # ③ liquid time-constant ODE: state x(t) under input I(t), τ adapts
-        o3 = quads[2]
-        lax = Axes(x_range=[0, 10, 2], y_range=[-1.5, 1.5, 1], x_length=4.0, y_length=1.9, axis_config=dict(color=C_DIM, include_tip=False)).move_to(o3 + LEFT * 1.0 + DOWN * 0.2)
-        ts = np.linspace(0, 10, 600)
-        I = np.sign(np.sin(ts * 0.9)) * 1.0 + 0.3 * np.sin(ts * 4)
-        x = np.zeros_like(ts); tau = np.zeros_like(ts)
-        for k in range(1, len(ts)):
-            tau[k] = 0.25 + 1.2 / (1 + abs(I[k]) * 2)
-            x[k] = x[k - 1] + (ts[1] - ts[0]) * (-x[k - 1] / tau[k] + np.tanh(I[k]) / tau[k] * 0.9)
-        tt = ValueTracker(0)
-        cx = LiveAxes.live_curve(VGroup(lax) if False else type("o", (), {"ax": lax})(), ts, x, tt, color=C_TEAL)
-        ci = LiveAxes.live_curve(type("o", (), {"ax": lax})(), ts, 0.4 * I - 1.0, tt, color=C_GREY, width=1.5, dot=False)
-        lode = M(r"\frac{dx}{dt}=-\frac{x}{\tau(I)}+f(x,I)", size=24, color=C_TEAL).move_to(o3 + RIGHT * 2.2 + UP * 0.4)
-        taul = always_redraw(lambda: VGroup(M(r"\tau =", size=24), DecimalNumber(tau[int(np.clip(tt.get_value() / 10 * 599, 0, 599))], num_decimal_places=2, font_size=24, color=C_TEAL))
-                             .arrange(RIGHT, buff=0.1).next_to(lode, DOWN, buff=0.3))
-        self.go("Third, Liquid", FadeIn(titles[2]), Create(lax), rt=0.6)
-        self.add(cx, ci)
-        self.go("Continuous-time dynamical", Write(lode), tt.animate(rate_func=linear).set_value(2.5), rt=1.4)
-        self.add(taul)
-        self.go("internal time constants", tt.animate(rate_func=linear).set_value(5), rt=1.4)
-        self.go("unpredictable real-time", tt.animate(rate_func=linear).set_value(7.5), rt=1.4)
-        self.go("without losing stability", tt.animate(rate_func=linear).set_value(10), rt=1.4, upto="And fourth")
+        # ── Ba & Hinton 2016: three timescales ───────────────────────────────────────
+        self.go("The idea is older", VGroup(slow, slow_w, grad, grl, instr, il).animate.scale(0.6).to_corner(DL, buff=0.5),
+                VGroup(fast, fast_l).animate.scale(0.6).to_corner(DR, buff=0.5), rt=1.0)
+        pg2 = PaperPage("ba2016", 0, height=4.6).move_to(LEFT * 3.6 + UP * 0.6)
+        h3 = pg2.hl("fast weights")
+        self.go("In 2016", FadeIn(pg2, shift=RIGHT), rt=0.8)
+        self.then(FadeIn(h3), rt=0.5)
+        ax = NumberLine(x_range=[-3, 9, 1], length=6.0, color=C_GREY).move_to(RIGHT * 2.8 + UP * 0.3)
+        axl = T("timescale (log₁₀ seconds)", size=14, color=C_GREY).next_to(ax, DOWN, buff=0.15)
+        bands = [("activations", -2.5, -0.5, C_YELLOW), ("fast weights", 0, 3, C_GREEN), ("slow weights", 5, 8.8, C_ICE)]
+        bandm = VGroup()
+        for nm, a, b, col in bands:
+            r = Rectangle(width=ax.n2p(b)[0] - ax.n2p(a)[0], height=0.35).set_stroke(width=0).set_fill(col, 0.8)
+            r.move_to((ax.n2p(a) + ax.n2p(b)) / 2 + UP * 0.45)
+            bandm.add(VGroup(r, T(nm, size=14, color=col).next_to(r, UP, buff=0.08)))
+        self.go("faster than learning", Create(ax), FadeIn(axl), FadeIn(bandm[2]), FadeIn(bandm[1]), rt=1.0)
+        self.go("slower than thought", FadeIn(bandm[0]), Indicate(bandm[1], color=WHITE), rt=1.0)
+        self.go("neurally plausible", Indicate(h3, color=C_YELLOW), rt=1.0, upto="So the Transformer never")
 
-        # ④ self-compiling graph: an agent inspects and rewrites its own DAG
-        o4 = quads[3]
-        ops = ["embed", "attend", "mlp", "route", "decode"]
-        boxes = VGroup(*[label_box(s, C_PURPLE, size=14) for s in ops]).arrange(RIGHT, buff=0.35).move_to(o4 + UP * 0.2)
-        darr = VGroup(*[Arrow(a.get_right(), b.get_left(), buff=0.05, color=C_PURPLE, stroke_width=2, max_tip_length_to_length_ratio=0.3) for a, b in zip(boxes[:-1], boxes[1:])])
-        perf = ValueTracker(0.45)
-        pb_bg = Rectangle(width=4.0, height=0.2, color=C_DIM).set_fill(C_DIM, 0.3).move_to(o4 + DOWN * 1.0)
-        pb = always_redraw(lambda: Rectangle(width=4.0 * perf.get_value(), height=0.2).set_stroke(width=0).set_fill(C_PURPLE, 0.9).move_to(pb_bg.get_left(), aligned_edge=LEFT))
-        pbl = T("task performance", size=13, color=C_GREY).next_to(pb_bg, DOWN, buff=0.08)
-        self.go("And fourth", FadeIn(titles[3]), FadeIn(boxes, lag_ratio=0.1), FadeIn(darr), rt=0.8)
-        self.add(pb)
-        self.then(FadeIn(pb_bg), FadeIn(pbl), rt=0.4)
-        lens = Circle(0.35, color=WHITE, stroke_width=2).move_to(boxes[0])
-        self.go("autonomous agentic", FadeIn(lens), rt=0.4)
-        self.go("inspect and rewrite", lens.animate.move_to(boxes[2]), rt=0.8)
-        newb = VGroup(label_box("moe", C_YELLOW, size=14), label_box("mlp′", C_YELLOW, size=14)).arrange(DOWN, buff=0.1).move_to(boxes[2])
-        self.go("at runtime", ReplacementTransform(boxes[2], newb), Flash(newb.get_center(), color=C_YELLOW), rt=0.8)
-        self.go("task performance", perf.animate.set_value(0.85), rt=1.0, upto="As hardware designers")
+        # ── Hebb moves from the synapse into the activations ─────────────────────────
+        fast.clear_updaters()
+        self.go("So the Transformer never", FadeOut(Group(pg2, h3, ax, axl, bandm)), FadeOut(VGroup(hebb, attn, hl_, al_, links, eqs)), FadeOut(VGroup(slow, slow_w, grad, grl, instr, il, fast, fast_l)), rt=0.9)
+        syn = VGroup(Circle(0.4, color=C_BLUE, stroke_width=3).move_to(LEFT * 4.4), Circle(0.4, color=C_PINK, stroke_width=3).move_to(LEFT * 1.8))
+        syn.add(Line(syn[0].get_right(), syn[1].get_left(), color=C_YELLOW, stroke_width=6))
+        sl_ = T("synapse", size=18, color=C_GREY).next_to(syn, DOWN, buff=0.3)
+        heq = M(r"\Delta w = \eta\, y\, x", size=34, color=C_YELLOW).next_to(syn, UP, buff=0.3)
+        self.then(FadeIn(syn), FadeIn(sl_), Write(heq), rt=0.8)
+        stream_p = Line(RIGHT * 0.4 + DOWN * 0.2, RIGHT * 6.4 + DOWN * 0.2)
+        st = Stream(stream_p, n=14, speed=0.35, color=C_GREEN, radius=0.07, square=True)
+        st_l = T("activations (the residual stream)", size=18, color=C_GREEN).next_to(stream_p, DOWN, buff=0.3)
+        self.go("out of the synapse", heq.animate.move_to(RIGHT * 3.4 + UP * 0.6), syn[2].animate.set_stroke(opacity=0.2), rt=1.4)
+        self.go("into the activations", FadeIn(st), FadeIn(st_l), Flash(RIGHT * 3.4 + UP * 0.6, color=C_YELLOW, line_length=0.5, num_lines=16), rt=1.0,
+                upto="And the crosstalk")
 
-        # ── convergence: the four systems connect into one architecture ───────────────
-        quadgroups = [VGroup(frames_[0], titles[0], wl, bl, mem, vin, ohm, loihi, vn), VGroup(frames_[1], titles[1], Wt, Wl_, ttt, ttt_l, trow),
-                      VGroup(frames_[2], titles[2], lax, lode), VGroup(frames_[3], titles[3], boxes[:2], boxes[3:], newb, darr, pb_bg, pbl, lens)]
-        self.remove(taul, cx, ci, pb, *bitstreams)
-        cpos = [LEFT * 2.2 + UP * 1.2, RIGHT * 2.2 + UP * 1.2, LEFT * 2.2 + DOWN * 1.5, RIGHT * 2.2 + DOWN * 1.5]
-        self.go("As hardware designers", *[g.animate.scale(0.5).move_to(p) for g, p in zip(quadgroups, cpos)], rt=1.6)
-        hub = Circle(0.6, color=WHITE, stroke_width=2.5).set_fill(BG, 1).move_to(DOWN * 0.15)
-        links = VGroup(*[Line(hub.get_center(), p, color=c, stroke_width=2.5) for p, c in zip(cpos, [C_ORANGE, C_PINK, C_TEAL, C_PURPLE])])
-        self.go("asynchronous sparsity", Create(links), rt=0.8)
-        self.then(GrowFromCenter(hub), rt=0.5)
-        flows = [Stream(Line(p, hub.get_center()), n=4, speed=0.6, color=c, radius=0.05) for p, c in zip(cpos, [C_ORANGE, C_PINK, C_TEAL, C_PURPLE])]
-        self.go("algorithmic theorists", *[FadeIn(f) for f in flows], rt=0.8)
-        self.go("credit assignment in continuous", hub.animate.set_stroke(C_YELLOW), rt=0.8)
-        self.go("finally dissolve", *[g.animate.set_opacity(0.0) for g in quadgroups], FadeOut(links), *[FadeOut(f) for f in flows], rt=1.2, upto="The monolith of modern")
-        self.remove(*quadgroups, *flows)
+        # ── capacity wall and the delta rule; then the measured curves ────────────────
+        st.clear_updaters()
+        self.go("And the crosstalk", FadeOut(VGroup(syn, sl_, heq, st, st_l)), rt=0.6)
+        ax2 = LiveAxes([0, 64, 16], [0, 1, 0.25], width=5.6, height=3.4, x_label="associations stored (d = 64)").move_to(LEFT * 3.0 + DOWN * 0.3)
+        ticks = VGroup(*[T(f"{int(v * 100)}%", size=14, color=C_GREY).next_to(ax2.ax.c2p(0, v), LEFT, buff=0.1) for v in (0.25, 0.5, 0.75, 1.0)])
+        xs = np.array(HVD["n_pairs"], float)
+        tr = ValueTracker(2)
+        c_h = ax2.live_curve(xs, np.array(HVD["hebb"]), tr, color=C_PINK)
+        self.then(FadeIn(ax2), FadeIn(ticks), rt=0.6)
+        self.add(c_h)
+        self.go("capacity wall", tr.animate(rate_func=linear).set_value(64), FadeIn(T("pure Hebbian  M += v kᵀ", size=16, color=C_PINK).next_to(ax2, UP, buff=0.1).align_to(ax2, LEFT)), rt=1.6)
+        deq = M(r"S \mathrel{+}=", r"\beta", r"\big(v - ", r"S k", r"\big)\, k^{\top}", size=40).move_to(RIGHT * 3.4 + UP * 1.8)
+        deq[3].set_color(C_YELLOW)
+        self.go("delta rule", Write(deq), rt=1.0)
+        pred = VGroup(*[Rectangle(width=0.28, height=h).set_stroke(width=0).set_fill(C_YELLOW, 0.85) for h in (0.9, 0.5, 1.2, 0.3)]).arrange(RIGHT, buff=0.06, aligned_edge=DOWN)
+        targ = VGroup(*[Rectangle(width=0.28, height=h).set_stroke(width=0).set_fill(V_COL, 0.85) for h in (1.3, 0.4, 0.6, 0.9)]).arrange(RIGHT, buff=0.06, aligned_edge=DOWN)
+        err = VGroup(*[Rectangle(width=0.28, height=max(0.05, abs(a - b))).set_stroke(width=0).set_fill(C_RED, 0.85) for a, b in zip((1.3, 0.4, 0.6, 0.9), (0.9, 0.5, 1.2, 0.3))]).arrange(RIGHT, buff=0.06, aligned_edge=DOWN)
+        grp = VGroup(VGroup(pred, T("S k  (predicted)", size=14, color=C_YELLOW)).arrange(DOWN, buff=0.1),
+                     VGroup(targ, T("v  (target)", size=14, color=V_COL)).arrange(DOWN, buff=0.1),
+                     VGroup(err, T("error → write", size=14, color=C_RED)).arrange(DOWN, buff=0.1)).arrange(RIGHT, buff=0.5, aligned_edge=DOWN).move_to(RIGHT * 3.4 + DOWN * 0.4)
+        self.go("read what the memory", FadeIn(grp[0], shift=UP * 0.2), Indicate(deq[3]), rt=0.9)
+        self.go("store only the error", FadeIn(grp[1], shift=UP * 0.2), rt=0.5)
+        self.then(TransformFromCopy(VGroup(grp[0][0], grp[1][0]), grp[2][0]), FadeIn(grp[2][1]), rt=0.9, upto="We tested this")
+        tr2 = ValueTracker(2)
+        c_d = ax2.live_curve(xs, np.array(HVD["delta"]), tr2, color=C_YELLOW)
+        c_d3 = ax2.live_curve(xs, np.array(HVD["delta_3sweeps"]), tr2, color=C_GREEN)
+        self.go("We tested this", FadeOut(grp), deq.animate.scale(0.7).to_corner(UR, buff=0.6).shift(DOWN * 0.4), rt=0.8)
+        self.add(c_d, c_d3)
+        i32 = HVD["n_pairs"].index(32)
+        vline = DashedLine(ax2.ax.c2p(32, 0), ax2.ax.c2p(32, 1), color=C_GREY)
+        self.go("thirty-two associations", Create(vline), tr2.animate(rate_func=linear).set_value(32), rt=1.2)
+        lab = lambda key, col, txt, dy: VGroup(Dot(ax2.ax.c2p(32, HVD[key][i32]), color=col), T(txt, size=16, color=col).next_to(ax2.ax.c2p(32, HVD[key][i32]), RIGHT, buff=0.15).shift(UP * dy))
+        self.go("forty-nine percent", FadeIn(lab("hebb", C_PINK, f"Hebbian {HVD['hebb'][i32]:.0%}", 0)), rt=0.6)
+        self.go("seventy-eight percent", FadeIn(lab("delta", C_YELLOW, f"delta, 1 pass {HVD['delta'][i32]:.0%}", 0)), rt=0.6)
+        self.go("every single one after three", FadeIn(lab("delta_3sweeps", C_GREEN, f"delta, 3 passes {HVD['delta_3sweeps'][i32]:.0%}", -0.05)),
+                tr2.animate(rate_func=linear).set_value(64), rt=1.4)
+        meas = T("measured on this M3 · keys correlated (ρ = 0.6) · 40 trials", size=14, color=C_GREY).next_to(ax2, DOWN, buff=0.55)
+        self.then(FadeIn(meas), rt=0.4, upto="This is exactly where")
 
-        # ── the monolith returns — then its rigid surfaces become motion ─────────────
-        mono = monolith(8, w=2.6, h=0.42, color=C_ICE).move_to(UP * 0.2)
-        frost = glow(SurroundingRectangle(mono, buff=0.12, color=C_ICE, corner_radius=0.1), C_ICE, opacity=0.25)
-        self.go("The monolith of modern", ReplacementTransform(hub, mono), FadeIn(frost), rt=1.4)
-        thr = DashedLine(LEFT * 6, RIGHT * 6, color=C_GOLD).move_to(DOWN * 2.8)
-        thl = T("threshold of superhuman reasoning", size=18, color=C_GOLD).next_to(thr, UP, buff=0.1).to_edge(RIGHT, buff=0.6)
-        self.go("threshold of superhuman", Create(thr), FadeIn(thl), thr.animate.move_to(UP * 2.9), thl.animate.move_to(UP * 3.15 + RIGHT * 3.4), rt=2.0)
-        cracks = VGroup(*[VMobject(stroke_color=WHITE, stroke_width=1.5).set_points_as_corners(
-            [l.get_center() + LEFT * 1.2 + RIGHT * 2.4 * a + UP * 0.18 * ((-1) ** k) for k, a in enumerate(np.linspace(0, 1, 7))]) for l in mono])
-        self.go("Yet the artificial minds", Indicate(mono, color=C_ICE), rt=1.0)
-        self.go("frozen statues", Create(cracks, lag_ratio=0.1), rt=1.2)
-        # each rigid layer becomes a living wave
-        phase = ValueTracker(0)
+        # ── DeltaNet gates, Titans surprise ────────────────────────────────────────────
+        self.remove(c_h, c_d, c_d3)
+        self.go("This is exactly where", FadeOut(self.stage(tag, deq)), rt=0.8)
+        geq = M(r"S_t = ", r"\alpha_t", r"\,S_{t-1} + \beta_t\big(v_t - S_{t-1}k_t\big)k_t^{\top}", size=38).move_to(UP * 2.0)
+        geq[1].set_color(C_ORANGE)
+        mem = heatmap(rng.random((8, 8)), cell=0.32, cmap=(BLACK, C_GREEN, WHITE)).move_to(LEFT * 3.4 + DOWN * 0.8)
+        self.then(ReplacementTransform(deq, geq), FadeIn(mem), rt=1.0)
+        gate_l = T("α: forget gate", size=18, color=C_ORANGE).next_to(mem, DOWN, buff=0.2)
+        self.go("forgetting gate", Indicate(geq[1], color=C_ORANGE, scale_factor=1.4), FadeIn(gate_l), mem.animate.set_opacity(0.35), rt=1.2)
+        net = NeuralNet((4, 6, 4), width=3.0, height=2.6, seed=8, edge_op=0.7).move_to(RIGHT * 3.2 + DOWN * 0.8)
+        tl_ = T("Titans: neural memory", size=18, color=C_PURPLE).next_to(net, UP, buff=0.2)
+        self.go("Titans go further", FadeIn(net), FadeIn(tl_), rt=0.8)
+        sur = ValueTracker(0.1)
+        meter = always_redraw(lambda: VGroup(Rectangle(width=0.3, height=2.4, color=C_DIM).set_fill(C_DIM, 0.2),
+                                             Rectangle(width=0.3, height=max(0.02, 2.4 * sur.get_value())).set_stroke(width=0)
+                                             .set_fill(interpolate_color(ManimColor(C_GREEN), ManimColor(C_RED), sur.get_value()), 0.9)).arrange(ORIGIN).next_to(net, RIGHT, buff=0.4))
+        sl2 = T("surprise", size=14, color=C_GREY).next_to(net, RIGHT, buff=0.25).shift(DOWN * 1.5)
+        self.add(meter)
+        self.then(FadeIn(sl2), rt=0.3)
+        self.go("rewrites its own weights", sur.animate.set_value(0.9), LaggedStart(*[e.animate.set_stroke(C_RED, width=3) for g in net.edges for e in g], lag_ratio=0.01), rt=1.2)
+        sq = M(r"\text{surprise} = \nabla_M \,\ell(M; x_t)", size=30, color=C_PURPLE).to_edge(DOWN, buff=0.6)
+        self.go("driven by surprise", Write(sq), sur.animate.set_value(0.15), LaggedStart(*[e.animate.set_stroke(C_BLUE if rng.random() > 0.4 else C_RED, width=1.4) for g in net.edges for e in g], lag_ratio=0.01),
+                rt=1.6, upto="Self-adapting intelligence did arrive")
 
-        def waves():
-            g = VGroup()
-            ph = phase.get_value()
-            for i, l in enumerate(mono):
-                c = l.get_center()
-                xs = np.linspace(-1.6, 1.6, 60)
-                col = interpolate_color(ManimColor(C_BLUE), ManimColor(C_GREEN), i / 7)
-                pts_ = [c + np.array([x * (1 + 0.15 * np.sin(ph + i)), 0.16 * np.sin(3 * x + ph * (1 + 0.2 * i) + i), 0]) for x in xs]
-                g.add(VMobject(stroke_color=col, stroke_width=3).set_points_smoothly(pts_))
-            return g
-        wv = always_redraw(waves)
-        phase.add_updater(lambda m, dt: m.increment_value(dt * 2.0))
-        self.add(phase)
-        self.go("silicon stone", FadeOut(VGroup(mono, frost, cracks)), FadeIn(wv), rt=1.4)
-        field = SpikeField(n=40, width=12.5, height=6.4, rate=3, seed=11, color=C_GREEN)
-        field.alpha.set_value(0)
-        self.add(field)
-        arcsL = VGroup(*[ArcBetweenPoints(mono[i].get_left() + LEFT * 0.2, mono[j].get_left() + LEFT * 0.2, angle=1.2).set_stroke(C_BLUE, 2, 0.7) for i, j in [(0, 3), (2, 6), (1, 7), (4, 7)]])
-        arcsR = VGroup(*[ArcBetweenPoints(mono[i].get_right() + RIGHT * 0.2, mono[j].get_right() + RIGHT * 0.2, angle=-1.2).set_stroke(C_GREEN, 2, 0.7) for i, j in [(0, 4), (3, 7), (1, 5)]])
-        self.go("They will be living", field.alpha.animate.set_value(0.8), Create(arcsL), Create(arcsR), rt=1.6)
-        breath = ValueTracker(0)
-        arcsL.add_updater(lambda m, dt: m.set_stroke(opacity=0.4 + 0.4 * np.sin(phase.get_value())))
-        arcsR.add_updater(lambda m, dt: m.set_stroke(opacity=0.4 + 0.4 * np.cos(phase.get_value() * 1.3)))
-        self.go("self-adapting cognitive", field.rate.animate.set_value(6), rt=1.4, upto="Thank you for joining")
+        # ── the monolith, with a living memory inside ────────────────────────────────
+        self.remove(meter)
+        self.go("Self-adapting intelligence did arrive", FadeOut(self.stage(tag)), rt=0.8)
+        lg = living_graph(20, center=LEFT * 3.6 + UP * 0.2, radius=1.4, seed=4)
+        thr0 = lg.thr.get_value(); lg.thr.set_value(0.01)
+        self.add(lg[0])
+        self.go("Not as a brain-shaped", FadeIn(lg.nodes), lg.thr.animate.set_value(thr0), rt=0.8)
+        self.then(lg.nodes.animate.set_opacity(0.15), lg.thr.animate.set_value(0.01), rt=0.8)
+        mono = monolith(8, w=2.6, h=0.42, color=C_ICE).move_to(RIGHT * 2.2 + UP * 0.1)
+        core = heatmap(np.full((5, 5), 0.5), cell=0.26, cmap=(BLACK, C_GREEN, WHITE)).move_to(mono)
+        cv = np.full(25, 0.5)
 
-        # ── end card, the living system keeps moving behind it ───────────────────────
-        self.go("Thank you for joining", FadeOut(VGroup(thr, thl)), field.alpha.animate.set_value(0.35), rt=0.8)
-        endt = T("Why Brain-Like AI Failed", size=46, weight=BOLD).move_to(UP * 2.4)
-        self.then(Write(endt), rt=1.0)
-        items = VGroup(*[VGroup(Dot(color=c), T(s, size=24, color=c)).arrange(RIGHT, buff=0.2) for s, c in
-                         [("mathematical proofs", C_YELLOW), ("experimental source code", C_GREEN), ("benchmark data", C_BLUE), ("research papers", C_PINK)]])
-        items.arrange(DOWN, aligned_edge=LEFT, buff=0.3).move_to(DOWN * 2.0)
-        for key, it in zip(["mathematical proofs", "experimental source", "benchmark data", "research papers"], items):
-            self.go(key, FadeIn(it, shift=RIGHT * 0.2), rt=0.5)
-        self.go("description below", Indicate(items, color=WHITE, scale_factor=1.03), rt=1.0)
-        self.finish(tail=2.0)
+        def pulse_core(m, dt):
+            nonlocal cv
+            cv = np.clip(cv + rng.normal(size=25) * 0.1, 0, 1)
+            for s_, val in zip(m, cv):
+                s_.set_fill(heat_color(val, (BLACK, C_GREEN, WHITE)))
+        self.go("dense, differentiable memory", FadeIn(mono), rt=0.8)
+        self.then(FadeIn(core, scale=0.4), rt=0.5)
+        core.add_updater(pulse_core)
+        self.add(core)
+        glowc = glow(SurroundingRectangle(core, buff=0.05, color=C_GREEN), C_GREEN, opacity=0.35)
+        self.go("inside the monolith", FadeIn(glowc), frame.animate.scale(0.7).move_to(mono), rt=2.0)
+        self.finish()

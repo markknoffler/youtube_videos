@@ -1,13 +1,13 @@
 """Resolve every chapter's cue list in both voices; print weak or suspicious matches."""
 import re, ast, sys, difflib
-sys.argv = ["x"]
+_argv = sys.argv[:] ; sys.argv = ["x"]
 import common
 from common import Timeline, _norm
-for ch in range(1, 11):
+for ch in range(1, 13):
     src = open(f"ch{ch:02d}.py").read()
     m = re.search(r"self\.times\((.*?)\)\n", src, re.S)
     phrases = ast.literal_eval("(" + m.group(1) + ",)")
-    for v in ("standard", "cloned"):
+    for v in _argv[1:] or ("standard", "cloned"):
         tl = Timeline(v, ch)
         prev = 0
         for p in phrases:

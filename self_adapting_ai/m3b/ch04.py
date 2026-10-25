@@ -13,7 +13,7 @@ class Ch04(Chapter):
             "destructive interference", "catastrophic forgetting", "Meanwhile, the Transformer", "spontaneously discovers",
             "Inside a trained", "induction heads", "modular routing", "arithmetic units", "associative recall",
             "These functional circuits", "without any dynamic", "The weights remain", "yet the activation flow",
-            "multi-step algorithmic", "In seminal work", "coordinate across layers", "implicit gradient descent",
+            "multi-step algorithmic", "In seminal work", "coordinate across layers", "mechanistic source",
             "When an induction head", "copies previous", "bilinear query-key", "retrieving arbitrary", "Biologically-inspired",
             "token-specific lookup", "catastrophic interference", "How could a rigid", "This paradox cannot",
             "engineering patience", "To understand why", "three foundational")
@@ -179,7 +179,7 @@ class Ch04(Chapter):
         self.go("In seminal work", FadeOut(VGroup(row, plane, karr, eq, locks, n1, n2, wire, wl, wst, wtag)), FadeIn(page, shift=UP), rt=1.2)
         self.then(frame.animate.scale(0.55).move_to(hlr.get_center() + DOWN * 0.2), rt=1.2, upto="coordinate across layers")
         self.go("coordinate across layers", FadeIn(hlr, lag_ratio=0.3), rt=1.2)
-        self.go("implicit gradient descent", frame.animate.scale(1 / 0.55).move_to(ORIGIN), Group(page, hlr).animate.scale(0.5).to_corner(UR, buff=0.4), rt=1.4,
+        self.go("mechanistic source", frame.animate.scale(1 / 0.55).move_to(ORIGIN), Group(page, hlr).animate.scale(0.5).to_corner(UR, buff=0.4), rt=1.4,
                 upto="When an induction head")
 
         # ── an induction head at work: [A][B] … [A] → [B] ─────────────────────────────

@@ -43,9 +43,24 @@ def _norm(w: str) -> str:
     return _NUM.get(w, w)
 
 
+def draft_timing(ch: int) -> dict:
+    """Approximate word timings from the V2 script text (for previews before audio exists)."""
+    src = open(os.path.join(PROJECT, "VOICEOVER_SCRIPT_V2.md"), encoding="utf-8").read()
+    text = dict((int(n), t) for n, t in re.findall(r"## CHAPTER (\d+):[^\n]*\n.*?```text\n(.*?)```", src, re.S))[ch]
+    t, words = 0.4, []
+    for para in text.strip().split("\n\n"):
+        for w in para.split():
+            dur = 0.16 + 0.045 * len(w)
+            words.append({"w": w, "s": round(t, 3), "e": round(t + dur, 3)})
+            t += dur + (0.32 if w.endswith((",", ":", ";")) else 0.55 if w.endswith((".", "?", "!")) else 0.04)
+        t += 0.6
+    return {"duration": t + 0.5, "words": words}
+
+
 class Timeline:
     def __init__(self, voice: str, ch: int):
-        d = json.load(open(os.path.join(ROOT, "timing", f"{voice}_ch{ch:02d}.json")))
+        path = os.path.join(ROOT, "timing", f"{voice}_ch{ch:02d}.json")
+        d = json.load(open(path)) if os.path.exists(path) else draft_timing(ch)
         self.duration = d["duration"]
         self.words = [w for w in d["words"] if _norm(w["w"])]
         self.toks = [_norm(w["w"]) for w in self.words]
@@ -411,6 +426,11 @@ PDFS = {
     "deepseek2": os.path.join(ASSETS, "pdf", "2405.04434.pdf"),
     "induction": os.path.join(ASSETS, "pdf", "2209.11895.pdf"),
     "ttt": os.path.join(ASSETS, "pdf", "2407.04620.pdf"),
+    "schlag": os.path.join(PROJECT, "papers", "new", "2102.11174.pdf"),
+    "ba2016": os.path.join(PROJECT, "papers", "new", "1610.06258.pdf"),
+    "rigl": os.path.join(PROJECT, "papers", "new", "1911.11134.pdf"),
+    "eprop": os.path.join(PROJECT, "papers", "new", "1901.09049.pdf"),
+    "titans": os.path.join(PROJECT, "papers", "new", "2501.00663.pdf"),
 }
 
 

@@ -12,16 +12,16 @@ class Ch08(Chapter):
 
     def construct(self):
         C = self.times(
-            "To prove these", "live diagnostic experiment", "PyTorch", "We pitted", "defining capability", "associative recall",
+            "To test these", "live diagnostic experiment", "PyTorch", "We pitted", "defining capability", "associative recall",
             "In this benchmark", "arbitrary key-value", "must dynamically retrieve", "queried with", "later in the sequence",
             "The first contender", "continuous Hebbian", "localized synaptic competition", "structural edge pruning",
-            "The second contender", "Modular Attention Transformer", "identical parameter", "Both models were trained",
-            "sixty-four dimensional", "sequence lengths", "The empirical results", "As revealed", "catastrophic rank collapse",
-            "first ten epochs", "Its hidden representations", "effective rank of only", "out of 64", "Its associative recall",
-            "flatlined", "completely unable", "structural pruning severed", "Furthermore, analyzing", "discrete structural mutations",
-            "non-differentiable", "The optimization algorithm", "newly formed", "suboptimal local minima", "The Transformer, meanwhile",
-            "rich representational", "effective rank of 14", "surging", "fewer than one hundred", "The mathematical proofs",
-            "live silicon", "Without all-to-all", "cannot sustain", "dense matrix multiplications win")
+            "The second contender", "two-layer attention Transformer", "ordinary backpropagation", "Both models saw",
+            "sixty-four dimensional", "sixteen key-value pairs", "thirteen possible values", "The results were unequivocal",
+            "For the first forty epochs", "Both networks hovered", "seven point seven", "never left that floor", "flatlined near twelve",
+            "completely unable", "kept compressing", "drifted down from forty-nine", "without ever learning", "And the gradient paths",
+            "Structural mutations are discrete", "step function", "could not send credit", "poor local minima", "did something remarkable",
+            "Around epoch forty-five", "from under thirty percent", "settled at one hundred", "That sudden leap", "The theory survived",
+            "Without all-to-all", "cannot sustain", "dense matrix multiplications win")
         frame = self.camera.frame
         tag = T("08 · EMPIRICAL BENCHMARK", size=16, color=C_GREY).to_corner(UL, buff=0.35)
         self.add(tag)
@@ -38,7 +38,7 @@ class Ch08(Chapter):
                "    train(tf, backprop=True)\n"
                "    so.plasticity(local_only=True)")
         code = code_block(src, size=16).scale(0.85).to_edge(LEFT, buff=0.4).shift(UP * 0.6)
-        self.go("To prove these", FadeIn(code.background), rt=0.5)
+        self.go("To test these", FadeIn(code.background), rt=0.5)
         self.go("live diagnostic experiment", LaggedStart(*[FadeIn(l, shift=RIGHT * 0.15) for l in code.code_lines], lag_ratio=0.1), rt=2.0)
         term = RoundedRectangle(width=6.2, height=3.6, corner_radius=0.12, stroke_color=C_DIM).set_fill(BLACK, 0.9).to_edge(RIGHT, buff=0.4).shift(UP * 0.6)
         prompt = mono("$ python experiments/assoc_recall.py   # Apple M3 · mps", size=14, color=C_GREEN).next_to(term.get_corner(UL), DR, buff=0.15)
@@ -107,63 +107,58 @@ class Ch08(Chapter):
         blocks.arrange(UP, buff=0.25).move_to(RIGHT * 3.6 + DOWN * 0.3)
         resid = Line(blocks.get_bottom() + DOWN * 0.3, blocks.get_top() + UP * 0.3, color=C_GREY, stroke_width=2).shift(LEFT * 2.0)
         self.go("The second contender", FadeIn(rt_), rt=0.4)
-        self.go("Modular Attention Transformer", FadeIn(blocks, lag_ratio=0.1, shift=UP * 0.2), Create(resid), rt=1.2)
-        self.go("identical parameter", Indicate(blocks, color=WHITE), rt=0.8)
-        cfg = VGroup(*[VGroup(T(a, size=16, color=C_GREY), T(b, size=16, font=MONO)).arrange(RIGHT, buff=0.3) for a, b in
-                       [("embedding d", "64"), ("sequence", f"{CFG['tokens']} tokens"), ("epochs", "100 × 40 steps"), ("batch", "128"), ("device", "Apple M3 · mps")]])
+        self.go("two-layer attention Transformer", FadeIn(blocks, lag_ratio=0.1, shift=UP * 0.2), Create(resid), rt=1.2)
+        bpa = VGroup(*[Arrow(blocks.get_top() + UP * 0.2 + RIGHT * x, blocks.get_bottom() + DOWN * 0.1 + RIGHT * x, buff=0, color=C_RED, stroke_width=2.5,
+                             max_tip_length_to_length_ratio=0.06) for x in (-1.2, 0, 1.2)])
+        self.go("ordinary backpropagation", LaggedStart(*[GrowArrow(a_) for a_ in bpa], lag_ratio=0.2), rt=0.9)
+        cfg = VGroup(*[VGroup(T(a_, size=16, color=C_GREY), T(b_, size=16, font=MONO)).arrange(RIGHT, buff=0.3) for a_, b_ in
+                       [("embedding d", "64"), ("pairs / sequence", f"{CFG['pairs']}  ({CFG['tokens']} tokens)"), ("possible values", f"{CFG['values']}"),
+                        ("epochs", "100 × 40 steps"), ("device", "Apple M3 · mps")]])
         for r in cfg:
             r[1].align_to(cfg[0][1], LEFT)
         cfg.arrange(DOWN, aligned_edge=LEFT, buff=0.12)
         cfgb = VGroup(SurroundingRectangle(cfg, buff=0.2, color=C_DIM, corner_radius=0.1).set_fill(BG, 0.95), cfg).move_to(DOWN * 2.6)
-        self.go("Both models were trained", FadeIn(cfgb, shift=UP * 0.2), rt=0.8)
+        self.go("Both models saw", FadeIn(cfgb, shift=UP * 0.2), FadeOut(bpa), rt=0.8)
         self.go("sixty-four dimensional", Indicate(cfg[0], color=C_YELLOW), rt=0.6)
-        self.go("sequence lengths", Indicate(cfg[1], color=C_YELLOW), rt=0.6, upto="The empirical results")
+        self.go("sixteen key-value pairs", Indicate(cfg[1], color=C_YELLOW), rt=0.6)
+        self.go("thirteen possible values", Indicate(cfg[2], color=C_YELLOW), rt=0.6, upto="The results were unequivocal")
 
         # ── training telemetry, generated while the models run ───────────────────────
-        self.go("The empirical results", FadeOut(cfgb), FadeOut(VGroup(sn, sev, blocks, resid)), lt.animate.scale(0.8).move_to(LEFT * 4.2 + UP * 1.6),
+        self.go("The results were unequivocal", FadeOut(cfgb), FadeOut(VGroup(sn, sev, blocks, resid)), lt.animate.scale(0.8).move_to(LEFT * 4.2 + UP * 1.6),
                 rt_.animate.scale(0.8).move_to(RIGHT * 2.6 + UP * 1.6), FadeOut(div), rt=1.2)
         xs = np.array([e["epoch"] for e in EP], float)
-        ax = LiveAxes([0, 100, 20], [0, 1, 0.25], width=5.6, height=3.0, x_label="epoch").move_to(LEFT * 2.6 + DOWN * 1.0)
-        ax.ax.add_coordinates(font_size=16) if False else None
+        ax = LiveAxes([0, 100, 20], [0, 1, 0.25], width=5.6, height=3.0, x_label="epoch").move_to(LEFT * 2.6 + DOWN * 0.6)
         ticks = VGroup(*[T(f"{int(v * 100)}%", size=14, color=C_GREY).next_to(ax.ax.c2p(0, v), LEFT, buff=0.1) for v in (0.25, 0.5, 0.75, 1.0)])
-        eps = ValueTracker(1)
+        eps, eps_r = ValueTracker(1), ValueTracker(1)
         c_tf = ax.live_curve(xs, np.array([e["tf_acc"] for e in EP]), eps, color=C_BLUE)
         c_so = ax.live_curve(xs, np.array([e["so_acc"] for e in EP]), eps, color=C_GREEN)
-        rk = LiveAxes([0, 100, 20], [0, 64, 16], width=4.0, height=3.0, x_label="epoch").move_to(RIGHT * 3.8 + DOWN * 1.0)
-        r_tf = rk.live_curve(xs, np.array([e["tf_rank"] for e in EP]), eps, color=C_BLUE)
-        r_so = rk.live_curve(xs, np.array([e["so_rank"] for e in EP]), eps, color=C_GREEN)
+        rk = LiveAxes([0, 100, 20], [0, 64, 16], width=4.0, height=3.0, x_label="epoch").move_to(RIGHT * 3.8 + DOWN * 0.6)
+        r_tf = rk.live_curve(xs, np.array([e["tf_rank"] for e in EP]), eps_r, color=C_BLUE)
+        r_so = rk.live_curve(xs, np.array([e["so_rank"] for e in EP]), eps_r, color=C_GREEN)
         acc_t = T("recall accuracy", size=18).next_to(ax, UP, buff=0.05)
         rk_t = T("effective rank of the query representation (of 64)", size=16).next_to(rk, UP, buff=0.05)
         epoch_l = always_redraw(lambda: VGroup(T("epoch", size=16, color=C_GREY), Integer(int(eps.get_value()), font_size=30)).arrange(RIGHT, buff=0.15).move_to(UP * 1.05))
-
-        def readout(key, col, fmt="{:.1%}"):
-            def f():
-                i = int(np.clip(eps.get_value(), 1, 100)) - 1
-                return T(fmt.format(EP[i][key]), size=18, color=col, font=MONO)
-            return f
-        ro = VGroup()
-        ro_tf = always_redraw(lambda: readout("tf_acc", C_BLUE)().next_to(rt_, RIGHT, buff=0.25))
-        ro_so = always_redraw(lambda: readout("so_acc", C_GREEN)().next_to(lt, RIGHT, buff=0.25))
+        at = lambda tr, key: EP[int(np.clip(tr.get_value(), 1, 100)) - 1][key]
+        ro_tf = always_redraw(lambda: T(f"{at(eps, 'tf_acc'):.1%}", size=18, color=C_BLUE, font=MONO).next_to(rt_, RIGHT, buff=0.25))
+        ro_so = always_redraw(lambda: T(f"{at(eps, 'so_acc'):.1%}", size=18, color=C_GREEN, font=MONO).next_to(lt, RIGHT, buff=0.25))
         chance = DashedLine(ax.ax.c2p(0, CFG["chance"]), ax.ax.c2p(100, CFG["chance"]), color=C_RED, stroke_width=2)
         chance_l = T("chance 1/13 = 7.7%", size=14, color=C_RED).next_to(chance, UP, buff=0.04).align_to(chance, RIGHT)
         self.then(FadeIn(ax), FadeIn(ticks), FadeIn(acc_t), FadeIn(rk), FadeIn(rk_t), rt=0.8)
         self.add(c_tf, c_so, r_tf, r_so, epoch_l, ro_tf, ro_so)
-        # epoch 1 → 10, freeze for legibility
-        self.go("As revealed", eps.animate(rate_func=linear).set_value(10), rt=2.0)
-        so_rank_l = always_redraw(lambda: T(f"{EP[int(np.clip(eps.get_value(), 1, 100)) - 1]['so_rank']:.1f}", size=18, color=C_GREEN, font=MONO)
-                                  .next_to(rk.ax.c2p(100, 64), DOWN, buff=0.1).shift(LEFT * 0.3))
-        tf_rank_l = always_redraw(lambda: T(f"{EP[int(np.clip(eps.get_value(), 1, 100)) - 1]['tf_rank']:.1f}", size=18, color=C_BLUE, font=MONO)
-                                  .next_to(rk.ax.c2p(100, 64), DOWN, buff=0.45).shift(LEFT * 0.3))
-        self.go("catastrophic rank collapse", FadeIn(so_rank_l), FadeIn(tf_rank_l), rt=0.6)
-        self.go("first ten epochs", Indicate(r_so, color=WHITE), rt=1.0)
-        self.go("Its hidden representations", eps.animate(rate_func=linear).set_value(25), rt=2.0)
-        self.go("effective rank of only", Indicate(so_rank_l, color=C_GREEN, scale_factor=1.5), rt=1.0)
-        self.go("Its associative recall", Create(chance), FadeIn(chance_l), rt=0.8)
-        self.go("flatlined", Indicate(c_so, color=WHITE), Indicate(ro_so), rt=1.0)
-        # severed binding inside the SO graph
+        # the long plateau: both models near chance for forty epochs
+        self.go("For the first forty epochs", eps.animate(rate_func=linear).set_value(40), rt=2.6)
+        self.go("Both networks hovered", Create(chance), FadeIn(chance_l), rt=0.8)
+        self.go("seven point seven", Indicate(chance_l, color=C_RED, scale_factor=1.3), rt=0.8)
+        self.go("never left that floor", Indicate(c_so, color=WHITE), rt=0.8)
+        self.go("flatlined near twelve", Indicate(ro_so, color=C_GREEN, scale_factor=1.4), rt=0.8)
         cut = list(sedge.values())[1]
-        self.go("structural pruning severed", cut.animate.set_stroke(C_RED, 4), rt=0.4)
-        self.then(Uncreate(cut), eps.animate(rate_func=linear).set_value(35), rt=1.4, upto="Furthermore, analyzing")
+        self.go("completely unable", rt=0.1)
+        # the rank telemetry runs the full 100 epochs on its own clock
+        so_rank_l = always_redraw(lambda: T(f"{at(eps_r, 'so_rank'):.1f}", size=18, color=C_GREEN, font=MONO).next_to(rk.ax.c2p(100, 64), DOWN, buff=0.1).shift(LEFT * 0.3))
+        tf_rank_l = always_redraw(lambda: T(f"{at(eps_r, 'tf_rank'):.1f}", size=18, color=C_BLUE, font=MONO).next_to(rk.ax.c2p(100, 64), DOWN, buff=0.45).shift(LEFT * 0.3))
+        self.go("kept compressing", FadeIn(so_rank_l), FadeIn(tf_rank_l), rt=0.5)
+        self.go("drifted down from forty-nine", eps_r.animate(rate_func=linear).set_value(100), rt=2.4)
+        self.go("without ever learning", Indicate(so_rank_l, color=C_GREEN, scale_factor=1.5), rt=0.9, upto="And the gradient paths")
 
         # ── why: pruning is a step function — no gradient crosses it ───────────────────
         step_ax = Axes(x_range=[-1, 1, 0.5], y_range=[0, 1.2, 1], x_length=3.0, y_length=1.6, axis_config=dict(color=C_GREY, include_tip=False)).move_to(LEFT * 4.6 + DOWN * 3.1)
@@ -171,34 +166,35 @@ class Ch08(Chapter):
                       DashedLine(step_ax.c2p(0.2, 0), step_ax.c2p(0.2, 1), color=C_ORANGE))
         sl = VGroup(M(r"m_{ij}=\mathbb{1}[|w_{ij}|>\tau]", size=22, color=C_ORANGE).next_to(step_ax, UP, buff=0.05),
                     M(r"\partial m/\partial w = 0 \ \text{or}\ \infty", size=22, color=C_RED).next_to(step_ax, RIGHT, buff=0.15))
-        self.go("Furthermore, analyzing", VGroup(ax, ticks, acc_t, chance, chance_l).animate.shift(UP * 0.4), rt=0.6)
-        self.go("discrete structural mutations", Create(step_ax), Create(step), Write(sl[0]), rt=1.2)
-        self.go("non-differentiable", Write(sl[1]), Flash(step_ax.c2p(0.2, 0.5), color=C_RED), rt=1.0)
-        # stuck ball in a local minimum
+        self.go("And the gradient paths", VGroup(ax, ticks, acc_t, chance, chance_l).animate.shift(UP * 0.4), rt=0.6)
+        self.go("Structural mutations are discrete", cut.animate.set_stroke(C_RED, 4), Create(step_ax), rt=0.8)
+        self.go("step function", Create(step), Write(sl[0]), Uncreate(cut), rt=1.0)
+        self.then(Write(sl[1]), Flash(step_ax.c2p(0.2, 0.5), color=C_RED), rt=0.8, upto="could not send credit")
         lm = Axes(x_range=[0, 6], y_range=[0, 3], x_length=3.0, y_length=1.6, axis_config=dict(stroke_opacity=0)).move_to(LEFT * 0.6 + DOWN * 3.1)
         f = lambda x: 1.6 + 0.9 * np.sin(1.7 * x) - 0.25 * x
         curve = lm.plot(f, x_range=[0, 6], color=C_PURPLE)
         ball = Dot(lm.c2p(1.0, f(1.0)), radius=0.09, color=C_GREEN)
-        self.go("The optimization algorithm", FadeIn(curve), FadeIn(ball), eps.animate(rate_func=linear).set_value(44), rt=1.4)
-        self.go("newly formed", ball.animate.move_to(lm.c2p(2.7, f(2.7)) + UP * 0.09), rt=0.8)
-        self.go("suboptimal local minima", Wiggle(ball), FadeIn(T("stuck", size=16, color=C_GREEN).next_to(ball, UP, buff=0.1)), rt=1.0, upto="The Transformer, meanwhile")
+        self.go("could not send credit", FadeIn(curve), FadeIn(ball), rt=0.8)
+        self.then(ball.animate.move_to(lm.c2p(2.7, f(2.7)) + UP * 0.09), rt=0.8, upto="poor local minima")
+        self.go("poor local minima", Wiggle(ball), FadeIn(T("stuck", size=16, color=C_GREEN).next_to(lm.c2p(2.7, f(2.7)), UP, buff=0.2)), rt=1.0, upto="did something remarkable")
 
-        # ── the transformer's phase transition, and the spectra ───────────────────────
+        # ── the transformer's phase change ───────────────────────────────────────────
         line923 = DashedLine(ax.ax.c2p(0, 0.923), ax.ax.c2p(100, 0.923), color=C_BLUE, stroke_width=1.5)
         l923 = T("92.3%", size=14, color=C_BLUE).next_to(line923, LEFT, buff=0.1)
-        self.go("The Transformer, meanwhile", FadeIn(line923), FadeIn(l923), eps.animate(rate_func=linear).set_value(48), rt=1.0)
-        self.go("rich representational", Indicate(r_tf, color=WHITE), rt=0.8)
-        self.go("effective rank of 14", Indicate(tf_rank_l, color=C_BLUE, scale_factor=1.5), rt=0.8)
+        self.go("did something remarkable", Indicate(c_tf, color=WHITE), rt=0.8)
+        self.go("Around epoch forty-five", eps.animate(rate_func=linear).set_value(45), FadeIn(line923), FadeIn(l923), rt=1.2)
+        jump = VGroup(Dot(ax.ax.c2p(45, at(eps, "tf_acc") if False else EP[44]["tf_acc"]), color=C_YELLOW, radius=0.07), Dot(ax.ax.c2p(49, EP[48]["tf_acc"]), color=C_YELLOW, radius=0.07))
+        brace = BraceBetweenPoints(ax.ax.c2p(45, 1.04), ax.ax.c2p(49, 1.04), UP, color=C_YELLOW)
+        bl_ = T("4 epochs", size=14, color=C_YELLOW).next_to(brace, UP, buff=0.05)
+        self.go("from under thirty percent", eps.animate(rate_func=linear).set_value(49), FadeIn(jump), GrowFromCenter(brace), FadeIn(bl_), rt=1.6)
+        self.go("settled at one hundred", eps.animate(rate_func=linear).set_value(100), rt=1.6)
+        phase = VGroup(T("phase change", size=16, color=C_YELLOW, weight=BOLD), T("cf. induction-head formation", size=13, color=C_YELLOW), T("Olsson et al. 2022", size=13, color=C_GREY)).arrange(DOWN, aligned_edge=LEFT, buff=0.05).move_to(ax.ax.c2p(75, 0.55))
+        self.go("That sudden leap", FadeIn(phase, shift=UP * 0.2), Indicate(brace, color=C_YELLOW), rt=1.2, upto="The theory survived")
         cross_ep = next(e["epoch"] for e in EP if e["tf_acc"] >= 0.923)
-        mark = VGroup(Dot(ax.ax.c2p(cross_ep, 0.923), color=C_YELLOW, radius=0.08),
-                      T(f"crosses 92.3% at epoch {cross_ep}", size=14, color=C_YELLOW).next_to(ax.ax.c2p(cross_ep, 0.923), DR, buff=0.1))
-        self.go("surging", eps.animate(rate_func=smooth).set_value(cross_ep + 1), rt=1.0)
-        self.then(FadeIn(mark), rt=0.4)
-        self.go("fewer than one hundred", eps.animate(rate_func=linear).set_value(100), rt=2.0, upto="The mathematical proofs")
+        self.remove(c_tf, c_so, r_tf, r_so, epoch_l, ro_tf, ro_so, so_rank_l, tf_rank_l)
+        self.go("The theory survived", FadeOut(self.stage(tag, task)), rt=0.8)
 
         # ── final: real singular-value spectra and a results table ────────────────────
-        self.remove(c_tf, c_so, r_tf, r_so, epoch_l, ro_tf, ro_so, so_rank_l, tf_rank_l)
-        self.go("The mathematical proofs", FadeOut(self.stage(tag, task)), rt=0.8)
         s_tf, s_so = np.array(RES["tf_spectrum"]), np.array(RES["so_spectrum"])
         base = Line(LEFT * 6.0, LEFT * 0.4, color=C_GREY).move_to(LEFT * 3.2 + DOWN * 2.6)
 
@@ -209,7 +205,7 @@ class Ch08(Chapter):
         bs.shift(UP * 0.0)
         spec_t = T("singular values of the final representations (σᵢ/σ₁)", size=16).next_to(base, UP, buff=3.0).align_to(base, LEFT)
         leg = VGroup(T("Transformer", size=16, color=C_BLUE), T("self-organizing", size=16, color=C_GREEN)).arrange(RIGHT, buff=0.4).next_to(spec_t, DOWN, buff=0.1).align_to(base, LEFT)
-        self.go("live silicon", Create(base), FadeIn(spec_t), FadeIn(leg), LaggedStart(*[GrowFromEdge(b, DOWN) for b in bt], lag_ratio=0.01), rt=1.4)
+        self.then(Create(base), FadeIn(spec_t), FadeIn(leg), LaggedStart(*[GrowFromEdge(b, DOWN) for b in bt], lag_ratio=0.01), rt=1.4)
         self.then(LaggedStart(*[GrowFromEdge(b, DOWN) for b in bs], lag_ratio=0.01), bt.animate.set_opacity(0.45), rt=1.2, upto="Without all-to-all")
         last = EP[-1]
         rows = [("", "Transformer", "Self-organizing"),

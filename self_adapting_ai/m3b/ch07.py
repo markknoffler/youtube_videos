@@ -22,11 +22,11 @@ class Ch07(Chapter):
             "general methods", "most effective", "This principle", "Hardware Lottery", "success of an AI", "fits existing",
             "theoretical elegance", "Modern AI supercomputers", "H100s", "TPU", "wafer-scale", "not biological brain",
             "dense systolic", "When performing dense", "computational utilization", "petaflops", "streaming contiguous", "on-chip SRAM",
-            "Hopper architecture", "16 by 16", "per clock cycle", "Any deviation", "stalls the execution", "sacrificing up to",
+            "Hopper architecture", "small dense matrix tiles", "cycle after cycle", "Any deviation", "stalls the execution", "sacrificing most",
             "Now examine", "self-rewiring sparse", "Pointers, irregular", "dynamic edge mutations", "thrash", "DRAM latency",
-            "uncoalesced", "plunging hardware", "less than", "Furthermore, consider", "Reverse-mode automatic",
+            "uncoalesced", "effective throughput collapses", "We measured it", "fourteen hundred", "crawled at under four", "three hundred and sixty", "Furthermore, consider", "Reverse-mode automatic",
             "exact analytical gradient", "single backward pass", "Local plasticity rules lack", "localized node perturbations",
-            "variance of the gradient", "scales exponentially", "sequence length T", "Without global backpropagation",
+            "variance of the gradient", "grows rapidly", "sequence length T", "Without global backpropagation",
             "wander blindly", "while dense Transformers", "scale monotonically", "compute dollar")
         frame = self.camera.frame
         tag = T("07 · THEOREM 3 — THE HARDWARE LOTTERY", size=16, color=C_GREY).to_corner(UL, buff=0.35)
@@ -131,16 +131,16 @@ class Ch07(Chapter):
         self.go("on-chip SRAM", FadeIn(s2), Indicate(sram, color=C_TEAL), wf.animate(rate_func=linear).set_value(22), rt=1.4)
         tile = SurroundingRectangle(arr[0:1], buff=0).set_stroke(width=0)
         t16 = Square(arr.width * 1.0, color=C_YELLOW, stroke_width=4).move_to(arr)
-        t16l = T("16 × 16 MMA tile", size=18, color=C_YELLOW).next_to(arr, DOWN, buff=0.2)
+        t16l = T("dense MMA tiles", size=18, color=C_YELLOW).next_to(arr, DOWN, buff=0.2)
         clk = counter(0, size=26, color=C_YELLOW).next_to(t16l, DOWN, buff=0.1)
         clk_l = T("clock", size=14, color=C_GREY).next_to(clk, LEFT, buff=0.15)
         self.go("Hopper architecture", wf.animate(rate_func=linear).set_value(-4), rt=1.2)
-        self.go("16 by 16", Create(t16), FadeIn(t16l), FadeIn(clk), FadeIn(clk_l), rt=0.8)
-        self.go("per clock cycle", clk.tracker.animate(rate_func=linear).set_value(48), wf.animate(rate_func=linear).set_value(22), rt=1.8, upto="Any deviation")
+        self.go("small dense matrix tiles", Create(t16), FadeIn(t16l), FadeIn(clk), FadeIn(clk_l), rt=0.8)
+        self.go("cycle after cycle", clk.tracker.animate(rate_func=linear).set_value(48), wf.animate(rate_func=linear).set_value(22), rt=1.8, upto="Any deviation")
         # a single irregularity: the stream breaks, PEs idle
         self.go("Any deviation", s1.speed.animate.set_value(0.08), s2.speed.animate.set_value(0.08), rt=0.8)
         self.go("stalls the execution", util.animate.set_value(0.05), arr.animate.set_color(C_DIM), rt=1.2)
-        self.go("sacrificing up to", Indicate(upct, color=C_RED), rt=0.8, upto="Now examine")
+        self.go("sacrificing most", Indicate(upct, color=C_RED), rt=0.8, upto="Now examine")
 
         # ── a self-rewiring sparse graph on the same machine: pointer chasing ─────────
         arr.clear_updaters()
@@ -165,8 +165,8 @@ class Ch07(Chapter):
         self.then(lat[1].tracker.animate.set_value(112), rt=1.0, upto="uncoalesced")
         rnd = [arr[i] for i in rngp.choice(len(arr), 8, replace=False)]
         self.go("uncoalesced", *[r.animate.set_fill(C_ORANGE, 0.9) for r in rnd], Flash(miss, color=C_RED), rt=0.8)
-        self.go("plunging hardware", util.animate.set_value(0.4), rt=0.4)
-        self.then(util.animate.set_value(0.07), rt=1.0, upto="less than")
+        self.go("effective throughput collapses", util.animate.set_value(0.4), rt=0.4)
+        self.then(util.animate.set_value(0.03), rt=1.0, upto="We measured it")
         # the real measurement on this laptop
         mb = BENCH.get("mps", BENCH["cpu"])
         bench_bg = RoundedRectangle(width=5.4, height=2.0, corner_radius=0.15, stroke_color=C_YELLOW, stroke_width=1.5).set_fill(BG, 0.95).move_to(LEFT * 2.6 + UP * 1.55)
@@ -177,8 +177,10 @@ class Ch07(Chapter):
                       VGroup(T("sparse gather", size=16, color=C_GREEN), b2, T(f"{mb['sparse_gflops']:.1f} GFLOP/s", size=16)).arrange(RIGHT, buff=0.15)).arrange(DOWN, aligned_edge=LEFT, buff=0.25)
         rows.move_to(bench_bg).shift(DOWN * 0.15)
         btitle = T(f"measured on this M3 · {mb['dense_gflops'] / mb['sparse_gflops']:.0f}× gap", size=16, color=C_YELLOW).next_to(bench_bg.get_top(), DOWN, buff=0.15)
-        self.go("less than", FadeIn(bench_bg), FadeIn(btitle), rt=0.4)
-        self.then(GrowFromEdge(b1, LEFT), GrowFromEdge(b2, LEFT), FadeIn(rows[0][0]), FadeIn(rows[1][0]), FadeIn(rows[0][2]), FadeIn(rows[1][2]), rt=1.2, upto="Furthermore, consider")
+        self.go("We measured it", FadeIn(bench_bg), FadeIn(btitle), FadeIn(rows[0][0]), FadeIn(rows[1][0]), rt=0.6)
+        self.go("fourteen hundred", GrowFromEdge(b1, LEFT), FadeIn(rows[0][2]), rt=1.0)
+        self.go("crawled at under four", GrowFromEdge(b2, LEFT), FadeIn(rows[1][2]), rt=1.0)
+        self.go("three hundred and sixty", Indicate(btitle, color=C_YELLOW, scale_factor=1.15), rt=1.0, upto="Furthermore, consider")
 
         # ── credit assignment: exact backward pass vs noisy local perturbation ─────────
         self.go("Furthermore, consider", FadeOut(self.stage(tag, head)), rt=0.8)
@@ -229,7 +231,7 @@ class Ch07(Chapter):
         self.add(vc, Tl)
         self.then(Create(vplot), FadeIn(vpl), jit.animate(rate_func=linear).set_value(3), rt=1.0)
         self.add(vcurve)
-        self.go("scales exponentially", Tt.animate(rate_func=linear).set_value(8), jit.animate(rate_func=linear).set_value(5), rt=1.6)
+        self.go("grows rapidly", Tt.animate(rate_func=linear).set_value(8), jit.animate(rate_func=linear).set_value(5), rt=1.6)
         self.go("sequence length T", Tt.animate(rate_func=linear).set_value(16), jit.animate(rate_func=linear).set_value(7), rt=1.8, upto="Without global backpropagation")
 
         # ── outcomes: blind wandering vs monotone scaling with compute ─────────────────

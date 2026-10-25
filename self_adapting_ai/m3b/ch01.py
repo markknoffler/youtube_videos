@@ -7,7 +7,8 @@ class Ch01(Chapter):
 
     def construct(self):
         C = self.times(
-            "Look around", "GPT-6", "Claude 5.5", "Gemini 4", "Mythos", "mathematical reasoning", "software synthesis",
+            "In nineteen forty-nine", "one sentence", "Seventy-seven years later", "every chatbot", "Just not where",
+            "To find it", "brain-like AI has failed", "Welcome to this", "Look around", "GPT-6", "Claude 5.5", "Gemini 4", "Mythos", "mathematical reasoning", "software synthesis",
             "multi-turn", "remarkable cognitive", "Yet behind", "unsettling", "Every single foundational", "frozen, static monolith",
             "Consider the computational", "several months", "tens of thousands of GPUs", "kilowatt hours",
             "hundreds of billions", "trillions of tokens", "During this training", "updating its numerical",
@@ -26,8 +27,38 @@ class Ch01(Chapter):
         tag = T("01 · THE MONOLITH", size=16, color=C_GREY).to_corner(UL, buff=0.35)
         title = T("Why Brain-Like AI Failed", size=54, weight=BOLD)
         sub = T("and what we built instead", size=26, color=C_GREY).next_to(title, DOWN)
-        self.play(Create(plane, lag_ratio=0.02), Write(title), run_time=2.0)
-        self.play(FadeIn(sub, shift=UP * 0.2), run_time=0.8)
+        # ── cold open: one sentence from 1949, hidden somewhere inside today's chatbots ─
+        paper = RoundedRectangle(width=4.2, height=5.4, corner_radius=0.06, stroke_width=0).set_fill("#E9E1CF", 1).move_to(LEFT * 3.4)
+        year = Text("1949", font="Georgia", font_size=34, color="#3B3326").move_to(paper.get_top() + DOWN * 0.55)
+        rows = VGroup(*[Rectangle(width=3.4 * (0.7 + 0.3 * ((i * 37) % 10) / 10), height=0.09).set_stroke(width=0).set_fill("#8C8270", 0.8)
+                        for i in range(16)]).arrange(DOWN, buff=0.17, aligned_edge=LEFT).next_to(year, DOWN, buff=0.4).align_to(paper, LEFT).shift(RIGHT * 0.4)
+        key_row = rows[7]
+        self.go("In nineteen forty-nine", FadeIn(paper, shift=UP * 0.3), Write(year), rt=1.0)
+        self.then(LaggedStart(*[GrowFromEdge(r, LEFT) for r in rows], lag_ratio=0.05), rt=1.0, upto="one sentence")
+        seed = key_row.copy().set_fill(C_YELLOW, 1)
+        self.go("one sentence", Transform(key_row, seed), Flash(key_row.get_right(), color=C_YELLOW), rows[:7].animate.set_opacity(0.35), rows[8:].animate.set_opacity(0.35), rt=1.0)
+        chats = VGroup()
+        for k, w in enumerate([2.6, 3.1, 2.2]):
+            b_ = RoundedRectangle(width=w, height=0.62, corner_radius=0.25, color=C_GREY, stroke_width=1.5).set_fill(C_DIM, 0.5)
+            dots = VGroup(*[Dot(radius=0.05, color=C_GREY) for _ in range(3)]).arrange(RIGHT, buff=0.12).move_to(b_)
+            chats.add(VGroup(b_, dots))
+        chats.arrange(DOWN, buff=0.25, aligned_edge=RIGHT).move_to(RIGHT * 3.6 + UP * 0.4)
+        self.go("Seventy-seven years later", LaggedStart(*[FadeIn(c, shift=LEFT * 0.3) for c in chats], lag_ratio=0.25), rt=1.2)
+        ghost = monolith(6, w=1.6, h=0.28, color=C_ICE).move_to(RIGHT * 3.6 + DOWN * 2.1).set_opacity(0.6)
+        spark = Dot(key_row.get_center(), radius=0.09, color=C_YELLOW)
+        self.go("every chatbot", FadeIn(ghost), *[Indicate(c[1], color=WHITE) for c in chats], rt=0.8)
+        self.then(spark.animate.move_to(ghost.get_center()).set_opacity(0.0), rt=1.0, upto="Just not where")
+        qmark = T("?", size=64, color=C_YELLOW, weight=BOLD).move_to(ghost)
+        self.go("Just not where", FadeIn(qmark, scale=1.6), ghost.animate.set_opacity(0.25), rt=1.0)
+        broken = living_graph(18, center=LEFT * 3.4, radius=1.5, seed=6)
+        thr0 = broken.thr.get_value(); broken.thr.set_value(0.01)
+        self.go("To find it", FadeOut(VGroup(paper, year, rows, key_row)), FadeOut(chats), rt=0.8)
+        self.add(broken[0])
+        self.then(FadeIn(broken.nodes), broken.thr.animate.set_value(thr0), rt=0.8, upto="brain-like AI has failed")
+        self.go("brain-like AI has failed", broken.thr.animate.set_value(0.01), broken.nodes.animate.set_color(C_RED).set_opacity(0.3), rt=1.4, upto="Welcome to this")
+        self.go("Welcome to this", FadeOut(broken.nodes), FadeOut(VGroup(ghost, qmark)), Create(plane, lag_ratio=0.02), Write(title), rt=1.8)
+        self.remove(broken[0])
+        self.then(FadeIn(sub, shift=UP * 0.2), rt=0.6, upto="Look around")
 
         # ── the frontier landscape: hub + branches grow as each model is named ─────
         hub = Circle(0.55, color=WHITE, stroke_width=2.5).set_fill(BG, 1)

@@ -9,11 +9,11 @@ class Ch09(Chapter):
         C = self.times(
             "Recognizing these", "frontier industrial", "brilliant architectural", "Consider the breakthrough", "late 2024",
             "did not abandon", "unstructured biological", "Instead, they engineered", "dense tensor matrices", "two revolutionary",
-            "First, through fine-grained", "distinct feed", "For any given token", "only eight experts", "keeping two shared",
-            "extreme conditional", "sparse execution", "ninety-percent hardware", "all-to-all communication", "Second, through",
+            "First, through fine-grained", "routed experts in each", "For any given token", "only eight of them", "one shared expert",
+            "extreme conditional", "sparse execution", "hardware-friendly matrix", "all-to-all communication", "Second, through",
             "Instead of incurring", "raw key-value caches", "dynamically compresses", "low-dimensional latent", "decompressing",
             "Notice how this", "do not come from abolishing", "They come from designing", "on top of dense", "You gain the efficiency",
-            "catastrophic cache penalty", "By combining", "sparse parameter activation", "zero loss", "Rather than letting",
+            "catastrophic cache penalty", "By combining", "thirty-seven billion", "remarkably stable", "Rather than letting",
             "learned soft routing", "statically defined", "Modularity is alive", "unruly biological", "disciplined mathematical")
         frame = self.camera.frame
         tag = T("09 · WHAT FRONTIER LABS DISCOVERED", size=16, color=C_GREY).to_corner(UL, buff=0.35)
@@ -67,7 +67,7 @@ class Ch09(Chapter):
         gl = T("256 routed experts", size=18, color=C_YELLOW).next_to(grid, UP, buff=0.15)
         self.go("First, through fine-grained", FadeOut(inn[1]), inn[0].animate.scale(0.8).to_corner(UL, buff=0.4).shift(DOWN * 0.45),
                 ReplacementTransform(mono, VGroup(*[grid[i] for i in range(0, 256, 32)])), rt=1.2)
-        self.go("distinct feed", LaggedStart(*[FadeIn(g, scale=0.5) for g in grid], lag_ratio=0.002), FadeIn(gl), rt=1.6)
+        self.go("routed experts in each", LaggedStart(*[FadeIn(g, scale=0.5) for g in grid], lag_ratio=0.002), FadeIn(gl), rt=1.6)
         # gate bars on the left
         gate_ax = Line(LEFT * 6.2, LEFT * 1.6, color=C_GREY).move_to(LEFT * 3.9 + DOWN * 2.6)
         gate_l = M(r"s_{t,i}=\sigma(u_t^{\top} e_i)", size=28, color=C_YELLOW).move_to(LEFT * 3.9 + UP * 0.3)
@@ -76,7 +76,7 @@ class Ch09(Chapter):
         toks = ["The", "proof", "of", "Fermat"]
         routes = VGroup()
         self.go("For any given token", FadeIn(shared), FadeIn(shared_l), Write(gate_l), Create(gate_ax), rt=1.0)
-        keys = ["only eight experts", "keeping two shared", "extreme conditional", "sparse execution"]
+        keys = ["only eight of them", "one shared expert", "extreme conditional", "sparse execution"]
         for k, w in enumerate(toks):
             tb = label_box(w, C_BLUE, size=22).move_to(LEFT * 3.9 + UP * 2.0)
             s = rng.random(256) ** 3
@@ -91,7 +91,7 @@ class Ch09(Chapter):
         act = T("8 of 256 active per token  ·  37B of 671B parameters", size=18, color=C_YELLOW).next_to(grid, DOWN, buff=0.2)
         self.then(FadeIn(act), rt=0.5)
         # experts sharded over GPUs, tokens dispatched all-to-all
-        self.go("ninety-percent hardware", FadeOut(VGroup(gate_l, topk, gate_ax)), rt=0.5)
+        self.go("hardware-friendly matrix", FadeOut(VGroup(gate_l, topk, gate_ax)), rt=0.5)
         gpus = VGroup(*[RoundedRectangle(width=1.6, height=1.0, corner_radius=0.1, color=C_ORANGE, stroke_width=2).set_fill(C_ORANGE, 0.1) for _ in range(4)])
         gpus.arrange_in_grid(2, 2, buff=0.6).move_to(LEFT * 3.9 + UP * 0.3)
         gl2 = VGroup(*[T(f"GPU {i}\n64 experts", size=13, color=C_ORANGE).move_to(g) for i, g in enumerate(gpus)])
@@ -160,14 +160,14 @@ class Ch09(Chapter):
         pie_bg = Circle(1.0, color=C_DIM, stroke_width=0).set_fill(C_DIM, 0.6).move_to(RIGHT * 0.9 + DOWN * 1.3)
         pie = AnnularSector(inner_radius=0, outer_radius=1.0, angle=TAU * frac, start_angle=PI / 2, color=C_YELLOW).set_fill(C_YELLOW, 0.9).move_arc_center_to(pie_bg.get_center())
         pl = VGroup(T("37B active", size=16, color=C_YELLOW), T("of 671B", size=14, color=C_GREY)).arrange(DOWN, buff=0.05).next_to(pie_bg, DOWN, buff=0.15)
-        self.go("sparse parameter activation", FadeIn(pie_bg), Create(pie), FadeIn(pl), rt=1.2)
+        self.go("thirty-seven billion", FadeIn(pie_bg), Create(pie), FadeIn(pl), rt=1.2)
         lax = LiveAxes([0, 10, 5], [0, 4, 2], width=3.6, height=2.2, x_label="training tokens →").move_to(RIGHT * 4.4 + DOWN * 1.3)
         lt_ = ValueTracker(0)
         xs = np.linspace(0, 10, 200)
         rngl = np.random.default_rng(1)
         lc = lax.live_curve(xs, 3.6 * np.exp(-0.35 * xs) + 0.6 + 0.03 * rngl.normal(size=200), lt_, color=C_TEAL)
         ll = T("no irrecoverable loss spikes (tech. report)", size=14, color=C_TEAL).next_to(lax, UP, buff=0.05)
-        self.go("zero loss", FadeIn(lax), FadeIn(ll), rt=0.5)
+        self.go("remarkably stable", FadeIn(lax), FadeIn(ll), rt=0.5)
         self.add(lc)
         self.then(lt_.animate(rate_func=linear).set_value(10), rt=1.6, upto="Rather than letting")
 
