@@ -1,0 +1,259 @@
+{
+ "chapter": 10,
+ "voice": "cloned",
+ "backend": "higgs",
+ "segments": [
+  {
+   "i": 0,
+   "s": 0.35,
+   "e": 3.75,
+   "text": "So far, this has been a story of failure."
+  },
+  {
+   "i": 1,
+   "s": 4.414,
+   "e": 5.795,
+   "text": "But there is a twist."
+  },
+  {
+   "i": 2,
+   "s": 6.262,
+   "e": 8.062,
+   "text": "And it changes everything."
+  },
+  {
+   "i": 3,
+   "s": 8.908,
+   "e": 12.364,
+   "text": "Go back to the Hebbian memory from chapter four:"
+  },
+  {
+   "i": 4,
+   "s": 12.886,
+   "e": 19.766,
+   "text": "the matrix that stores associations by adding up outer products, value times key-transpose."
+  },
+  {
+   "i": 5,
+   "s": 20.034,
+   "e": 22.354,
+   "text": "We watched it drown in crosstalk."
+  },
+  {
+   "i": 6,
+   "s": 23.742,
+   "e": 26.022,
+   "text": "Now look closely at a Transformer."
+  },
+  {
+   "i": 7,
+   "s": 26.701,
+   "e": 29.141,
+   "text": "Strip the softmax out of attention,"
+  },
+  {
+   "i": 8,
+   "s": 29.264,
+   "e": 32.784,
+   "text": "and something extraordinary is left behind."
+  },
+  {
+   "i": 9,
+   "s": 33.573,
+   "e": 39.013,
+   "text": "Every new token writes its value, times its key-transpose, into a running matrix."
+  },
+  {
+   "i": 10,
+   "s": 40.263,
+   "e": 43.903,
+   "text": "Every query reads from that matrix, by multiplication."
+  },
+  {
+   "i": 11,
+   "s": 44.994,
+   "e": 47.034,
+   "text": "That is Hebb's rule."
+  },
+  {
+   "i": 12,
+   "s": 47.32,
+   "e": 48.421,
+   "text": "Exactly."
+  },
+  {
+   "i": 13,
+   "s": 49.441,
+   "e": 55.601,
+   "text": "In 2021, Imanol Schlag, Kazuki Irie and J\u00fcrgen Schmidhuber proved it formally."
+  },
+  {
+   "i": 14,
+   "s": 56.851,
+   "e": 59.971,
+   "text": "Linear attention is a fast weight programmer:"
+  },
+  {
+   "i": 15,
+   "s": 60.433,
+   "e": 67.713,
+   "text": "a slow network that learns, by gradient descent, to write fast synaptic weights while it is thinking."
+  },
+  {
+   "i": 16,
+   "s": 68.621,
+   "e": 71.661,
+   "text": "The idea is older than the Transformer itself."
+  },
+  {
+   "i": 17,
+   "s": 72.911,
+   "e": 80.191,
+   "text": "In 2016, Jimmy Ba and Geoffrey Hinton argued that brains have synapses that change faster than learning,"
+  },
+  {
+   "i": 18,
+   "s": 80.342,
+   "e": 81.862,
+   "text": "but slower than thought,"
+  },
+  {
+   "i": 19,
+   "s": 82.142,
+   "e": 87.262,
+   "text": "and that these fast weights are a neurally plausible way to attend to the recent past."
+  },
+  {
+   "i": 20,
+   "s": 88.036,
+   "e": 91.236,
+   "text": "So the Transformer never rejected Hebb."
+  },
+  {
+   "i": 21,
+   "s": 91.474,
+   "e": 93.714,
+   "text": "It moved Hebb out of the synapse..."
+  },
+  {
+   "i": 22,
+   "s": 93.98,
+   "e": 95.78,
+   "text": "and into the activations."
+  },
+  {
+   "i": 23,
+   "s": 96.75,
+   "e": 98.27,
+   "text": "And the crosstalk?"
+  },
+  {
+   "i": 24,
+   "s": 98.787,
+   "e": 103.227,
+   "text": "Schlag's team showed that pure outer-product writing hits a hard capacity wall."
+  },
+  {
+   "i": 25,
+   "s": 104.018,
+   "e": 106.258,
+   "text": "Their fix was the delta rule:"
+  },
+  {
+   "i": 26,
+   "s": 106.52,
+   "e": 109.88,
+   "text": "before writing, read what the memory already predicts,"
+  },
+  {
+   "i": 27,
+   "s": 110.004,
+   "e": 111.884,
+   "text": "and store only the error."
+  },
+  {
+   "i": 28,
+   "s": 112.584,
+   "e": 114.506,
+   "text": "We tested this on this laptop."
+  },
+  {
+   "i": 29,
+   "s": 115.243,
+   "e": 118.963,
+   "text": "With thirty-two associations in a sixty-four dimensional memory,"
+  },
+  {
+   "i": 30,
+   "s": 119.053,
+   "e": 122.773,
+   "text": "pure Hebbian writing recalled only forty-nine percent of them."
+  },
+  {
+   "i": 31,
+   "s": 122.993,
+   "e": 126.553,
+   "text": "The delta rule recalled seventy-eight percent in a single pass,"
+  },
+  {
+   "i": 32,
+   "s": 126.74,
+   "e": 129.18,
+   "text": "and every single one after three."
+  },
+  {
+   "i": 33,
+   "s": 130.568,
+   "e": 133.008,
+   "text": "This is exactly where the frontier is moving."
+  },
+  {
+   "i": 34,
+   "s": 133.256,
+   "e": 137.733,
+   "text": "DeltaNet and Gated DeltaNet add a forgetting gate to the delta rule."
+  },
+  {
+   "i": 35,
+   "s": 138.277,
+   "e": 140.597,
+   "text": "Google's Titans go further still:"
+  },
+  {
+   "i": 36,
+   "s": 140.93,
+   "e": 144.73,
+   "text": "a neural memory that rewrites its own weights at test time,"
+  },
+  {
+   "i": 37,
+   "s": 144.914,
+   "e": 149.434,
+   "text": "driven by surprise, the gradient of how wrong it just was."
+  },
+  {
+   "i": 38,
+   "s": 150.396,
+   "e": 153.276,
+   "text": "Self-adapting intelligence did arrive."
+  },
+  {
+   "i": 39,
+   "s": 153.831,
+   "e": 156.471,
+   "text": "Not as a brain-shaped graph rewiring itself,"
+  },
+  {
+   "i": 40,
+   "s": 156.628,
+   "e": 162.068,
+   "text": "but as a dense, differentiable memory, written at the speed of thought,"
+  },
+  {
+   "i": 41,
+   "s": 162.473,
+   "e": 164.356,
+   "text": "inside the monolith."
+  }
+ ]
+}

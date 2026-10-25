@@ -73,3 +73,6 @@ self_adapting_ai/m3b/assets/pages/
 # Downloaded papers and their parsed text (re-downloadable)
 self_adapting_ai/papers/**/*.pdf
 self_adapting_ai/papers/**/*.txt
+
+# V2 voice pipeline: per-segment wav cache (regenerable, resumable)
+self_adapting_ai/audio_v2_*/_segments/
