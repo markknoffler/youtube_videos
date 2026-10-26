@@ -15,7 +15,7 @@ What changed from V2 (and why):
 Needs the gate server running (see qa_gate_server.py), the Higgs server (or Fish), and
 faster-whisper (CPU) for the ASR check.
 """
-import argparse, json, os, re, sys, time
+import argparse, hashlib, json, os, re, sys, time
 import numpy as np
 import soundfile as sf
 
@@ -59,6 +59,12 @@ def asr_score(asr, y, text):
     return difflib.SequenceMatcher(None, norm(" ".join(s.text for s in segs)), norm(text)).ratio()
 
 
+def seg_key(seg):
+    """Content key of a phrase: its text and performance tags (not its position, not its pause)."""
+    tags = "|".join(f"{k}={seg[k]}" for k in ("e", "s", "x", "nv") if seg.get(k))
+    return hashlib.sha1((seg["text"] + "|" + tags).encode()).hexdigest()[:10]
+
+
 def level_seg(seg, level):
     """level 0: mapped emotion + speed + expressiveness; 1: no emotion; 2: speed only; 3: plain."""
     s = dict(seg); s.pop("p", None)
@@ -88,6 +94,8 @@ def main():
     ap.add_argument("--min-sim", type=float, default=None, help="min ECAPA similarity (default 0.70 standard / 0.62 cloned)")
     ap.add_argument("--min-asr", type=float, default=0.70, help="ASR word-match floor (small.en mishears jargon, so not stricter)")
     ap.add_argument("--max-st-short", type=float, default=2.5, help="pitch-drift limit for phrases under 1.3 s")
+    ap.add_argument("--direction", help="direction file (default VOICE_DIRECTION_V2.md)")
+    ap.add_argument("--hash-cache", action="store_true", help="name cache files by phrase CONTENT, not index, so edited/merged phrases invalidate only themselves")
     ap.add_argument("--trust-cache", action="store_true", help="reuse every cached phrase without re-gating (delete cache files to force specific phrases)")
     ap.add_argument("--seed-offset", type=int, default=0, help="shift all seeds so a re-run does NOT repeat earlier takes")
     ap.add_argument("--fish-engine", default="/home/user/Desktop/Deep_learning_projects/youtube/youtube_videos/fish_speech_engine")
@@ -95,7 +103,7 @@ def main():
     import requests
     min_sim = args.min_sim if args.min_sim is not None else (0.62 if args.voice == "cloned" else 0.70)
 
-    D = direction_chapters()
+    D = direction_chapters(args.direction) if args.direction else direction_chapters()
     chs = sorted(D) if args.chapters == "all" else [int(c) for c in args.chapters.split(",")]
     be = g2.Higgs(args.url, args.model) if args.backend == "higgs" else g2.Fish(args.fish_engine, os.path.join(args.fish_engine, "checkpoints", "s2-pro"))
     try:
@@ -135,7 +143,7 @@ def main():
         rng = np.random.default_rng(1000 + ch)
         pieces, timing, t, t0 = [np.zeros(int(0.35 * SR), np.float32)], [], 0.35, time.time()
         for i, seg in enumerate(D[ch]):
-            cache = os.path.join(work, f"ch{ch:02d}_{i:03d}.wav")
+            cache = os.path.join(work, f"ch{ch:02d}_{seg_key(seg)}.wav" if args.hash_cache else f"ch{ch:02d}_{i:03d}.wav")
             meta, y = None, None
             if os.path.exists(cache):
                 y0 = sf.read(cache, dtype="float32")[0]
