@@ -1,0 +1,58 @@
+[
+ {
+  "voice": "standard",
+  "ch": 3,
+  "i": 12,
+  "r": 0.36,
+  "text": "without any external teacher or global loss function.",
+  "heard": "principal loss function."
+ },
+ {
+  "voice": "standard",
+  "ch": 4,
+  "i": 4,
+  "r": 0.67,
+  "text": "And conversely,",
+  "heard": "conversely,"
+ },
+ {
+  "voice": "standard",
+  "ch": 8,
+  "i": 10,
+  "r": 0.69,
+  "text": "sixty-four dimensional embeddings, sixteen key-value pairs per sequence, thirteen possible values, for one hundred epochs.",
+  "heard": "64 dimensional embeddings, 16 key -value pairs per sequence, 13 possible values, for 100 epochs."
+ },
+ {
+  "voice": "standard",
+  "ch": 8,
+  "i": 14,
+  "r": 0.56,
+  "text": "which for thirteen possible values is seven point seven percent.",
+  "heard": "which for 13 possible values is 7 .7%."
+ },
+ {
+  "voice": "standard",
+  "ch": 8,
+  "i": 28,
+  "r": 0.6,
+  "text": "from under thirty percent to ninety-nine percent in just four epochs,",
+  "heard": "under 30 % to 99 % in just four epochs"
+ },
+ {
+  "voice": "standard",
+  "ch": 10,
+  "i": 12,
+  "r": 0.0,
+  "text": "Exactly.",
+  "heard": ""
+ },
+ {
+  "voice": "standard",
+  "ch": 10,
+  "i": 29,
+  "r": 0.59,
+  "text": "With thirty-two associations in a sixty-four dimensional memory,",
+  "heard": "32 associations in a 64 -dimensional memory."
+ }
+]

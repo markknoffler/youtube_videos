@@ -1,0 +1,114 @@
+[
+ {
+  "voice": "cloned",
+  "ch": 3,
+  "i": 13,
+  "r": 0.67,
+  "text": "Concurrently, Teuvo Kohonen invented Self-Organizing Maps,",
+  "heard": "Concurrently, T .O. Kohonen invented self -organising maps,"
+ },
+ {
+  "voice": "cloned",
+  "ch": 4,
+  "i": 4,
+  "r": 0.67,
+  "text": "And conversely,",
+  "heard": "conversely,"
+ },
+ {
+  "voice": "cloned",
+  "ch": 7,
+  "i": 9,
+  "r": 0.0,
+  "text": "are not biological brain emulators.",
+  "heard": "and"
+ },
+ {
+  "voice": "cloned",
+  "ch": 7,
+  "i": 10,
+  "r": 0.5,
+  "text": "They are dense systolic tensor engines.",
+  "heard": "tensor engines."
+ },
+ {
+  "voice": "cloned",
+  "ch": 8,
+  "i": 10,
+  "r": 0.69,
+  "text": "sixty-four dimensional embeddings, sixteen key-value pairs per sequence, thirteen possible values, for one hundred epochs.",
+  "heard": "64 -dimensional embeddings, 16 key value pairs per sequence, 13 possible values for 100 epochs."
+ },
+ {
+  "voice": "cloned",
+  "ch": 8,
+  "i": 14,
+  "r": 0.56,
+  "text": "which for thirteen possible values is seven point seven percent.",
+  "heard": "which for 13 possible values is 7 .7%."
+ },
+ {
+  "voice": "cloned",
+  "ch": 8,
+  "i": 19,
+  "r": 0.56,
+  "text": "Its effective rank drifted down from forty-nine toward thirty,",
+  "heard": "effective rank drifted down from 49 to 30,"
+ },
+ {
+  "voice": "cloned",
+  "ch": 8,
+  "i": 28,
+  "r": 0.5,
+  "text": "from under thirty percent to ninety-nine percent in just four epochs,",
+  "heard": "under 30 % to 99 % in just 4 epochs"
+ },
+ {
+  "voice": "cloned",
+  "ch": 9,
+  "i": 8,
+  "r": 0.64,
+  "text": "DeepSeek-V3 deploys two hundred and fifty-six routed experts in each layer.",
+  "heard": "DeepSeq v3 deploys 256 routed experts in each layer."
+ },
+ {
+  "voice": "cloned",
+  "ch": 9,
+  "i": 23,
+  "r": 0.65,
+  "text": "DeepSeek-V3 activates only thirty-seven billion of its six hundred and seventy-one billion parameters per token,",
+  "heard": "DeepSeq v3 activates only 37 billion of its 671 billion parameters per token,"
+ },
+ {
+  "voice": "cloned",
+  "ch": 10,
+  "i": 5,
+  "r": 0.55,
+  "text": "We watched it drown in crosstalk.",
+  "heard": "washed it, drowned in crosstalk."
+ },
+ {
+  "voice": "cloned",
+  "ch": 10,
+  "i": 29,
+  "r": 0.59,
+  "text": "With thirty-two associations in a sixty-four dimensional memory,",
+  "heard": "32 associations in a 64 -dimensional memory."
+ },
+ {
+  "voice": "cloned",
+  "ch": 11,
+  "i": 17,
+  "r": 0.5,
+  "text": "spectral homeostasis.",
+  "heard": "spectro homeostasis."
+ },
+ {
+  "voice": "cloned",
+  "ch": 12,
+  "i": 4,
+  "r": 0.67,
+  "text": "with continuous, localized structural plasticity.",
+  "heard": "continuous localised structural plasticity."
+ }
+]

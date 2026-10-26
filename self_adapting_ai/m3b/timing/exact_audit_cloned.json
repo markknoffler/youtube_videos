@@ -1,0 +1,162 @@
+[
+ {
+  "voice": "cloned",
+  "ch": 1,
+  "i": 22,
+  "r": 0.4,
+  "text": "No outdated pathways dissolve.",
+  "heard": "No, I didn't, but please dissolve."
+ },
+ {
+  "voice": "cloned",
+  "ch": 1,
+  "i": 25,
+  "r": 0.72,
+  "text": "The projection weights, W Q, W K, and W V, are loaded into GPU high-bandwidth memory as fixed FP16 tensors.",
+  "heard": "The projection weights WQ, WK and WV are loaded into GPU high bandwidth memory as fixed FP16 dancers."
+ },
+ {
+  "voice": "cloned",
+  "ch": 3,
+  "i": 13,
+  "r": 0.71,
+  "text": "Concurrently, Teuvo Kohonen invented Self-Organizing Maps,",
+  "heard": "Concurrently, P.O. Cohen invented self-organizing maps."
+ },
+ {
+  "voice": "cloned",
+  "ch": 8,
+  "i": 16,
+  "r": 0.71,
+  "text": "Its recall accuracy flatlined near twelve percent,",
+  "heard": "It's recalled accuracy flatline near 12%."
+ },
+ {
+  "voice": "cloned",
+  "ch": 8,
+  "i": 21,
+  "r": 0.67,
+  "text": "And the gradient paths explain why.",
+  "heard": "And the grittin' bards explain why."
+ },
+ {
+  "voice": "cloned",
+  "ch": 9,
+  "i": 4,
+  "r": 0.0,
+  "text": "Instead,",
+  "heard": "He's sick."
+ },
+ {
+  "voice": "cloned",
+  "ch": 9,
+  "i": 28,
+  "r": 0.67,
+  "text": "not as an unruly biological graph,",
+  "heard": "Not as in unruly biological growth."
+ },
+ {
+  "voice": "cloned",
+  "ch": 10,
+  "i": 5,
+  "r": 0.5,
+  "text": "We watched it drown in crosstalk.",
+  "heard": "We washed and drowned in crosstalk."
+ },
+ {
+  "voice": "cloned",
+  "ch": 10,
+  "i": 7,
+  "r": 0.67,
+  "text": "Strip the softmax out of attention,",
+  "heard": "Strip the softbacks out of retention."
+ },
+ {
+  "voice": "cloned",
+  "ch": 10,
+  "i": 14,
+  "r": 0.71,
+  "text": "Linear attention is a fast weight programmer:",
+  "heard": "Linear attention is a far sweet programmer."
+ },
+ {
+  "voice": "cloned",
+  "ch": 10,
+  "i": 18,
+  "r": 0.0,
+  "text": "but slower than thought,",
+  "heard": "It's slow and hot."
+ },
+ {
+  "voice": "cloned",
+  "ch": 10,
+  "i": 35,
+  "r": 0.55,
+  "text": "Google's Titans go further still:",
+  "heard": "Google's guidance. Go for the still."
+ },
+ {
+  "voice": "cloned",
+  "ch": 11,
+  "i": 6,
+  "r": 0.6,
+  "text": "Theorem three told us that random sparse graphs starve the GPU.",
+  "heard": "QM3 told us that random spacecrafts starved the GPU."
+ },
+ {
+  "voice": "cloned",
+  "ch": 11,
+  "i": 10,
+  "r": 0.65,
+  "text": "growing and pruning whole sixteen-by-sixteen blocks, the way RigL grows and prunes individual weights during training?",
+  "heard": "Growing and pruning whole 16x16 blocks to wear regular grows and prunes individual weeds during training."
+ },
+ {
+  "voice": "cloned",
+  "ch": 11,
+  "i": 30,
+  "r": 0.7,
+  "text": "Fast weights and delta-rule memories, written during every conversation.",
+  "heard": "Fast rates and delta moon memories return during every conversation."
+ },
+ {
+  "voice": "cloned",
+  "ch": 11,
+  "i": 33,
+  "r": 0.0,
+  "text": "Two timescales,",
+  "heard": "All time skills"
+ },
+ {
+  "voice": "cloned",
+  "ch": 11,
+  "i": 35,
+  "r": 0.4,
+  "text": "And the fourth:",
+  "heard": "AND FOOT!"
+ },
+ {
+  "voice": "cloned",
+  "ch": 11,
+  "i": 42,
+  "r": 0.71,
+  "text": "That is how this field moves forward.",
+  "heard": "That is how the stream moves forward."
+ },
+ {
+  "voice": "cloned",
+  "ch": 12,
+  "i": 7,
+  "r": 0.7,
+  "text": "next-generation silicon, like Intel Loihi 2 and memristor crossbar arrays,",
+  "heard": "Next generation silicon, like in the low E2 and memristor crossbar arrays"
+ },
+ {
+  "voice": "cloned",
+  "ch": 12,
+  "i": 19,
+  "r": 0.7,
+  "text": "and algorithmic theorists solve credit assignment in continuous dynamical systems,",
+  "heard": "an algorithmic, curious, self-credit assignment in continuous dynamical systems."
+ }
+]

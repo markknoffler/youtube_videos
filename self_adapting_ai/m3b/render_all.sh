@@ -13,7 +13,8 @@ else
 fi
 OUT=out_$VOICE; mkdir -p $OUT
 ALL=($CHAPTERS)
-[[ -n $ONLY ]] && CHAPTERS=(${=ONLY})          # ONLY="01 02" renders a subset; JOIN=0 skips the final concat
+[[ -n $ONLY ]] && CHAPTERS=(${=ONLY})
+[[ $JOINONLY == 1 ]] && CHAPTERS=()          # ONLY="01 02" renders a subset; JOIN=0 skips the final concat
 for i in $CHAPTERS; do
   ./render.sh $i $VOICE final
   v=$(find media_$VOICE -name "Ch${i}_${VOICE}_final.mp4" | head -1)
