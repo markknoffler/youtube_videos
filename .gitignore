@@ -76,3 +76,5 @@ self_adapting_ai/papers/**/*.txt
 
 # V2 voice pipeline: per-segment wav cache (regenerable, resumable)
 self_adapting_ai/audio_v2_*/_segments/
+self_adapting_ai/audio_v3_*/_segments/
+self_adapting_ai/audio_final_*/
