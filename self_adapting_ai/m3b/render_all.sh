@@ -4,7 +4,9 @@
 set -e
 cd "$(dirname "$0")"
 VOICE=${1:-v2standard}
-if [[ $VOICE == v2* ]]; then
+if [[ $VOICE == v3* ]]; then
+  AUD=../audio_final_${VOICE#v3}; CHAPTERS=(01 02 03 04 05 06 07 08 09 10 11 12); NAME=Why_Brain-Like_AI_Failed_V3_${VOICE#v3}
+elif [[ $VOICE == v2* ]]; then
   AUD=../audio_v2_${VOICE#v2}; CHAPTERS=(01 02 03 04 05 06 07 08 09 10 11 12); NAME=Why_Brain-Like_AI_Failed_V2_${VOICE#v2}
 else
   AUD=../audio_fish_s2_pro_$VOICE; CHAPTERS=(01 02 03 04 05 06 07 08 09 10); NAME=Why_Brain-Like_AI_Failed_3B1B_${VOICE}
@@ -16,7 +18,7 @@ for i in $CHAPTERS; do
   ./render.sh $i $VOICE final
   v=$(find media_$VOICE -name "Ch${i}_${VOICE}_final.mp4" | head -1)
   ffmpeg -v error -y -i $v -i $AUD/Scene$i.mp3 -map 0:v -map 1:a -c:v copy -c:a aac -b:a 192k -ar 48000 -ac 2 -shortest $OUT/ch${i}_raw.mp4
-  if [[ $VOICE == v2* ]]; then
+  if [[ $VOICE == v[23]* ]]; then
     python3 burn_captions.py $VOICE $((10#$i)) $OUT/ch${i}_raw.mp4 $OUT/ch$i.mp4 && rm $OUT/ch${i}_raw.mp4
   else
     mv $OUT/ch${i}_raw.mp4 $OUT/ch$i.mp4
@@ -28,7 +30,7 @@ done
 for i in $ALL; do echo "file 'ch$i.mp4'" >> $OUT/list.txt; done
 CHAPTERS=($ALL)
 ffmpeg -v error -y -f concat -safe 0 -i $OUT/list.txt -c copy ../output/$NAME.mp4
-if [[ $VOICE == v2* ]]; then   # one SRT for the whole video, chapter offsets applied
+if [[ $VOICE == v[23]* ]]; then   # one SRT for the whole video, chapter offsets applied
   python3 - "$VOICE" "../output/$NAME.srt" $CHAPTERS <<'PY'
 import sys, subprocess, os
 sys.argv, (voice, dst, *chs) = sys.argv[:1], sys.argv[1:]

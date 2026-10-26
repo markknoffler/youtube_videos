@@ -82,11 +82,13 @@ def main():
     ap.add_argument("--ref-wav"); ap.add_argument("--ref-text-file")
     ap.add_argument("--cache", help="segment cache dir (can point at an older run to re-gate and reuse it)")
     ap.add_argument("--out", help="output dir (default audio_v3_<voice>)")
-    ap.add_argument("--attempts", type=int, default=6)
+    ap.add_argument("--attempts", type=int, default=8)
     ap.add_argument("--max-st", type=float, default=2.2, help="max |median F0 drift| from the voice's target, semitones")
     ap.add_argument("--max-range", type=float, default=10.0, help="max p5–p95 F0 range inside one phrase, semitones")
     ap.add_argument("--min-sim", type=float, default=None, help="min ECAPA similarity (default 0.70 standard / 0.62 cloned)")
-    ap.add_argument("--min-asr", type=float, default=0.80)
+    ap.add_argument("--min-asr", type=float, default=0.70, help="ASR word-match floor (small.en mishears jargon, so not stricter)")
+    ap.add_argument("--max-st-short", type=float, default=2.5, help="pitch-drift limit for phrases under 1.3 s")
+    ap.add_argument("--seed-offset", type=int, default=0, help="shift all seeds so a re-run does NOT repeat earlier takes")
     ap.add_argument("--fish-engine", default="/home/user/Desktop/Deep_learning_projects/youtube/youtube_videos/fish_speech_engine")
     args = ap.parse_args()
     import requests
@@ -115,10 +117,16 @@ def main():
         sf.write(tmp, y, SR)
         r = requests.post(args.gate + "/score", json=dict(path=tmp, voice=args.voice), timeout=120).json()
         asr_s = asr_score(asr, y, seg["text"]) if g2.plausible(y, seg["text"]) else 0.0
-        short = r["dur"] < 1.3 or "st" not in r         # too short for pitch/identity to be reliable
-        ok = asr_s >= args.min_asr and (short or (abs(r["st"]) <= args.max_st and r["range_st"] <= args.max_range and r["sim"] >= min_sim))
-        pen = 0 if short else 0.06 * max(0, abs(r["st"]) - 1.0) + 0.02 * max(0, r.get("range_st", 0) - 8) + max(0, min_sim - r["sim"])
-        return ok, asr_s - pen + (0 if short else r["sim"] * 0.5), dict(r, asr=round(asr_s, 3))
+        short = r["dur"] < 1.3                          # identity/range are unreliable on tiny clips, but PITCH still is checked
+        if "st" not in r:                               # <80 ms voiced: nothing to measure
+            ok, pen = asr_s >= args.min_asr, 0.0
+        elif short:
+            ok = asr_s >= args.min_asr and abs(r["st"]) <= args.max_st_short
+            pen = 0.08 * max(0, abs(r["st"]) - 1.0)
+        else:
+            ok = asr_s >= args.min_asr and abs(r["st"]) <= args.max_st and r["range_st"] <= args.max_range and r["sim"] >= min_sim
+            pen = 0.06 * max(0, abs(r["st"]) - 1.0) + 0.02 * max(0, r["range_st"] - 8) + max(0, min_sim - r["sim"])
+        return ok, asr_s - pen + (0 if short or "st" not in r else r["sim"] * 0.5), dict(r, asr=round(asr_s, 3))
 
     tmp = os.path.join(work, "_gate_tmp.wav")
     stats = dict(total=0, reused=0, regen=0, weak=0, attempts=0)
@@ -138,7 +146,7 @@ def main():
                 for k in range(args.attempts):
                     level = 0 if k < 2 else 1 if k < 4 else 2 if k < 5 else 3
                     temp = 0.75 if k < 2 else 0.70 if k < 4 else 0.62
-                    cand = g2.trim(be.synth(level_seg(seg, level), ref_wav, ref_text, seed=ch * 1000 + i * 10 + k, temperature=temp))
+                    cand = g2.trim(be.synth(level_seg(seg, level), ref_wav, ref_text, seed=args.seed_offset + ch * 1000 + i * 10 + k, temperature=temp))
                     ok, score, m = gate(cand, seg, tmp); stats["attempts"] += 1
                     if score > best[0]: best = (score, cand, dict(m, attempts=k + 1, level=level))
                     if ok: break
