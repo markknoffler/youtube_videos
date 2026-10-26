@@ -169,15 +169,12 @@
    "s": 65.753,
    "e": 68.153,
    "text": "Both networks hovered just above chance,",
+   "sim": 0.0,
    "dur": 2.4,
-   "voiced": 148,
-   "sim": 0.662,
-   "f0": 118.87,
-   "st": -0.164,
-   "range_st": 4.115,
-   "asr": 0.769,
-   "attempts": 3,
-   "level": 1
+   "asr": 0.0,
+   "trusted": true,
+   "attempts": 0,
+   "reused": true
   },
   {
    "i": 14,
@@ -208,15 +205,12 @@
    "s": 76.37,
    "e": 79.282,
    "text": "Its recall accuracy flatlined near twelve percent,",
+   "sim": 0.0,
    "dur": 2.912,
-   "voiced": 207,
-   "sim": 0.712,
-   "f0": 121.518,
-   "st": 0.218,
-   "range_st": 6.401,
-   "asr": 0.8,
-   "attempts": 1,
-   "level": 0
+   "asr": 0.0,
+   "trusted": true,
+   "attempts": 0,
+   "reused": true
   },
   {
    "i": 17,
@@ -271,15 +265,12 @@
    "s": 95.208,
    "e": 97.138,
    "text": "And the gradient paths explain why.",
+   "sim": 0.0,
    "dur": 1.93,
-   "voiced": 140,
-   "sim": 0.726,
-   "f0": 123.642,
-   "st": 0.518,
-   "range_st": 8.042,
-   "asr": 1.0,
-   "attempts": 10,
-   "level": 3
+   "asr": 0.0,
+   "trusted": true,
+   "attempts": 0,
+   "reused": true
   },
   {
    "i": 22,

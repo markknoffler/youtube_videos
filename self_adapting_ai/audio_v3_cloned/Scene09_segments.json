@@ -59,62 +59,37 @@
   {
    "i": 4,
    "s": 24.787,
-   "e": 25.507,
-   "text": "Instead,",
-   "dur": 0.72,
-   "voiced": 17,
-   "sim": 0.442,
-   "f0": 121.388,
-   "st": 0.199,
-   "range_st": 11.759,
+   "e": 32.033,
+   "text": "Instead, they engineered structural adaptability directly within the rigid mathematical geometry of dense tensor matrices.",
+   "dur": 7.246,
+   "voiced": 493,
+   "sim": 0.89,
+   "f0": 115.624,
+   "st": -0.643,
+   "range_st": 3.41,
    "asr": 1.0,
    "attempts": 1,
    "level": 0
   },
   {
    "i": 5,
-   "s": 25.881,
-   "e": 33.355,
-   "text": "they engineered structural adaptability directly within the rigid mathematical geometry of dense tensor matrices.",
-   "sim": 0.0,
-   "dur": 7.474,
-   "asr": 0.0,
-   "trusted": true,
-   "attempts": 0,
-   "reused": true
+   "s": 33.219,
+   "e": 39.333,
+   "text": "They achieved this through two revolutionary innovations. First, through fine-grained Mixture of Experts.",
+   "dur": 6.114,
+   "voiced": 351,
+   "sim": 0.759,
+   "f0": 119.976,
+   "st": -0.004,
+   "range_st": 8.273,
+   "asr": 0.714,
+   "attempts": 1,
+   "level": 0
   },
   {
    "i": 6,
-   "s": 34.69,
-   "e": 37.723,
-   "text": "They achieved this through two revolutionary innovations.",
-   "sim": 0.0,
-   "dur": 3.032,
-   "asr": 0.0,
-   "trusted": true,
-   "attempts": 0,
-   "reused": true
-  },
-  {
-   "i": 7,
-   "s": 38.938,
-   "e": 41.814,
-   "text": "First, through fine-grained Mixture of Experts.",
-   "dur": 2.876,
-   "voiced": 130,
-   "sim": 0.705,
-   "f0": 116.539,
-   "st": -0.507,
-   "range_st": 12.581,
-   "asr": 0.714,
-   "attempts": 5,
-   "level": 2,
-   "weak": true
-  },
-  {
-   "i": 8,
-   "s": 43.064,
-   "e": 48.172,
+   "s": 40.294,
+   "e": 45.402,
    "text": "DeepSeek-V3 deploys two hundred and fifty-six routed experts in each layer.",
    "sim": 0.0,
    "dur": 5.108,
@@ -124,9 +99,9 @@
    "reused": true
   },
   {
-   "i": 9,
-   "s": 48.491,
-   "e": 52.599,
+   "i": 7,
+   "s": 46.135,
+   "e": 50.242,
    "text": "For any given token, a routing gate dynamically activates only eight of them,",
    "sim": 0.0,
    "dur": 4.108,
@@ -136,9 +111,9 @@
    "reused": true
   },
   {
-   "i": 10,
-   "s": 52.84,
-   "e": 55.907,
+   "i": 8,
+   "s": 50.862,
+   "e": 53.929,
    "text": "alongside one shared expert that every token uses.",
    "sim": 0.0,
    "dur": 3.067,
@@ -148,9 +123,9 @@
    "reused": true
   },
   {
-   "i": 11,
-   "s": 57.173,
-   "e": 61.253,
+   "i": 9,
+   "s": 54.837,
+   "e": 58.917,
    "text": "This achieves extreme conditional specialization and sparse execution,",
    "sim": 0.0,
    "dur": 4.08,
@@ -160,9 +135,9 @@
    "reused": true
   },
   {
-   "i": 12,
-   "s": 61.625,
-   "e": 68.025,
+   "i": 10,
+   "s": 59.159,
+   "e": 65.559,
    "text": "while keeping every expert a dense, hardware-friendly matrix, connected through collective all-to-all communication primitives.",
    "sim": 0.0,
    "dur": 6.4,
@@ -172,9 +147,9 @@
    "reused": true
   },
   {
-   "i": 13,
-   "s": 69.001,
-   "e": 72.716,
+   "i": 11,
+   "s": 66.825,
+   "e": 70.54,
    "text": "Second, through Multi-head Latent Attention, or MLA.",
    "sim": 0.0,
    "dur": 3.715,
@@ -184,9 +159,9 @@
    "reused": true
   },
   {
-   "i": 14,
-   "s": 73.031,
-   "e": 77.711,
+   "i": 12,
+   "s": 71.219,
+   "e": 75.899,
    "text": "Instead of incurring massive memory bottlenecks with raw key-value caches,",
    "sim": 0.0,
    "dur": 4.68,
@@ -196,9 +171,9 @@
    "reused": true
   },
   {
-   "i": 15,
-   "s": 77.986,
-   "e": 84.66,
+   "i": 13,
+   "s": 76.145,
+   "e": 82.819,
    "text": "MLA dynamically compresses keys and values into a compact low-dimensional latent vector,",
    "sim": 0.0,
    "dur": 6.674,
@@ -208,9 +183,9 @@
    "reused": true
   },
   {
-   "i": 16,
-   "s": 84.909,
-   "e": 88.091,
+   "i": 14,
+   "s": 83.029,
+   "e": 86.211,
    "text": "decompressing them on the fly during attention computation.",
    "sim": 0.0,
    "dur": 3.182,
@@ -220,9 +195,9 @@
    "reused": true
   },
   {
-   "i": 17,
-   "s": 89.157,
-   "e": 91.957,
+   "i": 15,
+   "s": 87.237,
+   "e": 90.037,
    "text": "Notice how this resolves the paradox:",
    "sim": 0.0,
    "dur": 2.8,
@@ -232,9 +207,9 @@
    "reused": true
   },
   {
-   "i": 18,
-   "s": 92.064,
-   "e": 98.308,
+   "i": 16,
+   "s": 90.287,
+   "e": 96.531,
    "text": "frontier AI labs proved that modularity and dynamic routing do not come from abolishing the tensor monolith.",
    "sim": 0.0,
    "dur": 6.244,
@@ -244,9 +219,9 @@
    "reused": true
   },
   {
-   "i": 19,
-   "s": 99.374,
-   "e": 105.607,
+   "i": 17,
+   "s": 97.596,
+   "e": 103.829,
    "text": "They come from designing structured, hardware-aligned routing mechanisms on top of dense matrix multiplication.",
    "sim": 0.0,
    "dur": 6.233,
@@ -256,9 +231,9 @@
    "reused": true
   },
   {
-   "i": 20,
-   "s": 105.827,
-   "e": 109.073,
+   "i": 18,
+   "s": 104.049,
+   "e": 107.294,
    "text": "You gain the efficiency of conditional specialization",
    "sim": 0.0,
    "dur": 3.245,
@@ -268,9 +243,9 @@
    "reused": true
   },
   {
-   "i": 21,
-   "s": 109.306,
-   "e": 113.49,
+   "i": 19,
+   "s": 107.593,
+   "e": 111.777,
    "text": "without paying the catastrophic cache penalty of irregular graph rewiring.",
    "sim": 0.0,
    "dur": 4.184,
@@ -280,9 +255,9 @@
    "reused": true
   },
   {
-   "i": 22,
-   "s": 114.545,
-   "e": 118.98,
+   "i": 20,
+   "s": 112.493,
+   "e": 116.929,
    "text": "By combining fine-grained mixture of experts with multi-head latent attention,",
    "sim": 0.0,
    "dur": 4.435,
@@ -292,9 +267,9 @@
    "reused": true
   },
   {
-   "i": 23,
-   "s": 119.145,
-   "e": 125.585,
+   "i": 21,
+   "s": 117.162,
+   "e": 123.602,
    "text": "DeepSeek-V3 activates only thirty-seven billion of its six hundred and seventy-one billion parameters per token,",
    "sim": 0.0,
    "dur": 6.44,
@@ -304,9 +279,9 @@
    "reused": true
   },
   {
-   "i": 24,
-   "s": 125.781,
-   "e": 128.614,
+   "i": 22,
+   "s": 123.894,
+   "e": 126.727,
    "text": "and its report describes a remarkably stable training run.",
    "sim": 0.0,
    "dur": 2.833,
@@ -316,9 +291,9 @@
    "reused": true
   },
   {
-   "i": 25,
-   "s": 128.834,
-   "e": 132.288,
+   "i": 23,
+   "s": 126.954,
+   "e": 130.408,
    "text": "Rather than letting the graph self-organize at random,",
    "sim": 0.0,
    "dur": 3.454,
@@ -328,9 +303,9 @@
    "reused": true
   },
   {
-   "i": 26,
-   "s": 132.689,
-   "e": 137.706,
+   "i": 24,
+   "s": 130.604,
+   "e": 135.621,
    "text": "the architecture uses learned soft routing over statically defined expert banks.",
    "sim": 0.0,
    "dur": 5.017,
@@ -340,9 +315,9 @@
    "reused": true
   },
   {
-   "i": 27,
-   "s": 138.497,
-   "e": 141.354,
+   "i": 25,
+   "s": 136.412,
+   "e": 139.269,
    "text": "Modularity is alive and thriving at the frontier,",
    "sim": 0.0,
    "dur": 2.856,
@@ -352,24 +327,21 @@
    "reused": true
   },
   {
-   "i": 28,
-   "s": 141.876,
-   "e": 145.236,
+   "i": 26,
+   "s": 139.67,
+   "e": 143.03,
    "text": "not as an unruly biological graph,",
+   "sim": 0.0,
    "dur": 3.36,
-   "voiced": 232,
-   "sim": 0.741,
-   "f0": 141.889,
-   "st": 2.901,
-   "range_st": 6.207,
-   "asr": 1.0,
-   "attempts": 2,
-   "level": 0
+   "asr": 0.0,
+   "trusted": true,
+   "attempts": 0,
+   "reused": true
   },
   {
-   "i": 29,
-   "s": 145.519,
-   "e": 148.418,
+   "i": 27,
+   "s": 143.187,
+   "e": 146.086,
    "text": "but as a disciplined mathematical routing system.",
    "sim": 0.0,
    "dur": 2.898,

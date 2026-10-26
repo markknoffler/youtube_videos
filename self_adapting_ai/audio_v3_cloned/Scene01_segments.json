@@ -277,15 +277,12 @@
    "s": 114.913,
    "e": 117.192,
    "text": "No outdated pathways dissolve.",
+   "sim": 0.0,
    "dur": 2.279,
-   "voiced": 121,
-   "sim": 0.798,
-   "f0": 116.749,
-   "st": -0.475,
-   "range_st": 5.918,
-   "asr": 1.0,
-   "attempts": 1,
-   "level": 0
+   "asr": 0.0,
+   "trusted": true,
+   "attempts": 0,
+   "reused": true
   },
   {
    "i": 23,

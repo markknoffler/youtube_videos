@@ -241,15 +241,12 @@
    "s": 97.464,
    "e": 102.115,
    "text": "and algorithmic theorists solve credit assignment in continuous dynamical systems,",
+   "sim": 0.0,
    "dur": 4.651,
-   "voiced": 320,
-   "sim": 0.843,
-   "f0": 121.388,
-   "st": 0.199,
-   "range_st": 6.244,
-   "asr": 0.9,
-   "attempts": 1,
-   "level": 0
+   "asr": 0.0,
+   "trusted": true,
+   "attempts": 0,
+   "reused": true
   },
   {
    "i": 20,

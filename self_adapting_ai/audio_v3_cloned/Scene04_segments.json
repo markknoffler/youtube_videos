@@ -61,15 +61,12 @@
    "s": 23.816,
    "e": 25.061,
    "text": "And conversely,",
+   "sim": 0.0,
    "dur": 1.245,
-   "voiced": 75,
-   "sim": 0.636,
-   "f0": 113.835,
-   "st": -0.913,
-   "range_st": 9.191,
-   "asr": 1.0,
-   "attempts": 1,
-   "level": 0
+   "asr": 0.0,
+   "trusted": true,
+   "attempts": 0,
+   "reused": true
   },
   {
    "i": 5,
