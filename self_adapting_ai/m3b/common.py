@@ -91,6 +91,73 @@ class Timeline:
         return self.words[best_j - 1]["e"] if end else self.words[best_i]["s"]
 
 
+def caption_lines(voice: str, ch: int, max_chars: int = 46):
+    """Script text split into subtitle lines, each timed from the aligned spoken words."""
+    src = open(os.path.join(PROJECT, "VOICEOVER_SCRIPT_V2.md"), encoding="utf-8").read()
+    text = dict((int(n), t) for n, t in re.findall(r"## CHAPTER (\d+):[^\n]*\n.*?```text\n(.*?)```", src, re.S))[ch]
+    swords = text.split()
+    d = json.load(open(os.path.join(ROOT, "timing", f"{voice}_ch{ch:02d}.json")))
+    aw = [w for w in d["words"] if _norm(w["w"])]
+    sm = difflib.SequenceMatcher(None, [_norm(w) for w in swords], [_norm(w["w"]) for w in aw], autojunk=False)
+    t = [None] * len(swords)
+    for a, b, n in sm.get_matching_blocks():
+        for k in range(n):
+            t[a + k] = (aw[b + k]["s"], aw[b + k]["e"])
+    # interpolate unmatched words between matched neighbours
+    for i in range(len(t)):
+        if t[i] is None:
+            lo = next((t[j][1] for j in range(i - 1, -1, -1) if t[j] is not None), 0.0)
+            hi = next((t[j][0] for j in range(i + 1, len(t)) if t[j] is not None), lo + 0.4)
+            t[i] = (lo, max(lo + 0.05, hi))
+    lines, cur = [], []
+    for i, w in enumerate(swords):
+        cur.append(i)
+        txt = " ".join(swords[k] for k in cur)
+        end_sentence = w.endswith((".", "?", "!", ":")) or (w.endswith(",") and len(txt) > 28)
+        if len(txt) >= max_chars or end_sentence or i == len(swords) - 1:
+            lines.append(dict(s=t[cur[0]][0], e=t[cur[-1]][1], text=txt))
+            cur = []
+    for a, b in zip(lines, lines[1:]):           # hold each line until the next begins (≤ 0.6 s)
+        a["e"] = min(b["s"], a["e"] + 0.6)
+    lines[-1]["e"] += 0.8
+    return lines
+
+
+def write_srt(voice: str, ch: int, path: str, offset: float = 0.0):
+    def ts(x):
+        x += offset; h, r = divmod(x, 3600); m_, s_ = divmod(r, 60)
+        return f"{int(h):02d}:{int(m_):02d}:{int(s_):02d},{int(round((s_ % 1) * 1000)):03d}"
+    with open(path, "w", encoding="utf-8") as f:
+        for k, ln in enumerate(caption_lines(voice, ch), 1):
+            f.write(f"{k}\n{ts(ln['s'])} --> {ts(ln['e'])}\n{ln['text']}\n\n")
+
+
+class Captions(VGroup):
+    """Bottom-of-frame subtitles, switched by the scene clock; drawn above everything else."""
+
+    def __init__(self, scene, lines, size=22):
+        super().__init__()
+        self.scene, self.lines, self.size, self.cur = scene, lines, size, -2
+        self.add_updater(Captions._tick)
+
+    @staticmethod
+    def _tick(m, dt):
+        now = m.scene.now
+        k = next((i for i, ln in enumerate(m.lines) if ln["s"] - 0.05 <= now < ln["e"]), -1)
+        if k == m.cur:
+            return
+        m.cur = k
+        m.submobjects = []
+        if k >= 0:
+            frame = m.scene.camera.frame
+            sc = frame.width / config.frame_width
+            t = Text(m.lines[k]["text"], font=FONT, font_size=m.size, color=WHITE)
+            bg = BackgroundRectangle(t, buff=0.12, fill_opacity=0.62, color=BLACK, corner_radius=0.06)
+            g = VGroup(bg, t).scale(sc)
+            g.move_to(frame.get_center() + DOWN * (frame.height / 2 - 0.42 * sc))
+            m.add(*g.submobjects)
+
+
 # ── base scene ───────────────────────────────────────────────────────────────────────
 class Chapter(MovingCameraScene):
     CH = 0
@@ -99,6 +166,10 @@ class Chapter(MovingCameraScene):
         super().setup()
         self.tl = Timeline(VOICE, self.CH)
         self.camera.background_color = BG
+        cap = os.path.join(ROOT, "timing", f"{VOICE}_ch{self.CH:02d}.json")
+        if VOICE.startswith("v2") and os.path.exists(cap) and os.environ.get("CAPTIONS", "0") == "1":
+            self.captions = Captions(self, caption_lines(VOICE, self.CH))
+            self.add_foreground_mobject(self.captions)
 
     @property
     def now(self) -> float:
@@ -196,6 +267,7 @@ class Chapter(MovingCameraScene):
 
     def stage(self, *keep):
         """Everything currently visible except `keep` (for a clean FadeOut)."""
+        keep = keep + (getattr(self, "captions", None),)
         return Group(*[m for m in self.mobjects if m not in keep and not isinstance(m, ValueTracker)
                        and type(m) is not Mobject])
 

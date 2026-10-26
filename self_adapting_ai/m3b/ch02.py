@@ -97,7 +97,7 @@ class Ch02(Chapter):
         # ── STDP: Δw follows Δt ─────────────────────────────────────────────────────────
         self.go("Under the governing", FadeOut(VGroup(lg.nodes, ng, ng_l, tree, soma, tr_l, pr_l)), rt=0.8)
         self.remove(lg[0])
-        self.clear_ghosts = [m for m in self.mobjects if m not in (field, tag)]
+        self.clear_ghosts = [m for m in self.mobjects if m not in (field, tag, getattr(self, "captions", None))]
         for m in self.clear_ghosts:
             self.remove(m)
         pre = Circle(0.4, color=C_BLUE, stroke_width=3).set_fill(C_BLUE, 0.2).move_to(LEFT * 5.2 + UP * 1.6)

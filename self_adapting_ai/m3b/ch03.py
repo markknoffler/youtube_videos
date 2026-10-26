@@ -229,7 +229,7 @@ class Ch03(Chapter):
         # ── the elegant hypothesis: local rules → modules emerge (the graph organizes) ─
         keep = [(a, b) for (a, b, e), w in zip(el, weights) if w > 0.35]
         self.remove(phi)
-        self.go("breathtakingly elegant", FadeOut(VGroup(bcm, bcm_l, sprouts)), FadeOut(VGroup(*[m for m in self.mobjects if m is axis or (isinstance(m, VMobject) and m.get_center()[1] < -2.6 and m not in gnodes and m not in gedges)])), VGroup(gnodes, gedges).animate.move_to(ORIGIN + UP * 0.3), rt=1.2)
+        self.go("breathtakingly elegant", FadeOut(VGroup(bcm, bcm_l, sprouts)), FadeOut(VGroup(*[m for m in self.mobjects if m is axis or (isinstance(m, VMobject) and m.get_center()[1] < -2.6 and m not in gnodes and m not in gedges and m is not getattr(self, 'captions', None))])), VGroup(gnodes, gedges).animate.move_to(ORIGIN + UP * 0.3), rt=1.2)
         surv = VGroup(*[e for (a, b, e), w in zip(el, weights) if w > 0.35])
         centers = [LEFT * 3.4 + UP * 1.2, RIGHT * 3.4 + UP * 1.2, DOWN * 1.6]
         cols = [C_YELLOW, C_PINK, C_BLUE]
