@@ -88,6 +88,7 @@ def main():
     ap.add_argument("--min-sim", type=float, default=None, help="min ECAPA similarity (default 0.70 standard / 0.62 cloned)")
     ap.add_argument("--min-asr", type=float, default=0.70, help="ASR word-match floor (small.en mishears jargon, so not stricter)")
     ap.add_argument("--max-st-short", type=float, default=2.5, help="pitch-drift limit for phrases under 1.3 s")
+    ap.add_argument("--trust-cache", action="store_true", help="reuse every cached phrase without re-gating (delete cache files to force specific phrases)")
     ap.add_argument("--seed-offset", type=int, default=0, help="shift all seeds so a re-run does NOT repeat earlier takes")
     ap.add_argument("--fish-engine", default="/home/user/Desktop/Deep_learning_projects/youtube/youtube_videos/fish_speech_engine")
     args = ap.parse_args()
@@ -138,7 +139,9 @@ def main():
             meta, y = None, None
             if os.path.exists(cache):
                 y0 = sf.read(cache, dtype="float32")[0]
-                ok, _, m = gate(y0, seg, tmp)
+                ok, m = True, dict(sim=0.0, dur=len(y0) / SR, asr=0.0, trusted=True)
+                if not args.trust_cache:
+                    ok, _, m = gate(y0, seg, tmp)
                 if ok: y, meta = y0, dict(m, attempts=0, reused=True); stats["reused"] += 1
                 else: os.remove(cache)
             if y is None:
