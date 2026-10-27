@@ -1,0 +1,23 @@
+{
+ "calm": {
+  "match_score": 1.0,
+  "start": 59.6,
+  "end": 73.45,
+  "dur": 13.85,
+  "transcript": "Concurrently, Teuvo Kohonen invented self-organizing maps, showing that uncoordinated, localized competition between neighboring units could spontaneously fold a high-dimensional feature space into a beautifully ordered topological manifold."
+ },
+ "excited": {
+  "match_score": 1.0,
+  "start": 8.49,
+  "end": 27.17,
+  "dur": 18.68,
+  "transcript": "In 1949, Canadian psychologist Donald Hebb published The Organization of Behavior, introducing his foundational postulate of synaptic plasticity. When an axon of cell A is near enough to excite cell B and repeatedly takes part in firing it, some growth process or metabolic change takes place."
+ },
+ "serious": {
+  "match_score": 1.0,
+  "start": 102.93,
+  "end": 114.75,
+  "dur": 11.82,
+  "transcript": "For decades, this was viewed as the holy grail of artificial intelligence. It promised networks that could learn continuously without catastrophic forgetting, growing new modules dynamically as needed."
+ }
+}

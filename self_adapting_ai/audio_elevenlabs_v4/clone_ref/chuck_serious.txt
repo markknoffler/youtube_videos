@@ -1,0 +1,1 @@
+For decades, this was viewed as the holy grail of artificial intelligence. It promised networks that could learn continuously without catastrophic forgetting, growing new modules dynamically as needed.

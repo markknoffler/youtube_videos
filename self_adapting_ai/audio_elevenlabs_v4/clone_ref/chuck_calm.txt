@@ -1,0 +1,1 @@
+Concurrently, Teuvo Kohonen invented self-organizing maps, showing that uncoordinated, localized competition between neighboring units could spontaneously fold a high-dimensional feature space into a beautifully ordered topological manifold.
