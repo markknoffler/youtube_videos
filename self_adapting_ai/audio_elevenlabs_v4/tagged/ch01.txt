@@ -1,0 +1,23 @@
+[curious] In nineteen forty-nine, a psychologist wrote one sentence about how brains learn. Seventy-seven years later, that sentence is hiding inside every chatbot you have ever talked to. [excited] Just not where anyone expected it.
+
+To find it, we first have to understand why every attempt to build a brain-like AI has failed.
+
+[excited] Welcome to this technical masterclass. Look around at the current frontier of artificial intelligence: OpenAI's GPT-6 Astra, Anthropic's Claude 5.5, Google DeepMind's Gemini 4, and Mythos.
+
+Across every benchmark in mathematical reasoning, software synthesis, and multi-turn dialogue, these systems exhibit remarkable cognitive capabilities. Yet behind the dazzling demonstrations lies a profound and unsettling architectural truth.
+
+[serious] Every single foundational model in production today is a frozen, static monolith of computation.
+
+Consider the computational lifecycle of a modern language model. Over several months of pre-training, clusters of tens of thousands of GPUs consume millions of kilowatt hours to optimize hundreds of billions of numerical parameters across trillions of tokens.
+
+During this training epoch, the system learns by updating its numerical weights through stochastic gradient descent. [dramatic] But the exact instant that training completes, the learning process halts forever.
+
+The neural weights are etched into silicon like ancient stone monuments. When you query the model at inference time, whether you ask it to compose a simple haiku or prove a subtle theorem in algebraic geometry, not a single synapse moves.
+
+No new connections form. No outdated pathways dissolve. The network cannot dynamically reallocate its internal routing topology to adapt to the complexity of your request.
+
+In our live terminal, examine the attention implementation. The projection weights, W Q, W K, and W V, are loaded into GPU high-bandwidth memory as fixed FP16 tensors. Every single incoming token vector is multiplied against these identical, immutable arrays.
+
+While activations change dynamically from token to token, the underlying parametric landscape is completely rigid and invariant.
+
+[curious] Why has the entire multi-billion dollar enterprise of artificial intelligence consolidated around this rigid, unyielding architectural paradigm? In this investigation, we explore the deep mathematical, physical, and hardware forces that created the modern AI monolith... and why the tantalizing dream of truly self-adapting intelligence has proven so fiercely difficult to realize in physical silicon.

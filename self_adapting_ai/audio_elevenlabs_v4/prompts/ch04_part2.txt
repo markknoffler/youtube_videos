@@ -1,0 +1,7 @@
+[excited] Meanwhile, the Transformer, constructed from static, dense, homogeneous matrix multiplications, spontaneously discovers internal modularity.
+
+Inside a trained Transformer, researchers in mechanistic interpretability have uncovered sophisticated induction heads, modular routing circuits, arithmetic units, and in-context associative recall mechanisms.
+
+These functional circuits emerge entirely without any dynamic topological rewiring during inference. The weights remain completely fixed, yet the activation flow exhibits extraordinary dynamic routing and multi-step algorithmic execution.
+
+In seminal work by Olsson and colleagues, attention heads coordinate across layers to form induction circuits, which appear to be a mechanistic source of in-context learning.

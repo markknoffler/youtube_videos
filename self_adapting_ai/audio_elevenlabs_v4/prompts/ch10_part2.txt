@@ -1,0 +1,5 @@
+The idea is older than the Transformer itself. In 2016, Jimmy Ba and Geoffrey Hinton argued that brains have synapses that change faster than learning, but slower than thought, and that these fast weights are a neurally plausible way to attend to the recent past.
+
+[excited] So the Transformer never rejected Hebb. It moved Hebb out of the synapse... and into the activations.
+
+And the crosstalk? Schlag's team showed that pure outer-product writing hits a hard capacity wall. Their fix was the delta rule: before writing, read what the memory already predicts, and store only the error.

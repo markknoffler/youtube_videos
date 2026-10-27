@@ -1,0 +1,5 @@
+[curious] Before we look ten years ahead, I want to share a few ideas of my own. They are research directions, not results. Some of them may be wrong. But I think each one is worth someone's PhD.
+
+[excited] The first idea: rewire tiles, not synapses. Theorem three told us that random sparse graphs starve the GPU. But a tensor core does not see synapses. It sees small dense tiles. So what if structural plasticity worked at exactly that granularity, growing and pruning whole sixteen-by-sixteen blocks, the way RigL grows and prunes individual weights during training? The network still rewires its own topology, but every piece that survives stays dense.
+
+On my laptop, the same ninety percent sparsity ran five and a half times faster as sixteen-by-sixteen tiles than as scattered synapses, even with a naive implementation. A real block-sparse kernel should close much more of the gap.

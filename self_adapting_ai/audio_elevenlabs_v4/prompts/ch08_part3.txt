@@ -1,0 +1,7 @@
+And the gradient paths explain why. Structural mutations are discrete. A pruning mask is a step function, with no useful derivative. The optimization could not send credit across the links it was busy creating and destroying, locking the architecture into poor local minima.
+
+[excited] The Transformer, meanwhile, did something remarkable. Around epoch forty-five, its accuracy suddenly jumped, from under thirty percent to ninety-nine percent in just four epochs, and then settled at one hundred.
+
+That sudden leap looks exactly like the phase change Olsson and colleagues tied to the formation of induction heads.
+
+[excited] The theory survived contact with real silicon. Without all-to-all bilinear attention, local rewiring algorithms cannot sustain dynamic in-context memory. The Transformer's dense matrix multiplications win decisively.

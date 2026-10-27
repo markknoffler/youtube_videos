@@ -1,0 +1,7 @@
+[curious] What does this lower bound imply for the flow of information across the cognitive architecture?
+
+If token A needs to communicate with token B located on the opposite side of the network, the signal cannot travel instantaneously.
+
+[serious] It must traverse a multi-hop relay path through intermediate neurons. Each intermediate hop incurs computational latency, accumulates nonlinear distortion, and attenuates gradient signals.
+
+If an architecture contains one million sparse units with degree sixteen, routing a signal across the graph requires at least five to six sequential hops.

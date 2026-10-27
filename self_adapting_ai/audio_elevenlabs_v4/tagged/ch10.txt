@@ -1,0 +1,21 @@
+[sighs] So far, this has been a story of failure. But there is a twist. And it changes everything.
+
+Go back to the Hebbian memory from chapter four: the matrix that stores associations by adding up outer products, value times key-transpose. We watched it drown in crosstalk.
+
+Now look closely at a Transformer. Strip the softmax out of attention, and something extraordinary is left behind. Every new token writes its value, times its key-transpose, into a running matrix. Every query reads from that matrix, by multiplication.
+
+[excited] That is Hebb's rule. Exactly.
+
+[curious] In 2021, Imanol Schlag, Kazuki Irie and Jürgen Schmidhuber proved it formally. Linear attention is a fast weight programmer: a slow network that learns, by gradient descent, to write fast synaptic weights while it is thinking.
+
+The idea is older than the Transformer itself. In 2016, Jimmy Ba and Geoffrey Hinton argued that brains have synapses that change faster than learning, but slower than thought, and that these fast weights are a neurally plausible way to attend to the recent past.
+
+[excited] So the Transformer never rejected Hebb. It moved Hebb out of the synapse... and into the activations.
+
+And the crosstalk? Schlag's team showed that pure outer-product writing hits a hard capacity wall. Their fix was the delta rule: before writing, read what the memory already predicts, and store only the error.
+
+[excited] We tested this on this laptop. With thirty-two associations in a sixty-four dimensional memory, pure Hebbian writing recalled only forty-nine percent of them. The delta rule recalled seventy-eight percent in a single pass, and every single one after three.
+
+This is exactly where the frontier is moving. DeltaNet and Gated DeltaNet add a forgetting gate to the delta rule. Google's Titans go further still: a neural memory that rewrites its own weights at test time, driven by surprise, the gradient of how wrong it just was.
+
+[excited] Self-adapting intelligence did arrive. Not as a brain-shaped graph rewiring itself, but as a dense, differentiable memory, written at the speed of thought, inside the monolith.

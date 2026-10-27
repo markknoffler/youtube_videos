@@ -1,0 +1,7 @@
+When performing dense matrix multiplications, modern tensor cores achieve over ninety percent computational utilization, delivering petaflops of mathematical throughput by streaming contiguous memory blocks directly into on-chip SRAM.
+
+On modern NVIDIA Hopper architecture, tensor cores consume the computation as small dense matrix tiles, cycle after cycle. Any deviation from dense tensor geometry stalls the execution pipeline, sacrificing most of the theoretical compute.
+
+[serious] Now examine what happens when you attempt to train a dynamic, self-rewiring sparse graph on this hardware.
+
+Pointers, irregular memory lookups, and dynamic edge mutations completely thrash the high-bandwidth memory caches. DRAM latency exceeds one hundred nanoseconds for uncoalesced memory access, and effective throughput collapses.

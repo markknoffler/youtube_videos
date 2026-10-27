@@ -1,0 +1,7 @@
+[serious] Our first theoretical barrier concerns representational dimensionality: Theorem 1, Rank Collapse in Homogeneous Local Plasticity.
+
+Let us mathematically formalize what happens inside a self-organizing network governed by local Hebbian rules.
+
+Consider a layer of neurons with synaptic weight matrix W. The continuous-time update under generalized Hebbian learning with local weight decay is given by the differential equation shown on our analysis screen: dW over dt equals eta times the expectation of y times x-transpose, minus alpha times y times y-transpose times W.
+
+[serious] When we analyze the dynamical stability of this system under stationary input distributions, a fatal spectral catastrophe unfolds.

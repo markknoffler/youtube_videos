@@ -1,0 +1,5 @@
+[curious] The dream of self-adapting neural networks is not a new idea. In fact, it is historically older than backpropagation itself.
+
+[excited] In 1949, Canadian psychologist Donald Hebb published The Organization of Behavior, introducing his foundational postulate of synaptic plasticity: when an axon of cell A is near enough to excite cell B and repeatedly takes part in firing it, some growth process or metabolic change takes place.
+
+In popular culture, this became the famous adage: neurons that fire together, wire together. In the decades that followed, mathematical theorists attempted to transform Hebb's intuitive biological principle into rigorous computational learning algorithms.

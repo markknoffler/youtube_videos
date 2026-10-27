@@ -1,0 +1,21 @@
+[serious] Our first theoretical barrier concerns representational dimensionality: Theorem 1, Rank Collapse in Homogeneous Local Plasticity.
+
+Let us mathematically formalize what happens inside a self-organizing network governed by local Hebbian rules.
+
+Consider a layer of neurons with synaptic weight matrix W. The continuous-time update under generalized Hebbian learning with local weight decay is given by the differential equation shown on our analysis screen: dW over dt equals eta times the expectation of y times x-transpose, minus alpha times y times y-transpose times W.
+
+[serious] When we analyze the dynamical stability of this system under stationary input distributions, a fatal spectral catastrophe unfolds.
+
+By Lyapunov stability analysis, the weight vector of each neuron is mathematically attracted to the dominant eigenvector of the input covariance matrix C equals expectation of x times x-transpose.
+
+[dramatic] In formal terms: as time approaches infinity, the asymptotic rank of the weight matrix collapses to one. Every neuron in the layer converges toward encoding the identical, largest principal component.
+
+Even when researchers introduce multi-neuron anti-Hebbian lateral inhibition, such as Sanger's Generalized Hebbian Algorithm, the network can only ever extract the top k orthogonal principal components of the static data distribution.
+
+It acts as a linear projection operator onto fixed subspace eigenvectors.
+
+[curious] Now look at what is fundamentally required for intelligence: dynamic in-context reasoning.
+
+[excited] In a Transformer, the attention mechanism computes softmax of Q times K-transpose divided by square root of d. This is a dynamic, input-dependent bilinear form that can instantiate a full-rank associative memory across arbitrary token pairs at runtime.
+
+[serious] Local Hebbian rewiring is fundamentally trapped in the static statistics of the dataset. It squanders its representational capacity collapsing onto dominant eigenvalues, permanently barring it from learning dynamic, context-sensitive attention.

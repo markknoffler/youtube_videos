@@ -1,0 +1,5 @@
+They come from designing structured, hardware-aligned routing mechanisms on top of dense matrix multiplication. You gain the efficiency of conditional specialization without paying the catastrophic cache penalty of irregular graph rewiring.
+
+By combining fine-grained mixture of experts with multi-head latent attention, DeepSeek-V3 activates only thirty-seven billion of its six hundred and seventy-one billion parameters per token, and its report describes a remarkably stable training run. Rather than letting the graph self-organize at random, the architecture uses learned soft routing over statically defined expert banks.
+
+[excited] Modularity is alive and thriving at the frontier, not as an unruly biological graph, but as a disciplined mathematical routing system.

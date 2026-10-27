@@ -1,0 +1,5 @@
+[excited] We tested this on this laptop. With thirty-two associations in a sixty-four dimensional memory, pure Hebbian writing recalled only forty-nine percent of them. The delta rule recalled seventy-eight percent in a single pass, and every single one after three.
+
+This is exactly where the frontier is moving. DeltaNet and Gated DeltaNet add a forgetting gate to the delta rule. Google's Titans go further still: a neural memory that rewrites its own weights at test time, driven by surprise, the gradient of how wrong it just was.
+
+[excited] Self-adapting intelligence did arrive. Not as a brain-shaped graph rewiring itself, but as a dense, differentiable memory, written at the speed of thought, inside the monolith.

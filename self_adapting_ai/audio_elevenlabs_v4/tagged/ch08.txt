@@ -1,0 +1,27 @@
+[excited] To test these theorems for ourselves, we built a live diagnostic experiment in PyTorch, and ran it on this laptop.
+
+We pitted two competing architectures against each other on the defining capability of modern foundational models: In-Context Associative Recall.
+
+In this benchmark, the network is presented with arbitrary key-value pairs and must dynamically retrieve the correct value when queried with a corresponding key later in the sequence.
+
+The first contender is a Self-Organizing Dynamic Rewiring Network, equipped with continuous Hebbian updates, localized synaptic competition, and top-k structural edge pruning.
+
+The second contender is a small two-layer attention Transformer, trained with ordinary backpropagation.
+
+Both models saw identical data: sixty-four dimensional embeddings, sixteen key-value pairs per sequence, thirteen possible values, for one hundred epochs.
+
+[dramatic] The results were unequivocal.
+
+[serious] For the first forty epochs, nothing seemed to happen. Both networks hovered just above chance, which for thirteen possible values is seven point seven percent.
+
+The self-organizing network never left that floor. Its recall accuracy flatlined near twelve percent, completely unable to bind dynamic keys to their values in context.
+
+Its local updates kept compressing its representation anyway. Its effective rank drifted down from forty-nine toward thirty, without ever learning the task.
+
+And the gradient paths explain why. Structural mutations are discrete. A pruning mask is a step function, with no useful derivative. The optimization could not send credit across the links it was busy creating and destroying, locking the architecture into poor local minima.
+
+[excited] The Transformer, meanwhile, did something remarkable. Around epoch forty-five, its accuracy suddenly jumped, from under thirty percent to ninety-nine percent in just four epochs, and then settled at one hundred.
+
+That sudden leap looks exactly like the phase change Olsson and colleagues tied to the formation of induction heads.
+
+[excited] The theory survived contact with real silicon. Without all-to-all bilinear attention, local rewiring algorithms cannot sustain dynamic in-context memory. The Transformer's dense matrix multiplications win decisively.

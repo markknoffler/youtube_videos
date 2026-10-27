@@ -1,0 +1,5 @@
+This achieves extreme conditional specialization and sparse execution, while keeping every expert a dense, hardware-friendly matrix, connected through collective all-to-all communication primitives.
+
+Second, through Multi-head Latent Attention, or MLA. Instead of incurring massive memory bottlenecks with raw key-value caches, MLA dynamically compresses keys and values into a compact low-dimensional latent vector, decompressing them on the fly during attention computation.
+
+[excited] Notice how this resolves the paradox: frontier AI labs proved that modularity and dynamic routing do not come from abolishing the tensor monolith.

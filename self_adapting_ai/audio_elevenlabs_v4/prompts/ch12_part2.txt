@@ -1,0 +1,5 @@
+Second, Fast-Weights and Test-Time Training: pioneering frameworks like TTT, where neural weights dynamically update during inference using localized meta-gradients, bridging the gap between static weights and episodic memory.
+
+Third, Liquid State Networks and Neural ODEs: continuous-time dynamical systems whose internal time constants adapt to unpredictable real-time streaming environments without losing stability.
+
+And fourth, Self-Compiling Cognitive Graphs: autonomous agentic systems that continuously inspect and rewrite their own high-level computational graphs at runtime based on task performance.

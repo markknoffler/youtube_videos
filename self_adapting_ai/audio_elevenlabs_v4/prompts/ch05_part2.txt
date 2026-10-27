@@ -1,0 +1,5 @@
+By Lyapunov stability analysis, the weight vector of each neuron is mathematically attracted to the dominant eigenvector of the input covariance matrix C equals expectation of x times x-transpose.
+
+[dramatic] In formal terms: as time approaches infinity, the asymptotic rank of the weight matrix collapses to one. Every neuron in the layer converges toward encoding the identical, largest principal component.
+
+Even when researchers introduce multi-neuron anti-Hebbian lateral inhibition, such as Sanger's Generalized Hebbian Algorithm, the network can only ever extract the top k orthogonal principal components of the static data distribution.

@@ -1,0 +1,7 @@
+[serious] Our third and most insurmountable barrier is forged in physical silicon: Theorem 3, The Hardware Lottery and the Credit Assignment Barrier.
+
+[curious] In 2019, artificial intelligence pioneer Rich Sutton published his landmark essay, The Bitter Lesson. His conclusion was unequivocal: the biggest lesson from seventy years of AI research is that general methods that leverage massive computation are ultimately the most effective.
+
+This principle was compounded by Sara Hooker's formulation of the Hardware Lottery: the success of an AI algorithm is largely determined by how well it fits existing specialized hardware, rather than its theoretical elegance.
+
+Modern AI supercomputers, powered by NVIDIA H100s, Google TPU v5es, and Cerebras wafer-scale engines, are not biological brain emulators. They are dense systolic tensor engines.

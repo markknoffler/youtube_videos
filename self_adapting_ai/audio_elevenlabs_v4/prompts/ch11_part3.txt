@@ -1,0 +1,5 @@
+[excited] The third idea: let the network sleep. Brains separate fast learning from slow consolidation. The hippocampus records the day, and sleep replays it into the cortex. A language model could do the same. Fast weights and delta-rule memories, written during every conversation. Then, offline, replayed and distilled into the slow weights with ordinary backpropagation. Plasticity at inference, stability in training. Two timescales, and perhaps no catastrophic forgetting, if the replay is chosen well.
+
+[curious] And the fourth: three-factor learning for credit. A method called e-prop showed that eligibility traces stored at each synapse, combined with a single broadcast learning signal, can approximate backpropagation through time in spiking networks. Pair that with neuromorphic hardware, and the variance explosion of Theorem three might finally be tamed.
+
+[excited] If any of these sparks something for you, run with it. That is how this field moves forward.

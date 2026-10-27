@@ -1,0 +1,7 @@
+It acts as a linear projection operator onto fixed subspace eigenvectors.
+
+[curious] Now look at what is fundamentally required for intelligence: dynamic in-context reasoning.
+
+[excited] In a Transformer, the attention mechanism computes softmax of Q times K-transpose divided by square root of d. This is a dynamic, input-dependent bilinear form that can instantiate a full-rank associative memory across arbitrary token pairs at runtime.
+
+[serious] Local Hebbian rewiring is fundamentally trapped in the static statistics of the dataset. It squanders its representational capacity collapsing onto dominant eigenvalues, permanently barring it from learning dynamic, context-sensitive attention.

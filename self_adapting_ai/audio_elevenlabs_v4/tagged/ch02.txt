@@ -1,0 +1,21 @@
+[curious] To understand our architectural predicament, let us turn our attention to the only definitive proof of general intelligence in the known universe: the biological brain.
+
+[excited] A human brain operates on an astonishingly modest power budget of approximately twenty watts. That is roughly the energy consumed by a dim refrigerator light bulb.
+
+Yet within that microscopic energy footprint, the brain coordinates eighty-six billion living neurons and over one hundred trillion synaptic junctions with breathtaking cognitive efficiency.
+
+[serious] Crucially, the biological brain is never static. It is in perpetual topological motion. Through continuous neurogenesis, dendritic arborization, and synaptic spine pruning, neural circuits physically restructure themselves in real time based on sensory experience.
+
+[excited] Under the governing laws of spike-timing-dependent plasticity, if two neurons repeatedly fire in temporal synchrony, the biochemical junction between them physically thickens, synthesizing new AMPA and NMDA receptors to reinforce the connection.
+
+Conversely, if a pathway remains inactive, microglia and astrocytic processes prune the unused synapses to conserve precious metabolic energy.
+
+The living brain does not separate training from inference. Every single percept you process, every sentence you read, and every thought you formulate physically alters the wiring of your cerebral cortex.
+
+Biological computation is event-driven and asynchronous. Neurons communicate via sparse millisecond electrical action potentials at frequencies of only one to ten hertz, avoiding wasteful continuous synchronization clocks.
+
+[sighs] Now compare this living, breathing architecture to a modern artificial intelligence data center.
+
+A frontier GPU cluster consumes megawatts of electrical power, requiring massive liquid cooling towers and industrial substations. Inside, millions of identical matrix operations are broadcast across rigid, invariant systolic arrays.
+
+[curious] Why couldn't our artificial neural networks work like living biology? Why did computer science abandon the living dream of continuous, self-organizing plasticity in favor of frozen tensors?

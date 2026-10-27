@@ -1,0 +1,9 @@
+[curious] Where does this leave the grand frontier of self-adapting artificial intelligence over the next decade?
+
+The future of intelligence will not be a regression to biological chaos, nor will it be an indefinite continuation of brute-force frozen weights.
+
+[excited] The true frontier is the profound unification of global bilinear attention with continuous, localized structural plasticity.
+
+Over the next ten years, this revolution will unfold across four pioneering technical pillars.
+
+[excited] First, Neuromorphic and Analog Hardware: next-generation silicon, like Intel Loihi 2 and memristor crossbar arrays, designed from the physical layer up to execute continuous local plasticity without memory thrashing or von Neumann bottlenecks.

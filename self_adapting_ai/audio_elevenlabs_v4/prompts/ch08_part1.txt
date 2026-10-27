@@ -1,0 +1,9 @@
+[excited] To test these theorems for ourselves, we built a live diagnostic experiment in PyTorch, and ran it on this laptop.
+
+We pitted two competing architectures against each other on the defining capability of modern foundational models: In-Context Associative Recall.
+
+In this benchmark, the network is presented with arbitrary key-value pairs and must dynamically retrieve the correct value when queried with a corresponding key later in the sequence.
+
+The first contender is a Self-Organizing Dynamic Rewiring Network, equipped with continuous Hebbian updates, localized synaptic competition, and top-k structural edge pruning.
+
+The second contender is a small two-layer attention Transformer, trained with ordinary backpropagation.

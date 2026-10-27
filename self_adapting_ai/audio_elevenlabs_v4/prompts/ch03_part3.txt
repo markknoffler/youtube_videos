@@ -1,0 +1,5 @@
+[excited] The self-organizing hypothesis was breathtakingly elegant: if we simply give a network the freedom to sculpt its own wiring using local rules, general intelligence, modular specialization, and dynamic routing will organically emerge from the bottom up.
+
+[serious] For decades, this was viewed as the holy grail of artificial intelligence. It promised networks that could learn continuously without catastrophic forgetting, growing new modules dynamically as needed.
+
+[sighs] Yet when these ideas were pushed to the scale of modern deep learning, an unexpected crisis emerged. The promised organic modularity failed to materialize, stalling in chaotic representational collapse.

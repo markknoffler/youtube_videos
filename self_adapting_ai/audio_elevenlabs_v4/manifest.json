@@ -1,0 +1,450 @@
+{
+ "3": {
+  "1": {
+   "chosen": "ch03_part1_takeA.mp3",
+   "takes": [
+    {
+     "file": "ch03_part1_takeA.mp3",
+     "dur": 43.1,
+     "r": 0.985
+    },
+    {
+     "file": "ch03_part1_takeB.mp3",
+     "dur": 43.1,
+     "r": 0.985
+    },
+    {
+     "file": "ch03_part1_takeC.mp3",
+     "dur": 43.0,
+     "r": 0.985
+    }
+   ]
+  },
+  "2": {
+   "chosen": "ch03_part2_takeB.mp3",
+   "takes": [
+    {
+     "file": "ch03_part2_takeA.mp3",
+     "dur": 44.6,
+     "r": 0.919
+    },
+    {
+     "file": "ch03_part2_takeB.mp3",
+     "dur": 44.4,
+     "r": 0.939
+    }
+   ]
+  },
+  "3": {
+   "chosen": "ch03_part3_takeA.mp3",
+   "takes": [
+    {
+     "file": "ch03_part3_takeA.mp3",
+     "dur": 41.4,
+     "r": 1.0
+    },
+    {
+     "file": "ch03_part3_takeB.mp3",
+     "dur": 41.2,
+     "r": 1.0
+    }
+   ]
+  }
+ },
+ "4": {
+  "1": {
+   "chosen": "ch04_part1_takeB.mp3",
+   "takes": [
+    {
+     "file": "ch04_part1_takeA.mp3",
+     "dur": 52.6,
+     "r": 0.936
+    },
+    {
+     "file": "ch04_part1_takeB.mp3",
+     "dur": 53.7,
+     "r": 0.95
+    }
+   ]
+  },
+  "2": {
+   "chosen": "ch04_part2_takeA.mp3",
+   "takes": [
+    {
+     "file": "ch04_part2_takeA.mp3",
+     "dur": 45.5,
+     "r": 0.93
+    },
+    {
+     "file": "ch04_part2_takeB.mp3",
+     "dur": 45.6,
+     "r": 0.93
+    }
+   ]
+  },
+  "3": {
+   "chosen": "ch04_part3_takeA.mp3",
+   "takes": [
+    {
+     "file": "ch04_part3_takeA.mp3",
+     "dur": 44.4,
+     "r": 0.972
+    },
+    {
+     "file": "ch04_part3_takeB.mp3",
+     "dur": 44.0,
+     "r": 0.961
+    }
+   ]
+  }
+ },
+ "5": {
+  "1": {
+   "chosen": "ch05_part1_takeA.mp3",
+   "takes": [
+    {
+     "file": "ch05_part1_takeA.mp3",
+     "dur": 47.2,
+     "r": 0.933
+    },
+    {
+     "file": "ch05_part1_takeB.mp3",
+     "dur": 47.6,
+     "r": 0.933
+    }
+   ]
+  },
+  "2": {
+   "chosen": "ch05_part2_takeA.mp3",
+   "takes": [
+    {
+     "file": "ch05_part2_takeA.mp3",
+     "dur": 40.1,
+     "r": 0.962
+    },
+    {
+     "file": "ch05_part2_takeB.mp3",
+     "dur": 40.2,
+     "r": 0.946
+    }
+   ]
+  },
+  "3": {
+   "chosen": "ch05_part3_takeA.mp3",
+   "takes": [
+    {
+     "file": "ch05_part3_takeA.mp3",
+     "dur": 42.1,
+     "r": 0.984
+    },
+    {
+     "file": "ch05_part3_takeB.mp3",
+     "dur": 41.5,
+     "r": 0.984
+    }
+   ]
+  }
+ },
+ "6": {
+  "1": {
+   "chosen": "ch06_part1_takeB.mp3",
+   "takes": [
+    {
+     "file": "ch06_part1_takeA.mp3",
+     "dur": 45.0,
+     "r": 0.909
+    },
+    {
+     "file": "ch06_part1_takeB.mp3",
+     "dur": 45.8,
+     "r": 0.924
+    }
+   ]
+  },
+  "2": {
+   "chosen": "ch06_part2_takeA.mp3",
+   "takes": [
+    {
+     "file": "ch06_part2_takeA.mp3",
+     "dur": 34.8,
+     "r": 0.936
+    },
+    {
+     "file": "ch06_part2_takeB.mp3",
+     "dur": 34.8,
+     "r": 0.936
+    }
+   ]
+  },
+  "3": {
+   "chosen": "ch06_part3_takeB.mp3",
+   "takes": [
+    {
+     "file": "ch06_part3_takeA.mp3",
+     "dur": 37.1,
+     "r": 0.971
+    },
+    {
+     "file": "ch06_part3_takeB.mp3",
+     "dur": 36.8,
+     "r": 0.983
+    }
+   ]
+  }
+ },
+ "7": {
+  "1": {
+   "chosen": "ch07_part1_takeA.mp3",
+   "takes": [
+    {
+     "file": "ch07_part1_takeA.mp3",
+     "dur": 55.5,
+     "r": 0.942
+    },
+    {
+     "file": "ch07_part1_takeB.mp3",
+     "dur": 54.4,
+     "r": 0.942
+    }
+   ]
+  },
+  "2": {
+   "chosen": "ch07_part2_takeA.mp3",
+   "takes": [
+    {
+     "file": "ch07_part2_takeA.mp3",
+     "dur": 50.6,
+     "r": 0.935
+    },
+    {
+     "file": "ch07_part2_takeB.mp3",
+     "dur": 50.4,
+     "r": 0.935
+    }
+   ]
+  },
+  "3": {
+   "chosen": "ch07_part3_takeA.mp3",
+   "takes": [
+    {
+     "file": "ch07_part3_takeA.mp3",
+     "dur": 50.2,
+     "r": 0.931
+    },
+    {
+     "file": "ch07_part3_takeB.mp3",
+     "dur": 48.7,
+     "r": 0.931
+    }
+   ]
+  }
+ },
+ "8": {
+  "1": {
+   "chosen": "ch08_part1_takeA.mp3",
+   "takes": [
+    {
+     "file": "ch08_part1_takeA.mp3",
+     "dur": 41.6,
+     "r": 0.915
+    },
+    {
+     "file": "ch08_part1_takeB.mp3",
+     "dur": 42.6,
+     "r": 0.915
+    }
+   ]
+  },
+  "2": {
+   "chosen": "ch08_part2_takeA.mp3",
+   "takes": [
+    {
+     "file": "ch08_part2_takeA.mp3",
+     "dur": 44.5,
+     "r": 0.844
+    },
+    {
+     "file": "ch08_part2_takeB.mp3",
+     "dur": 44.6,
+     "r": 0.833
+    },
+    {
+     "file": "ch08_part2_takeC.mp3",
+     "dur": 44.5,
+     "r": 0.844
+    },
+    {
+     "file": "ch08_part2_takeD.mp3",
+     "dur": 44.6,
+     "r": 0.833
+    }
+   ]
+  },
+  "3": {
+   "chosen": "ch08_part3_takeB.mp3",
+   "takes": [
+    {
+     "file": "ch08_part3_takeA.mp3",
+     "dur": 51.6,
+     "r": 0.912
+    },
+    {
+     "file": "ch08_part3_takeB.mp3",
+     "dur": 52.0,
+     "r": 0.933
+    }
+   ]
+  }
+ },
+ "9": {
+  "1": {
+   "chosen": "ch09_part1_takeA.mp3",
+   "takes": [
+    {
+     "file": "ch09_part1_takeA.mp3",
+     "dur": 47.6,
+     "r": 0.926
+    },
+    {
+     "file": "ch09_part1_takeB.mp3",
+     "dur": 47.7,
+     "r": 0.926
+    }
+   ]
+  },
+  "2": {
+   "chosen": "ch09_part2_takeA.mp3",
+   "takes": [
+    {
+     "file": "ch09_part2_takeA.mp3",
+     "dur": 39.3,
+     "r": 0.983
+    },
+    {
+     "file": "ch09_part2_takeB.mp3",
+     "dur": 39.2,
+     "r": 0.966
+    }
+   ]
+  },
+  "3": {
+   "chosen": "ch09_part3_takeA.mp3",
+   "takes": [
+    {
+     "file": "ch09_part3_takeA.mp3",
+     "dur": 45.7,
+     "r": 0.931
+    },
+    {
+     "file": "ch09_part3_takeB.mp3",
+     "dur": 45.6,
+     "r": 0.931
+    }
+   ]
+  }
+ },
+ "10": {
+  "1": {
+   "chosen": "ch10_part1_takeA.mp3",
+   "takes": [
+    {
+     "file": "ch10_part1_takeA.mp3",
+     "dur": 55.3,
+     "r": 0.961
+    },
+    {
+     "file": "ch10_part1_takeB.mp3",
+     "dur": 55.4,
+     "r": 0.953
+    }
+   ]
+  },
+  "2": {
+   "chosen": "ch10_part2_takeA.mp3",
+   "takes": [
+    {
+     "file": "ch10_part2_takeA.mp3",
+     "dur": 36.8,
+     "r": 0.953
+    },
+    {
+     "file": "ch10_part2_takeB.mp3",
+     "dur": 37.1,
+     "r": 0.953
+    }
+   ]
+  },
+  "3": {
+   "chosen": "ch10_part3_takeA.mp3",
+   "takes": [
+    {
+     "file": "ch10_part3_takeA.mp3",
+     "dur": 40.7,
+     "r": 0.926
+    },
+    {
+     "file": "ch10_part3_takeB.mp3",
+     "dur": 41.6,
+     "r": 0.917
+    }
+   ]
+  }
+ },
+ "11": {
+  "1": {
+   "chosen": "ch11_part1_takeA.mp3",
+   "takes": [
+    {
+     "file": "ch11_part1_takeA.mp3",
+     "dur": 56.2,
+     "r": 0.94
+    },
+    {
+     "file": "ch11_part1_takeB.mp3",
+     "dur": 56.5,
+     "r": 0.899
+    }
+   ]
+  },
+  "2": {
+   "chosen": "ch11_part2_takeA.mp3",
+   "takes": [
+    {
+     "file": "ch11_part2_takeA.mp3",
+     "dur": 33.1,
+     "r": 0.982
+    },
+    {
+     "file": "ch11_part2_takeB.mp3",
+     "dur": 33.1,
+     "r": 0.982
+    }
+   ]
+  },
+  "3": {
+   "chosen": "ch11_part3_takeA.mp3",
+   "takes": [
+    {
+     "file": "ch11_part3_takeA.mp3",
+     "dur": 55.0,
+     "r": 0.962
+    },
+    {
+     "file": "ch11_part3_takeB.mp3",
+     "dur": 54.4,
+     "r": 0.962
+    }
+   ]
+  }
+ },
+ "1": {
+  "all": {
+   "chosen": "ch01_take1.mp3"
+  }
+ },
+ "2": {
+  "all": {
+   "chosen": "ch02_take1.mp3"
+  }
+ }
+}

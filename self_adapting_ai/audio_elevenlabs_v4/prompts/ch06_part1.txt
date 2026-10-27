@@ -1,0 +1,9 @@
+[serious] Our second fundamental barrier originates in topological graph theory: Theorem 2, Routing Expressivity and Graph Latency Bounds.
+
+Advocates of self-organizing networks frequently argue that neural connectivity should be highly sparse and strictly localized, just like the six layers of the mammalian cerebral cortex.
+
+Let us subject this argument to mathematical scrutiny.
+
+Consider a dynamic neural network of N neurons, where each neuron maintains at most d synaptic connections to its immediate neighbors.
+
+From extremal graph theory, the Moore Bound dictates that the diameter of any graph with maximum vertex degree d and N nodes is bounded below by Omega of log N divided by log d.

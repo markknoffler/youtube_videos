@@ -1,0 +1,9 @@
+[sighs] So far, this has been a story of failure. But there is a twist. And it changes everything.
+
+Go back to the Hebbian memory from chapter four: the matrix that stores associations by adding up outer products, value times key-transpose. We watched it drown in crosstalk.
+
+Now look closely at a Transformer. Strip the softmax out of attention, and something extraordinary is left behind. Every new token writes its value, times its key-transpose, into a running matrix. Every query reads from that matrix, by multiplication.
+
+[excited] That is Hebb's rule. Exactly.
+
+[curious] In 2021, Imanol Schlag, Kazuki Irie and Jürgen Schmidhuber proved it formally. Linear attention is a fast weight programmer: a slow network that learns, by gradient descent, to write fast synaptic weights while it is thinking.

@@ -1,0 +1,5 @@
+[excited] In 1982, Finnish mathematician Erkki Oja introduced normalized Hebbian learning, proving that a single neuron equipped with local weight decay could mathematically discover the principal eigenvector of its input distribution without any external teacher or global loss function.
+
+Concurrently, Teuvo Kohonen invented Self-Organizing Maps, showing that uncoordinated, localized competition between neighboring units could spontaneously fold a high-dimensional feature space into a beautifully ordered topological manifold.
+
+Later, researchers expanded this with BCM theory and Dynamic Rewiring Networks, adding structural plasticity rules where weak connections were pruned and new synaptic edges were randomly sprouted in response to local activity levels.

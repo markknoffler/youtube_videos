@@ -1,0 +1,7 @@
+In recurrent execution, gradients backpropagating through multiple non-linear hops decay exponentially as the product of operator spectral norms, causing severe vanishing or exploding gradients.
+
+[excited] In stark contrast, consider the geometric topology of a Transformer.
+
+A multi-head attention layer is a dynamic bipartite graph with a diameter of exactly one.
+
+[excited] Every single token attends directly to every other token in a single, parallelized computational step with O-of-one depth. Sparse self-organizing graphs pay an insurmountable routing latency penalty whenever global context must be synthesized.

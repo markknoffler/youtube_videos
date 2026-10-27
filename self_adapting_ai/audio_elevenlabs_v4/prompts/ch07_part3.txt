@@ -1,0 +1,7 @@
+[excited] We measured it on this very laptop. The same useful arithmetic, laid out as a dense matrix multiplication, ran at nearly fourteen hundred gigaflops. Scattered as sparse graph gathers, it crawled at under four. A gap of more than three hundred and sixty times.
+
+[serious] Furthermore, consider credit assignment. Reverse-mode automatic differentiation calculates the exact analytical gradient of the global loss function in a single backward pass.
+
+Local plasticity rules lack a global backward signal. They must rely on localized node perturbations, where the variance of the gradient estimator grows rapidly with sequence length T.
+
+[sighs] Without global backpropagation, self-organizing networks wander blindly in high-dimensional optimization space, while dense Transformers scale monotonically with every compute dollar spent.

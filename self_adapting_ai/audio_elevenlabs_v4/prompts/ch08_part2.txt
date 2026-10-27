@@ -1,0 +1,9 @@
+Both models saw identical data: sixty-four dimensional embeddings, sixteen key-value pairs per sequence, thirteen possible values, for one hundred epochs.
+
+[dramatic] The results were unequivocal.
+
+[serious] For the first forty epochs, nothing seemed to happen. Both networks hovered just above chance, which for thirteen possible values is seven point seven percent.
+
+The self-organizing network never left that floor. Its recall accuracy flatlined near twelve percent, completely unable to bind dynamic keys to their values in context.
+
+Its local updates kept compressing its representation anyway. Its effective rank drifted down from forty-nine toward thirty, without ever learning the task.
