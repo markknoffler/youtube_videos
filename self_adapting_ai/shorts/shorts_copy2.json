@@ -1,0 +1,107 @@
+[
+ {
+  "slug": "n01-etched-in-stone",
+  "yt_title": "Every AI you use is carved in stone #Shorts",
+  "yt_description": "The instant training ends, a language model stops learning forever. Its weights are etched into silicon like ancient stone monuments. Not one synapse moves when you ask it a question.\n\nFull 28-minute breakdown (with experiments and references): https://youtu.be/2tdrON7G6PU\n\nMoonshot Engineering\n\n#AI #MachineLearning #LLM #DeepLearning #NeuralNetworks #Shorts",
+  "ig_caption": "Every AI you use is carved in stone\n\nThe instant training ends, a language model stops learning forever. Its weights are etched into silicon like ancient stone monuments. Not one synapse moves when you ask it a question.\n\nFull breakdown on YouTube: Moonshot Engineering (link in bio)\n\n#AI #MachineLearning #LLM #DeepLearning #Reels #Explained #Science #Tech",
+  "hashtags": "#AI #MachineLearning #LLM #DeepLearning #NeuralNetworks #Shorts"
+ },
+ {
+  "slug": "n02-brain-vs-datacenter",
+  "yt_title": "A brain runs on 20 watts. A GPU cluster on megawatts. #Shorts",
+  "yt_description": "Why couldn't artificial neural networks work like living biology? Twenty watts of brain against megawatts of GPUs and liquid cooling.\n\nFull 28-minute breakdown (with experiments and references): https://youtu.be/2tdrON7G6PU\n\nMoonshot Engineering\n\n#Neuroscience #AI #GPU #Efficiency #NeuromorphicComputing #Shorts",
+  "ig_caption": "A brain runs on 20 watts. A GPU cluster on megawatts.\n\nWhy couldn't artificial neural networks work like living biology? Twenty watts of brain against megawatts of GPUs and liquid cooling.\n\nFull breakdown on YouTube: Moonshot Engineering (link in bio)\n\n#Neuroscience #AI #GPU #Efficiency #Reels #Explained #Science #Tech",
+  "hashtags": "#Neuroscience #AI #GPU #Efficiency #NeuromorphicComputing #Shorts"
+ },
+ {
+  "slug": "n03-stdp",
+  "yt_title": "Fire together, and the synapse physically thickens #Shorts",
+  "yt_description": "Spike-timing-dependent plasticity: when two neurons fire in sync, the junction between them literally thickens with new receptors. Unused synapses get pruned to save energy.\n\nFull 28-minute breakdown (with experiments and references): https://youtu.be/2tdrON7G6PU\n\nMoonshot Engineering\n\n#Neuroscience #Plasticity #Brain #AI #Shorts",
+  "ig_caption": "Fire together, and the synapse physically thickens\n\nSpike-timing-dependent plasticity: when two neurons fire in sync, the junction between them literally thickens with new receptors. Unused synapses get pruned to save energy.\n\nFull breakdown on YouTube: Moonshot Engineering (link in bio)\n\n#Neuroscience #Plasticity #Brain #AI #Reels #Explained #Science #Tech",
+  "hashtags": "#Neuroscience #Plasticity #Brain #AI #Shorts"
+ },
+ {
+  "slug": "n04-oja-kohonen",
+  "yt_title": "One neuron found the main pattern in its data. No teacher. #Shorts",
+  "yt_description": "Erkki Oja proved that a single neuron with local weight decay finds the principal eigenvector of its inputs, with no loss function and no teacher. Kohonen's maps did the same for whole feature spaces.\n\nFull 28-minute breakdown (with experiments and references): https://youtu.be/2tdrON7G6PU\n\nMoonshot Engineering\n\n#Hebbian #Oja #Kohonen #MachineLearning #AIHistory #Shorts",
+  "ig_caption": "One neuron found the main pattern in its data. No teacher.\n\nErkki Oja proved that a single neuron with local weight decay finds the principal eigenvector of its inputs, with no loss function and no teacher. Kohonen's maps did the same for whole feature spaces.\n\nFull breakdown on YouTube: Moonshot Engineering (link in bio)\n\n#Hebbian #Oja #Kohonen #MachineLearning #Reels #Explained #Science #Tech",
+  "hashtags": "#Hebbian #Oja #Kohonen #MachineLearning #AIHistory #Shorts"
+ },
+ {
+  "slug": "n05-holy-grail",
+  "yt_title": "The holy grail of AI that never worked #Shorts",
+  "yt_description": "Let a network sculpt its own wiring with local rules and intelligence will emerge from the bottom up. That was the dream. At scale it stalled in representational collapse.\n\nFull 28-minute breakdown (with experiments and references): https://youtu.be/2tdrON7G6PU\n\nMoonshot Engineering\n\n#AI #SelfOrganization #DeepLearning #AIHistory #Shorts",
+  "ig_caption": "The holy grail of AI that never worked\n\nLet a network sculpt its own wiring with local rules and intelligence will emerge from the bottom up. That was the dream. At scale it stalled in representational collapse.\n\nFull breakdown on YouTube: Moonshot Engineering (link in bio)\n\n#AI #SelfOrganization #DeepLearning #AIHistory #Reels #Explained #Science #Tech",
+  "hashtags": "#AI #SelfOrganization #DeepLearning #AIHistory #Shorts"
+ },
+ {
+  "slug": "n06-cant-pay-attention",
+  "yt_title": "Why brain-like networks can't pay attention #Shorts",
+  "yt_description": "Attention is an input-dependent bilinear form that builds a full-rank memory at runtime. Local Hebbian rules are trapped in the static statistics of the data.\n\nFull 28-minute breakdown (with experiments and references): https://youtu.be/2tdrON7G6PU\n\nMoonshot Engineering\n\n#Attention #Transformers #Hebbian #DeepLearning #Shorts",
+  "ig_caption": "Why brain-like networks can't pay attention\n\nAttention is an input-dependent bilinear form that builds a full-rank memory at runtime. Local Hebbian rules are trapped in the static statistics of the data.\n\nFull breakdown on YouTube: Moonshot Engineering (link in bio)\n\n#Attention #Transformers #Hebbian #DeepLearning #Reels #Explained #Science #Tech",
+  "hashtags": "#Attention #Transformers #Hebbian #DeepLearning #Shorts"
+ },
+ {
+  "slug": "n07-five-hops",
+  "yt_title": "Brain-like graph: 5+ hops. Attention: 1 hop. #Shorts",
+  "yt_description": "A million sparse units with sixteen links each need at least five or six hops to send a signal across. A Transformer's attention layer has diameter one.\n\nFull 28-minute breakdown (with experiments and references): https://youtu.be/2tdrON7G6PU\n\nMoonshot Engineering\n\n#GraphTheory #Transformers #DeepLearning #AI #Shorts",
+  "ig_caption": "Brain-like graph: 5+ hops. Attention: 1 hop.\n\nA million sparse units with sixteen links each need at least five or six hops to send a signal across. A Transformer's attention layer has diameter one.\n\nFull breakdown on YouTube: Moonshot Engineering (link in bio)\n\n#GraphTheory #Transformers #DeepLearning #AI #Reels #Explained #Science #Tech",
+  "hashtags": "#GraphTheory #Transformers #DeepLearning #AI #Shorts"
+ },
+ {
+  "slug": "n08-bitter-lesson",
+  "yt_title": "The bitter lesson of 70 years of AI #Shorts",
+  "yt_description": "Rich Sutton's Bitter Lesson and Sara Hooker's Hardware Lottery: the algorithm that wins is the one that fits the hardware, not the most elegant one.\n\nFull 28-minute breakdown (with experiments and references): https://youtu.be/2tdrON7G6PU\n\nMoonshot Engineering\n\n#BitterLesson #HardwareLottery #AI #Hardware #Shorts",
+  "ig_caption": "The bitter lesson of 70 years of AI\n\nRich Sutton's Bitter Lesson and Sara Hooker's Hardware Lottery: the algorithm that wins is the one that fits the hardware, not the most elegant one.\n\nFull breakdown on YouTube: Moonshot Engineering (link in bio)\n\n#BitterLesson #HardwareLottery #AI #Hardware #Reels #Explained #Science #Tech",
+  "hashtags": "#BitterLesson #HardwareLottery #AI #Hardware #Shorts"
+ },
+ {
+  "slug": "n09-blind-credit",
+  "yt_title": "Why local learning wanders blind #Shorts",
+  "yt_description": "Backpropagation gives the exact gradient in one backward pass. Local plasticity rules have no global signal, so they wander in the dark while dense Transformers scale with every compute dollar.\n\nFull 28-minute breakdown (with experiments and references): https://youtu.be/2tdrON7G6PU\n\nMoonshot Engineering\n\n#Backpropagation #CreditAssignment #DeepLearning #AI #Shorts",
+  "ig_caption": "Why local learning wanders blind\n\nBackpropagation gives the exact gradient in one backward pass. Local plasticity rules have no global signal, so they wander in the dark while dense Transformers scale with every compute dollar.\n\nFull breakdown on YouTube: Moonshot Engineering (link in bio)\n\n#Backpropagation #CreditAssignment #DeepLearning #AI #Reels #Explained #Science #Tech",
+  "hashtags": "#Backpropagation #CreditAssignment #DeepLearning #AI #Shorts"
+ },
+ {
+  "slug": "n10-laptop-showdown",
+  "yt_title": "Brain-like net vs Transformer, live on a laptop #Shorts",
+  "yt_description": "In-context associative recall, 16 key-value pairs, 100 epochs. We ran a self-organizing Hebbian network against a tiny Transformer on a MacBook.\n\nFull 28-minute breakdown (with experiments and references): https://youtu.be/2tdrON7G6PU\n\nMoonshot Engineering\n\n#PyTorch #Transformers #Experiment #MachineLearning #Shorts",
+  "ig_caption": "Brain-like net vs Transformer, live on a laptop\n\nIn-context associative recall, 16 key-value pairs, 100 epochs. We ran a self-organizing Hebbian network against a tiny Transformer on a MacBook.\n\nFull breakdown on YouTube: Moonshot Engineering (link in bio)\n\n#PyTorch #Transformers #Experiment #MachineLearning #Reels #Explained #Science #Tech",
+  "hashtags": "#PyTorch #Transformers #Experiment #MachineLearning #Shorts"
+ },
+ {
+  "slug": "n11-latent-attention",
+  "yt_title": "DeepSeek's trick: compress the memory #Shorts",
+  "yt_description": "Multi-head Latent Attention compresses keys and values into a small latent vector and decompresses on the fly. Structure on top of dense matrices, not instead of them.\n\nFull 28-minute breakdown (with experiments and references): https://youtu.be/2tdrON7G6PU\n\nMoonshot Engineering\n\n#DeepSeek #MLA #LLM #Transformers #AI #Shorts",
+  "ig_caption": "DeepSeek's trick: compress the memory\n\nMulti-head Latent Attention compresses keys and values into a small latent vector and decompresses on the fly. Structure on top of dense matrices, not instead of them.\n\nFull breakdown on YouTube: Moonshot Engineering (link in bio)\n\n#DeepSeek #MLA #LLM #Transformers #Reels #Explained #Science #Tech",
+  "hashtags": "#DeepSeek #MLA #LLM #Transformers #AI #Shorts"
+ },
+ {
+  "slug": "n12-titans",
+  "yt_title": "An AI that rewrites its own weights while it thinks #Shorts",
+  "yt_description": "DeltaNet adds a forgetting gate to the delta rule. Google's Titans go further: a neural memory that rewrites its own weights at test time, driven by surprise.\n\nFull 28-minute breakdown (with experiments and references): https://youtu.be/2tdrON7G6PU\n\nMoonshot Engineering\n\n#Titans #DeltaNet #TestTimeTraining #AI #Shorts",
+  "ig_caption": "An AI that rewrites its own weights while it thinks\n\nDeltaNet adds a forgetting gate to the delta rule. Google's Titans go further: a neural memory that rewrites its own weights at test time, driven by surprise.\n\nFull breakdown on YouTube: Moonshot Engineering (link in bio)\n\n#Titans #DeltaNet #TestTimeTraining #AI #Reels #Explained #Science #Tech",
+  "hashtags": "#Titans #DeltaNet #TestTimeTraining #AI #Shorts"
+ },
+ {
+  "slug": "n13-rewire-tiles",
+  "yt_title": "Rewire tiles, not synapses #Shorts",
+  "yt_description": "An original idea: let structural plasticity grow and prune whole 16x16 tiles instead of single weights. In our laptop test the same 90% sparsity ran 5.5x faster as tiles than as scattered synapses.\n\nFull 28-minute breakdown (with experiments and references): https://youtu.be/2tdrON7G6PU\n\nMoonshot Engineering\n\n#SparseNetworks #GPU #Research #DeepLearning #Shorts",
+  "ig_caption": "Rewire tiles, not synapses\n\nAn original idea: let structural plasticity grow and prune whole 16x16 tiles instead of single weights. In our laptop test the same 90% sparsity ran 5.5x faster as tiles than as scattered synapses.\n\nFull breakdown on YouTube: Moonshot Engineering (link in bio)\n\n#SparseNetworks #GPU #Research #DeepLearning #Reels #Explained #Science #Tech",
+  "hashtags": "#SparseNetworks #GPU #Research #DeepLearning #Shorts"
+ },
+ {
+  "slug": "n14-fast-weights",
+  "yt_title": "Synapses faster than learning, slower than thought #Shorts",
+  "yt_description": "Linear attention is a fast weight programmer: a slow network learns to write fast synaptic weights while it thinks. The Transformer never rejected Hebb. It moved Hebb into the activations.\n\nFull 28-minute breakdown (with experiments and references): https://youtu.be/2tdrON7G6PU\n\nMoonshot Engineering\n\n#FastWeights #LinearAttention #Hebb #Transformers #Shorts",
+  "ig_caption": "Synapses faster than learning, slower than thought\n\nLinear attention is a fast weight programmer: a slow network learns to write fast synaptic weights while it thinks. The Transformer never rejected Hebb. It moved Hebb into the activations.\n\nFull breakdown on YouTube: Moonshot Engineering (link in bio)\n\n#FastWeights #LinearAttention #Hebb #Transformers #Reels #Explained #Science #Tech",
+  "hashtags": "#FastWeights #LinearAttention #Hebb #Transformers #Shorts"
+ },
+ {
+  "slug": "n15-spectral-homeostasis",
+  "yt_title": "Can a local rule keep many modes alive? #Shorts",
+  "yt_description": "Spectral homeostasis: push every layer back whenever its effective rank starts to fall, using only local statistics. Can a purely local rule keep many modes alive, the way attention does?\n\nFull 28-minute breakdown (with experiments and references): https://youtu.be/2tdrON7G6PU\n\nMoonshot Engineering\n\n#Research #Homeostasis #DeepLearning #Neuroscience #Shorts",
+  "ig_caption": "Can a local rule keep many modes alive?\n\nSpectral homeostasis: push every layer back whenever its effective rank starts to fall, using only local statistics. Can a purely local rule keep many modes alive, the way attention does?\n\nFull breakdown on YouTube: Moonshot Engineering (link in bio)\n\n#Research #Homeostasis #DeepLearning #Neuroscience #Reels #Explained #Science #Tech",
+  "hashtags": "#Research #Homeostasis #DeepLearning #Neuroscience #Shorts"
+ }
+]
